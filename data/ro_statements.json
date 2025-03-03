@@ -6,6 +6,7 @@
         "titlu": "Koningsberg",
         "enunt_markdown": "\nSe dă harta alăturată.\n\nHarta reprezintă un râu (albastru), două maluri și patru insule (verde), precum și opt poduri (negru).\n\nCare este numărul minim de poduri ce trebuie construite astfel încât un turist să poată traversa toate podurile exact o dată?\n\n**Atenție:** turistul își poate începe traseul oriunde dorește (pe un mal sau pe o insulă) și, de asemenea, poate termina traseul oriunde dorește.",
         "imagine": "./images/2024-koningsberg.png",
+        "continut_imagine": "\nImaginea reprezinta o hartă, avem un rau (reprezentat de culoarea albastru), două maluri, un mal stâng și un mal drept, și patru insule (reprezentate de culoarea verde), precum și opt poduri (reprezentat de culoarea negru), de la stanga la dreapta prima insulă este conectată de cele două maluri, malul stâng respectiv drept, prin două poduri, urmatoarele două insule, la dreapta primei insule descrise, sunt una deasupra celeilalte, insula aflata deasupra se contecteaza cu prima insulă descrisă printr-un pod și se mai conectează cu insula aflată dedesupt, tot prin intermediul unui pod, ultima insulă, și mai la dreapta față de cele două insule, se contecteaz cu insula de la stanânga care se afla dedesupt, și cu cele două maluri, având un total de trei poduri, și mai la stânga se află ulimul pod care conectează cele două maluri.",
         "variante": [
           0,
           1,
@@ -46,6 +47,7 @@
         "titlu": "APM-uri",
         "enunt_markdown": "\nCâți arbori parțiali de cost minim are următorul graf?\n",
         "imagine": "./images/2024-APM-uri.png",
+        "continut_imagine": "\nImaginea reprezintă un graf neorientat cu 6 noduri și 7 muchii, fiecare muchie are ponderi asociate, anume avem muchia de la 1 la 2 cu pondere 2, 1 la 4 cu ponderea 2, 2 la 5 cu ponderea 2, 2 la 3 cu ponderea 1, 3 la 6 cu ponderea 2, 4 la 5 cu ponderea 2 și 5 la 6 cu ponderea 1.",
         "variante": [
           6,
           5,
@@ -70,7 +72,7 @@
         "dificultate": "usor"
       },
       {
-        "titlu": "Cel mai mic număr",
+        "titlu": "Cel mai mic număr reprezentabil",
         "enunt_markdown": "\nMarius i-a cumpărat fetiței sale, Luna, un calculator de jucărie. În mod curios, acest calculator are un procesor care funcționează pe 10 biți. O variabilă de tip număr real păstrează valoarea sa în următorul format: `$$m \\ \\times \\ 2^{-e}$$`, unde m și e sunt numere naturale a căror reprezentare binară este păstrată în variabilă. Mai exact primii 3 biți semnificativi reprezintă valoarea lui e și următorii 7 reprezintă valoarea lui m.\n\nDe exemplu, variabila x dată prin secvența de biți 1010101010 reprezintă numărul:\n```KaTeX\n(32 \\ + \\ 8 \\ + \\ 2) \\ \\times \\ 2^{-5} \\ = \\ 1.3125\n```\n\nMarius îi dă următoarea temă Lunei: care este cea mai mică valoare nenulă care poate fi reprezentată de o variabilă în noua ei jucărie? O puteți ajuta?\n",
         "variante": [
           0.001,
@@ -213,6 +215,7 @@
         "titlu": "Turneu Jackpot",
         "enunt_markdown": "\nÎntr-un turneu de table de tip jackpot participă 40 de jucători și sunt premiați cu diverse sume doar primii 4 în funcție de clasamentul final al acestora. Valoarea totală a premiilor este de `10800` de dolari.\n\nDeși cei 4 nu vor primi exact aceeași sumă, în principiu fiecare dintre ei are șansa sa câștige în medie `$$\\frac{10800}{4} \\ = \\ 2700$$` dolari.\n\nTurneul se desfășoară astfel: jucătorii sunt grupați aleator câte doi, joacă o partidă, iar câștigătorii trec în etapa următoare. Astfel după 3 runde rămân 5 jucători A, B, C, D și E.\n\nTeoretic acum, fiecare dintre cei cinci are șansa sa câștige în medie `$$\\frac{10800}{4} \\ = \\ 2160$$` dolari. Pentru a hotărî care vor fi cei 4 finaliști se aleg aleatoriu doi jucători din cei cinci, să zicem D și E, care vor juca o rundă suplimentară, câștigătorul intrând în finala celor 4.\n\nAceastă rundă suplimentară diminuează șansele lui D și E la câștigul teoretic mediu. Cu căt ar trebui compensați D și E din fondul total de premii, înainte de runda suplimentară pe care o vor juca, astfel încât în final șansa la câștigul mediu (oricare ar fi acesta) să rămână aceeași pentru cei cinci?\n",
         "imagine": "./images/2024-jackpot.png",
+        "continut_imagine": "\nImaginea reprezintă stadiul turneului, avem 5 jucători A, B, C, D și E, jucătorii D și E vor juca o runda, câștigătorul intrând în finală cu C, în timp ce A și B vor juca între ei, căștigătorii celor două runde vor juca în finală.",
         "variante": [
           0,
           540,
@@ -365,6 +368,7 @@
         "titlu": "Insule",
         "enunt_markdown": "\nÎntr-o matrice infinită (asemenea unui ocean nemărginit) în care pătratele albe reprezintă apă, iar pătratele negre reprezintă fâșii de pământ.\n\nMai multe fâșii formează o insulă dacă se poate ajunge din orice fâșie din insulă în orice altă fâșie din insulă mergând fie pe orizontală, fie pe verticală pe fâșii de pământ adiacente (fără a merge pe diagonale). O insulă poate fi formată și dintr-o singură fâșie de pământ. De pe o fâșie dintr-o insulă nu putem ajunge pe o altă fâșie de pe altă insulă. Dimensiunea unei insule reprezintă numărul de fâșii care alcătuiesc insula. În figura de mai jos sunt 4 astfel de insule cu dimensiunile 1, 4, 4 și 24.\n\nPresupunem că pentru fiecare fâșie de pământ cunoaștem dimensiunea insulei din care face parte. Dându-se o matrice infinită în care știm că se află 30 de fâșii de pământ și lista următoare sortată a dimensiunilor insulelor din care face parte fiecare fâșie de pământ:\n\n```\n1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4\n```\n\nsă se afle numărul de insule.\n",
         "imagine": "./images/2023-insule.png",
+        "continut_imagine": "\nImaginea reprezintă niște insule cu dimensiunile 1, 4, 4 și 24, într-un spațiu de 9 pe 13, cu celule colorate în alb, reprezentând celule goele, și celule colorate în negru pentru a descrie porțiuni din insule, descrierea celulelor este indexată de la 0, celula (6, 4) este colorată în negru și reprezintă insula de dimensiune 1, celulele (6, 1), (5, 1), (4, 1) și (4, 2) colorate în negru reprezintă o insulă de dimensiune 4, celulele (3, 8), (3, 9), (4, 8), (4, 9) colorate în negru reprezintă o altă insulă de dimensiune 4, iar celule (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (2, 4), (2, 5), (2, 11), (3, 5), (3, 6), (3, 11), (4, 6), (4, 11), (5, 6), (5, 10), (5, 11), (6, 6), (6, 7), (6, 8), (6, 9), (6, 10), (6, 11), (7, 6) sunt colorate în negru și formează o insula de dimensiune 24.",
         "variante": [
           "5",
           "7",
@@ -392,6 +396,7 @@
         "titlu": "Fort Leon",
         "enunt_markdown": "\nArhipelagul Fort Leon este format din 14 insule, majoritatea locuitorilor fiind programatori începători.\n\nÎntr-o zi cu soare, locuitorii arhipelagului s-au gândit că le-ar plăcea foarte mult să construiască mai multe poduri între insule astfel încât să poate pleca de pe orice insulă, să treacă o singură dată pe fiecare pod și să ajungă tot pe insula de unde au plecat. Pentru a-și îndeplini mai repede dorința, ei au scris un program care să-i ajute.\n\nDin păcate, ei au scris un program greșit, care le-a furnizat următoarea modalitate de construire a unor poduri între cele 14 insule (vedeți poza alăturată).\n\nDeoarece sunt foarte nerăbdători, locuitorii din Fort Leon vă roagă să-i ajutați, precizându-le numărul minim de poduri pe care trebuie să le adauge la cele deja indicate de programul scris de ei, astfel încăt să-și îndeplinească dorința.\n",
         "imagine": "./images/2023-graf.png",
+        "continut_imagine": "\nImainea reprezină o mulțime de 4 grafuri neorientate, neconectate între ele, primul graf reprezintă un graf complet de 3 noduri, al doilea graf reprezintă un graf complet de 4 noduri, al treilea graf reprezintă un graf complete de 4 noduri, iar ultimul graf reprezintă un graf complet de 3 noduri.",
         "variante": [
           "3",
           "4",
@@ -543,6 +548,7 @@
         "titlu": "Tastatură",
         "enunt_markdown": "\nMatei tocmai a cumpărat tastatura din imagine și dorește să apese în total pe 10 taste. Prima tastă pe care apasă poate fi oricare dintre ele, dar fiind foarte leneș vrea ca începând de la a doua apăsare, fiecare tastă pe care o apasă să fie alăturată celei pe care tocmai a apăsat-o (tasta a i-a pe care apasă să fie alăturată tastei a i-1-a pentru 2 ≤ i ≤ 10).\n\nDouă taste sunt alăturate dacă sunt diferite și se ating pe o latură sau jumătate de latură. De exemplu, tastele \"1\" si \"0\" sunt alăturate, dar tastele \"7\" si \"5\", sau \"+\" si \"*\" nu sunt.\n\nÎn câte moduri poate apăsa Matei pe taste?\n",
         "imagine": "./images/2023-tastatura.png",
+        "continut_imagine": "\nImaginea reprezintă un numpad, cu numlock, /, *, - fiind primele taste, pe urmatoarea linie urmate de 7, 8, 9, +, urmate de 4, 5, 6, prelungirea tastei +, 1, 2, 3, enter, urmate de 0, . și prelungirea tastei enter, 0 ocupa 2 spatii.",
         "variante": [
           "1212334",
           "4200301",
@@ -1239,7 +1245,8 @@
         ],
         "raspuns": "11",
         "dificultate": "usor",
-        "imagine": "./images/2021-arbori-partiali.png"
+        "imagine": "./images/2021-arbori-partiali.png",
+        "continut_imagine": "\nImaginea dată descrie un graf neorientat cu 5 noduri și 6 muchii, o muchie de la nodul 0 la 2, de la 0 la 4, de la 2 la 3, de la 2 la 4, de la 4 la 1 și de la 1 la 3."
       },
       {
         "titlu": "Pseudo-palindrom",
@@ -1344,7 +1351,8 @@
         ],
         "raspuns": "2080520640766",
         "dificultate": "mediu",
-        "imagine": "./images/2021-triunghi-infinit.png"
+        "imagine": "./images/2021-triunghi-infinit.png",
+        "continut_imagine": "\nImaginea data descrie un triunghi infinit de numere naturale, in care numarul 1 se afla la nivelul 1, numerele 2 si 3 se afla la nivelul 2, numerele 4, 5 si 6 se afla la nivelul 3 si așa mai departe."
       },
       {
         "titlu": "Domino",
