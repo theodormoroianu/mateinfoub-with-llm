@@ -1,4 +1,3 @@
-
 from dataclasses import dataclass
 from enum import Enum
 from typing import Optional
@@ -6,6 +5,7 @@ import json
 import logging
 
 import script_runner
+
 
 class ProblemDificulty(Enum):
     EASY = "easy"
@@ -22,11 +22,13 @@ class ProblemDificulty(Enum):
             return ProblemDificulty.HARD
         raise ValueError(f"Invalid difficulty: {s}")
 
+
 @dataclass
 class Problem:
     """
     Stores a problem instance.
     """
+
     title: str
     markdown_statement: str
     answer_variants: list[str]
@@ -46,7 +48,7 @@ class Problem:
             image_path=obj.get("imagine"),
             image_content=obj.get("continut_imagine"),
         )
-    
+
     @staticmethod
     def from_english_json(obj: dict) -> "Problem":
         return Problem(
@@ -58,7 +60,7 @@ class Problem:
             image_path=obj.get("image_path"),
             image_content=obj.get("image_content"),
         )
-    
+
     def to_romanian_json(self) -> dict:
         obj = {
             "titlu": self.title,
@@ -72,7 +74,7 @@ class Problem:
         if self.image_content is not None:
             obj["continut_imagine"] = self.image_content
         return obj
-    
+
     def to_english_json(self) -> dict:
         obj = {
             "title": self.title,
@@ -84,9 +86,9 @@ class Problem:
         if self.image_path is not None:
             obj["image_path"] = self.image_path
         if self.image_content is not None:
-            obj["image_content"] = self.image_content   
+            obj["image_content"] = self.image_content
         return obj
-    
+
     def image_url(self) -> Optional[str]:
         """
         If the problem has an image, returns the URL to the image.
@@ -95,11 +97,13 @@ class Problem:
             return None
         return f"https://mateinfo-ub.github.io/{self.image_path}"
 
+
 @dataclass
 class Contest:
     """
     Stores a contest instance.
     """
+
     name: str
     problems: list[Problem]
 
@@ -109,20 +113,20 @@ class Contest:
             name=obj["name"],
             problems=list(map(Problem.from_romanian_json, obj["probleme"])),
         )
-    
+
     def to_romanian_json(self) -> dict:
         return {
             "name": self.name,
             "probleme": list(map(Problem.to_romanian_json, self.problems)),
         }
-    
+
     @classmethod
     def from_english_json(cls, obj: dict) -> "Contest":
         return Contest(
             name=obj["name"],
             problems=list(map(Problem.from_english_json, obj["problems"])),
         )
-    
+
     def to_english_json(self) -> dict:
         return {
             "name": self.name,
@@ -134,12 +138,13 @@ class LLMAnswer:
     """
     An LLM's solution. Can either be a python script or a punctual answer.
     """
+
     # Explanation of the model's reasoning.
     reasoning: str
-    
+
     # If present, the python code we have to run to get the answer.
     python_code: Optional[str]
-    
+
     # The output of the python code, if present.
     python_code_output: Optional[str]
 
@@ -150,7 +155,7 @@ class LLMAnswer:
     def accepted_format() -> str:
         """
         Returns a string which describes the accepted format of the answer.
-        """    
+        """
         fmt = {
             "reasoning": "The techniques you used for solving the problem, concise, mandatory",
             "python_code": "If you choose to solve the problem using a python script, the python3.12 script, without dependencies on 3rd party libs, which has to print EXACTLY the right answer to stdout (only the right answer, nothing more). The field doesn't exist if you reply with an answer.",

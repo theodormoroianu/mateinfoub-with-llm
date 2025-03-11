@@ -5,24 +5,23 @@ import argparse
 
 import statements_importer
 
+
 def main():
-    parser = argparse.ArgumentParser(
-        description="Play around with MateInfoUB tasks"
-    )
+    parser = argparse.ArgumentParser(description="Play around with MateInfoUB tasks")
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
 
     # Define the 'generate' command parser
     parser_data_translation = subparsers.add_parser(
-        "translate",
-        help="Translate data from romanian to english."
+        "translate", help="Translate data from romanian to english."
     )
     parser_data_translation.add_argument(
-        "-f", "--force",
+        "-f",
+        "--force",
         action="store_true",
         help="Overwrite the output file if it already exists.",
-        default=False
+        default=False,
     )
-    
+
     # Parse the arguments
     args = parser.parse_args()
 

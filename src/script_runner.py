@@ -8,8 +8,8 @@ import tempfile
 
 
 def run_script(
-        script: str,
-        timeout: int = 10,
+    script: str,
+    timeout: int = 10,
 ) -> str:
     """
     Runs the python script in a container, and captures the stdout. If the script takes more than `timeout` seconds to
@@ -27,8 +27,19 @@ def run_script(
             f.write(script)
 
         # Run the script in a container.
-        command = ["docker", "run", "--rm", "-v", f"{temp_dir}:/app", "python", "python", "/app/script.py"]
-        process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        command = [
+            "docker",
+            "run",
+            "--rm",
+            "-v",
+            f"{temp_dir}:/app",
+            "python",
+            "python",
+            "/app/script.py",
+        ]
+        process = subprocess.Popen(
+            command, stdout=subprocess.PIPE, stderr=subprocess.PIPE
+        )
         try:
             stdout, stderr = process.communicate(timeout=timeout)
         except subprocess.TimeoutExpired:

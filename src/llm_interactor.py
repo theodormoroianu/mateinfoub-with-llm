@@ -1,6 +1,8 @@
-from enum import Enum
 import google.generativeai as genai
 import os
+import time
+
+from enum import Enum
 
 # Gemini API key and model
 gemini_api_key = os.environ["GEMINI_API_KEY"]
@@ -19,8 +21,10 @@ gemini_model = genai.GenerativeModel(
     generation_config=generation_config,
 )
 
+
 class Model(Enum):
     GEMINI = "gemini"
+
 
 def ask_gemini(model: Model, question: str) -> str:
     """
@@ -35,8 +39,10 @@ def ask_gemini(model: Model, question: str) -> str:
             raise NotImplementedError(f"Model {model} not implemented")
     except Exception as e:
         print("Error:", e)
-        input("Press Enter to retry...")
+        print("Retrying in 10 seconds...")
+        time.sleep(10)
         return ask_gemini(model, question)
+
 
 def translate_ro_to_en(text: str) -> str:
     """
