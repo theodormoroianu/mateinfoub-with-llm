@@ -2,15 +2,18 @@
 from dataclasses import dataclass
 from enum import Enum
 from typing import Optional
+import json
+import logging
 
+import script_runner
 
 class ProblemDificulty(Enum):
     EASY = "easy"
     MEDIUM = "medium"
     HARD = "hard"
 
-    @classmethod
-    def from_romanian(cls, s: str) -> "ProblemDificulty":
+    @staticmethod
+    def from_romanian(s: str) -> "ProblemDificulty":
         if s == "usor":
             return ProblemDificulty.EASY
         if s == "mediu":
@@ -32,8 +35,8 @@ class Problem:
     image_path: Optional[str]
     image_content: Optional[str]
 
-    @classmethod
-    def from_romanian_json(cls, obj: dict) -> "Problem":
+    @staticmethod
+    def from_romanian_json(obj: dict) -> "Problem":
         return Problem(
             title=obj["titlu"],
             markdown_statement=obj["enunt_markdown"],
@@ -44,8 +47,8 @@ class Problem:
             image_content=obj.get("continut_imagine"),
         )
     
-    @classmethod
-    def from_english_json(cls, obj: dict) -> "Problem":
+    @staticmethod
+    def from_english_json(obj: dict) -> "Problem":
         return Problem(
             title=obj["title"],
             markdown_statement=obj["markdown_statement"],
@@ -125,3 +128,59 @@ class Contest:
             "name": self.name,
             "problems": list(map(Problem.to_english_json, self.problems)),
         }
+
+
+class LLMAnswer:
+    """
+    An LLM's solution. Can either be a python script or a punctual answer.
+    """
+    # Explanation of the model's reasoning.
+    reasoning: str
+    
+    # If present, the python code we have to run to get the answer.
+    python_code: Optional[str]
+    
+    # The output of the python code, if present.
+    python_code_output: Optional[str]
+
+    # If present, the answer outputed by the model.
+    answer: str
+
+    @staticmethod
+    def accepted_format() -> str:
+        """
+        Returns a string which describes the accepted format of the answer.
+        """    
+        fmt = {
+            "reasoning": "The techniques you used for solving the problem, concise, mandatory",
+            "python_code": "If you choose to solve the problem using a python script, the python3.12 script, without dependencies on 3rd party libs, which has to print EXACTLY the right answer to stdout (only the right answer, nothing more). The field doesn't exist if you reply with an answer.",
+            "answer": "If you choose to solve the problem directly, this is the correct answer. The field doesn't exist if you reply with a script.",
+        }
+        answer = "You have to output the correct answer (not the index, the actual value of the answer).\n"
+        answer += "The answer is computed with a diff check, so it has to be EXACTLY the right answer.\n"
+        answer += "You can answer in 2 ways: by providing the answer (i.e. the string), or by providing a Python3.12 script which, when ran with a timeout of ~10 seconds, outputs EXACTLY the right answer.\n"
+        answer += "Please reply with a valid JSON, in the following format, without any additional notes:\n"
+        answer += json.dumps(fmt)
+        return answer
+
+    @staticmethod
+    def from_json(content: str) -> Optional["LLMAnswer"]:
+        """
+        Tries to parse the answer, returns None if the answer
+        is not in the right format.
+        """
+        try:
+            obj = json.loads(content)
+            llm_answer = LLMAnswer()
+            llm_answer.reasoning = obj["reasoning"]
+            if "answer" in obj:
+                llm_answer.answer = obj["answer"]
+            if "python_code" in obj:
+                llm_answer.python_code = obj["python_code"]
+                llm_answer.python_code_output = script_runner.run_script(
+                    llm_answer.python_code
+                )
+            return llm_answer
+        except Exception as e:
+            logging.warning(f"Failed to parse json: {e}")
+            return None
