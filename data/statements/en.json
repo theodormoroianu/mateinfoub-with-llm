@@ -1,0 +1,1631 @@
+[
+  {
+    "name": "Edi\u021bia 2024",
+    "problems": [
+      {
+        "title": "Koningsberg",
+        "markdown_statement": "The adjacent map is given.\n\nThe map represents a river (blue), two banks and four islands (green), as well as eight bridges (black).\n\nWhat is the minimum number of bridges that need to be built so that a tourist can cross all bridges exactly once?\n\n**Attention:** the tourist can start his route wherever he wants (on a bank or on an island) and can also finish the route wherever he wants.\n",
+        "answer_variants": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "correct_answer": "1",
+        "difficulty": "easy",
+        "image_path": "./images/2024-koningsberg.png",
+        "image_content": "The image represents a map, we have a river (represented by the color blue), two banks, a left bank and a right bank, and four islands (represented by the color green), as well as eight bridges (represented by the color black), from left to right the first island is connected by the two banks, the left and right banks respectively, through two bridges, the next two islands, to the right of the first described island, are one above the other, the island located above connects with the first described island through a bridge and also connects with the island located below, also through a bridge, the last island, and further to the right compared to the two islands, connects with the island from the left which is located below, and with the two banks, having a total of three bridges, and further to the left is the last bridge that connects the two banks.\n"
+      },
+      {
+        "title": "Buseala",
+        "markdown_statement": "The following code sequence is given:\n\n```c++\nint n = 3;\nfor (int i = 0; i < n; i--) {\n    cout << '$';\n}\n```\n\nWhich of the following modifications will make the code display the dollar character exactly 3 times (i.e., \"$$$\")?\n\n1. we replace \"n = 3\" with \"n = -3\"\n2. we replace \"int i = 0\" with \"long i = 0\"\n3. we replace \"i < n\" with \"-i < n\"\n4. we replace \"i < n\" with \"i + n\"\n5. we replace \"i--\" with \"n--\"\n6. we replace \"cout << '$'\" with \"cout << \"$$$\"\"\n",
+        "answer_variants": [
+          "1, 2 si 3.",
+          "2, 3 si 4.",
+          "3, 4 si 5.",
+          "3, 5 si 6.",
+          "1, 3 si 6."
+        ],
+        "correct_answer": "3, 4 si 5.",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Text",
+        "markdown_statement": "The following list of words is given:\n\n```c++\nchar cuvinte[10][5] = {\n  \"mate\",\n  \"buri\",\n  \"mute\",\n  \"mese\",\n  \"cute\",\n  \"mare\",\n  \"iute\",\n  \"sute\",\n  \"sate\",\n  \"muri\"\n};\n```\n\nTwo words are _similar_ if they are exactly one letter apart (that is, exactly one letter from the first word can be changed so that it becomes equal to the second word). For example, \"abab\" is similar to \"abbb\", but \"aaaa\" is not similar to \"aabb\" and also \"aaaa\" is not similar to \"aaaa\".\n\nHow many unordered pairs (the pair (a, b) is considered equal to the pair (b, a)) of similar words exist?\n",
+        "answer_variants": [
+          "3",
+          "7",
+          "11",
+          "15",
+          "19"
+        ],
+        "correct_answer": "11",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "APM-uri",
+        "markdown_statement": "How many minimum spanning trees does the following graph have?\n",
+        "answer_variants": [
+          "6",
+          "5",
+          "7",
+          "3",
+          "9"
+        ],
+        "correct_answer": "7",
+        "difficulty": "easy",
+        "image_path": "./images/2024-APM-uri.png",
+        "image_content": "The image represents an undirected graph with 6 nodes and 7 edges, each edge has associated weights, namely we have the edge from 1 to 2 with weight 2, 1 to 4 with weight 2, 2 to 5 with weight 2, 2 to 3 with weight 1, 3 to 6 with weight 2, 4 to 5 with weight 2 and 5 to 6 with weight 1.\n"
+      },
+      {
+        "title": "Bilete norocoase",
+        "markdown_statement": "Alexandrina, being passionate about public transportation, bought 1 million bus tickets, having codes distinct from each other, formed of exactly 6 digits. A ticket is considered lucky if the sum of its first 3 digits is equal to the sum of the last 3. For example, the ticket with the code 000013 has the sum of the first 3 digits equal to 0 and the sum of the last 3 digits equal to 4.\n\nHelp Alexandrina count how many lucky tickets she has!\n",
+        "answer_variants": [
+          "50412",
+          "55252",
+          "57823",
+          "49575",
+          "45198"
+        ],
+        "correct_answer": "55252",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Cel mai mic num\u0103r reprezentabil",
+        "markdown_statement": "Marius bought his daughter, Luna, a toy calculator. Curiously, this calculator has a processor that operates on 10 bits. A variable of real number type stores its value in the following format: `$$m \\ \\times \\ 2^{-e}$$`, where m and e are natural numbers whose binary representation is stored in the variable. More specifically, the first 3 significant bits represent the value of e and the next 7 represent the value of m.\n\nFor example, the variable x given by the bit sequence 1010101010 represents the number:\n```KaTeX\n(32 \\ + \\ 8 \\ + \\ 2) \\ \\times \\ 2^{-5} \\ = \\ 1.3125\n```\n\nMarius gives Luna the following homework: what is the smallest non-zero value that can be represented by a variable in her new toy? Can you help her?\n",
+        "answer_variants": [
+          "0.001",
+          "0.0078125",
+          "0.00390625",
+          "0.005859375",
+          "0.015625"
+        ],
+        "correct_answer": "0.0078125",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Tastatur\u0103 rotund\u0103",
+        "markdown_statement": "In the hardware design class, Teo invents a circular keyboard that contains the digits from 0 to 9 in ascending order and a needle that points to one of them. This keyboard can perform one of the following two operations any number of times:\n\n1. write on the screen the digit the needle is pointing to\n2. move the needle to the successor position (if the needle pointed to 0, it will be moved to digit 1; if it pointed to 9, it will be moved to digit 0)\n\nInitially the needle points to digit 0. What is the **minimum** number of operations needed to write the number 11052024 on the screen?\n",
+        "answer_variants": [
+          "41",
+          "42",
+          "43",
+          "44",
+          "45"
+        ],
+        "correct_answer": "42",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Sockets",
+        "markdown_statement": "In the UniBuc datacenter, a scientific computing server A initiates a connection to an external service once every 17 **seconds**. Another server B initiates a connection once every 21 **seconds**.\n\nAlexandru, the new chief technician of the datacenter, made a program that monitors the number of connections initiated at any given time. Knowing that each connection remains open for exactly 5 **minutes** from initiation, what is the maximum number of connections that can exist simultaneously?\n",
+        "answer_variants": [
+          "29",
+          "30",
+          "31",
+          "32",
+          "33"
+        ],
+        "correct_answer": "33",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Alian\u021be",
+        "markdown_statement": "\u0218tefan together with his 23 friends play a strategy game.\n\nThey receive a unique ID within the game, a number from the interval [2, N+1] where N is the number of players.\n\nThe players form alliances as follows: two players are in the same alliance if their IDs have the same number of divisors (for example the player with ID 2 is in the same alliance with the player with ID 3). Communication is very important in this game, and after the alliances are established, only members of the same alliance can establish bidirectional secure connections between them through which they communicate.\n\nWhat is the total number of secure connections that can be established?\n",
+        "answer_variants": [
+          "63",
+          "61",
+          "62",
+          "65",
+          "64"
+        ],
+        "correct_answer": "63",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Cifre distincte",
+        "markdown_statement": "Mara is passionate about numbers. After analyzing many types of numbers\n(even/odd, prime, palindrome, perfect squares etc.)\nshe realized that her favorites are the numbers with all distinct digits that do not contain the digit 0.\n\nMara has done a lot of studies for numbers written in base 10, but now she is curious what happens in other numeral bases. For example, for base 2 she realized she only likes one number, and for base 3 she likes 4 numbers.\n\nHow many numbers will Mara like for base 5?\n",
+        "answer_variants": [
+          "31",
+          "68",
+          "15",
+          "64",
+          "260"
+        ],
+        "correct_answer": "64",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Cop\u0103cel",
+        "markdown_statement": "The copacel command displays the directory structure. For example, if we have a directory A that contains the directories B, C and D, the directory B contains the directories E and F, and the directory D contains the directory G, then the result of the copacel command will look like this:\n\n```c++\n> copacel A\nA\n|-- B\n|   |-- E\n|   |-- F\n|-- C\n|-- D\n    |-- G\n\n7 directories,  0 files\n```\n\nIn the example above, the directories C, E, F and G are empty.\n\nAt <a href=\"data/2024-tree.txt\" target=\"_blank\">this</a> link is the result of running the copacel command on a system with 1500 directories (and no files). How many of the present directories are empty?\n",
+        "answer_variants": [
+          "53",
+          "164",
+          "419",
+          "602",
+          "734",
+          "953",
+          "1231"
+        ],
+        "correct_answer": "734",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Valize",
+        "markdown_statement": "Matei has 6 suitcases with capacities of 14, 3, 16, 8, 2 and 5 liters. He chooses a subset of suitcases and calculates the sum of the capacities of the chosen suitcases. Amused, Matei observes: _\"There are exactly two possible choices of suitcases that give this sum!\"_.\n\nWhat is the maximum sum of the capacities of the suitcases chosen by Matei?\n",
+        "answer_variants": [
+          "Este imposibil.",
+          "5",
+          "8",
+          "13",
+          "19",
+          "30",
+          "43"
+        ],
+        "correct_answer": "43",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Tractora\u0219",
+        "markdown_statement": "How many numbers X between 5 and 999 (inclusive) have the property that the following sequence of operations ends:\n\n```c++\nX := number between 5 and 999\nY := 1\nWHILE Y != 3:\n    Y = Y * 2 % X\n```\n\nFor connoisseurs, the problem asks to find for how many numbers n between 5 and 999, the number 3 is generated by 2 in `(Zn, *)`.\n",
+        "answer_variants": [
+          "0",
+          "10",
+          "64",
+          "134",
+          "257",
+          "752",
+          "989"
+        ],
+        "correct_answer": "134",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Playlist",
+        "markdown_statement": "Cecilia wants to listen to her favorite playlist during the big break which lasts 15 minutes. Her playlist is composed of 5 songs with the following durations:\n1. song 1: 4 minutes and 35 seconds\n2. song 2: 3 minutes and 25 seconds\n3. song 3: 6 minutes and 20 seconds\n4. song 4: 12 minutes and 20 seconds\n5. song 5: 5 minutes and 40 seconds\n\nBefore starting to listen to the playlist, Cecilia will press the \"shuffle\" button which will randomly (uniformly) shuffle the songs. What is the average number of songs that Cecilia can listen to completely?\n",
+        "answer_variants": [
+          "1.8",
+          "2.5",
+          "1.5",
+          "2.2",
+          "2.4",
+          "2.3",
+          "2.6"
+        ],
+        "correct_answer": "1.8",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Prietenel",
+        "markdown_statement": "Friend has 23 colleagues at the company he works at (so there are 24 employees in total).\n\nHe built a network with the friendship relations between the employees at the company. Thus, he numbered the colleagues with numbers from 1 to 23 (he kept the number 24 for himself, because it is 2024) and found that there are `m` reciprocal friendship relations between (unordered) pairs of employees from the company he works at.\n\nWe say that i is friends with j if there is a friendship relation between i and j (the friendship relation between i and j being reciprocal, if i is friends with j, then j is friends with i). Friend made his list L1 of his friends and list L2 of his friends' friends and found that exactly two of his colleagues are not in any of these lists.\n\nWhat is the minimum value and the maximum value of `m`?\n",
+        "answer_variants": [
+          "21 \u0219i  252",
+          "23 \u0219i  252",
+          "21 \u0219i  251",
+          "23 \u0219i  251",
+          "21 \u0219i  232",
+          "23 \u0219i  232",
+          "22 \u0219i  231"
+        ],
+        "correct_answer": "21 \u0219i  252",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Turneu Jackpot",
+        "markdown_statement": "In a jackpot-type backgammon tournament, 40 players participate and only the first 4 are awarded various sums, depending on their final ranking. The total value of the prizes is `$10800`.\n\nAlthough the 4 will not receive exactly the same amount, in principle each of them has the chance to win on average `$$\\frac{10800}{4} \\ = \\ 2700$$` dollars.\n\nThe tournament takes place as follows: the players are randomly grouped in pairs, play a game, and the winners advance to the next stage. Thus, after 3 rounds, 5 players A, B, C, D and E remain.\n\nTheoretically, now, each of the five has a chance to win on average `$$\\frac{10800}{4} \\ = \\ 2160$$` dollars. To decide which will be the 4 finalists, two players are randomly selected from the five, let's say D and E, who will play an additional round, with the winner entering the final of the 4.\n\nThis additional round diminishes the chances of D and E to the theoretical average winnings. How much should D and E be compensated from the total prize pool, before the additional round they will play, so that in the end the chance of the average winnings (whatever it may be) remains the same for the five?\n",
+        "answer_variants": [
+          "0",
+          "540",
+          "720",
+          "1080",
+          "1350",
+          "2160",
+          "2700"
+        ],
+        "correct_answer": "1080",
+        "difficulty": "medium",
+        "image_path": "./images/2024-jackpot.png",
+        "image_content": "The image represents the stage of the tournament, we have 5 players A, B, C, D and E, players D and E will play a round, the winner entering the final with C, while A and B will play against each other, the winners of the two rounds will play in the final.\n"
+      },
+      {
+        "title": "5 Eyes",
+        "markdown_statement": "Consider the following C++ code sequence, from which the value of the secret character array is missing:\n\n```c++\n// Length of the secret (excluding '\\0').\nint n = 12;\n\n// Secret, consisting of n+1 characters (including the '\\0' character).\nchar secret[] = \"????????????\"; // the secret is missing\n\nfor (int i = 1; i < n; i++)\n    for (int j = 2 * i; j < n; j += i)\n        secret[j] ^= secret[i];\n\nfor (int i = 0; i < n; i++)\n    cout << (int)secret[i] << ' ';\n```\n\nThe result of running the code is the following string, of length 12:\n\n```c++\n109 97 21 4 89 40 62 39 98 72 9 35\n```\n\nWhat is the last non-null character (different from `\\0`) of the secret?\n",
+        "answer_variants": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J"
+        ],
+        "correct_answer": "B",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Z\u0103p\u0103ceal\u0103",
+        "markdown_statement": "Br\u0103du\u021b is a scatterbrained boy who always messes up the way to school.\nThe map of his neighborhood can be represented as an orthogonal system where Br\u0103du\u021b's house is at the origin, and his school is at the point with coordinates `(3, 4)`.\n\nIf Br\u0103du\u021b is at the point with coordinates `(x, y)`, he can move in one minute to one of the points `(x + 1, y)`, `(x - 1, y)`, `(x, y + 1)` and `(x, y - 1)`.\n\nBecause he is scatterbrained, he will not always consider the best choice, but will randomly choose one of the 4 directions of movement, as follows:\n1. He will go to `(x + 1, y)` with probability `Pdreapta = 0.4`.\n2. He will go to `(x - 1, y)` with probability `Pstanga = 0.05`.\n3. He will go to `(x, y + 1)` with probability `Psus = 0.45`.\n4. He will go to `(x, y - 1)` with probability `Pjos = 0.1`.\n\nMoreover, Br\u0103du\u021b permanently misses his home. Thus, after each movement in a certain direction, the probability of moving in that direction decreases by `0.01`, and the probability of moving in the opposite direction increases by `0.01`.\n\nWhat is the probability that Br\u0103du\u021b will arrive at school (point `(3, 4)`) using a path of minimum duration?\n\nWe consider one of the answer choices correct, if the difference between it and the real value of the probability is less than `0.001`.\n",
+        "answer_variants": [
+          "0.002",
+          "0.015",
+          "0.023",
+          "0.043",
+          "0.074",
+          "0.087",
+          "0.092",
+          "0.131",
+          "0.176",
+          "0.5"
+        ],
+        "correct_answer": "0.074",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "2024 ca sub\u0219ir",
+        "markdown_statement": "We consider the **finite** sequence `123456789101112131415...2024` formed by concatenating in order all the digits of non-zero natural numbers less than or equal to 2024. Pierre wants to know how many times `2024` appears as a subsequence in this sequence. Help Pierre.\n\n**Note**: the sequence `a` is a subsequence of the sequence `b` if `a` can be obtained from `b` by deleting 0 or more characters from b.\n",
+        "answer_variants": [
+          "1421010813",
+          "4858581392",
+          "5144380298",
+          "5715978109",
+          "8173848695",
+          "6859173730",
+          "3268324869",
+          "1278909731",
+          "3429586865",
+          "5430179203"
+        ],
+        "correct_answer": "5715978109",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Plimbare prin matrice",
+        "markdown_statement": "After working all night on his own operating system, Ioan fell fast asleep and began to dream.\n\nHe finds himself in cell `(0, 0)` of an infinite two-dimensional matrix. In this matrix, Ioan can only take one or two steps **down or to the right**. In other words, if he is in cell `(i, j)`, in one move he can reach one of the cells `(i + 1, j)`, `(i + 2, j)`, `(i, j + 1)` or `(i, j + 2)`.\n\nTo be able to escape the dream, Ioan must answer the following question:\n_In how many ways can he reach cell `(20, 24)`, given the movement restrictions he has?_\n",
+        "answer_variants": [
+          "59713569536180432",
+          "436844856458564300",
+          "152596701737090864",
+          "1119576038404099820",
+          "384848943308945522",
+          "20810114480126744",
+          "52291395481992608",
+          "1735342859526354688",
+          "1343491246084919808",
+          "27053148824164768"
+        ],
+        "correct_answer": "1119576038404099820",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      }
+    ]
+  },
+  {
+    "name": "Edi\u021bia 2023",
+    "problems": [
+      {
+        "title": "Num\u0103rul N",
+        "markdown_statement": "We consider the number `N = 1! + 2! + ... + 2023!`.\n\nWhat is the last digit of the number `N`?\n",
+        "answer_variants": [
+          "0",
+          "1",
+          "3",
+          "5",
+          "8"
+        ],
+        "correct_answer": "3",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Numere puternice",
+        "markdown_statement": "A number is powerful if it is strictly greater than its reverse.\n\nFor example, 10 and 21 are powerful numbers, but 1 and 34 are not. The reverse of 10 is 1.\n\nHow many positive numbers up to 2023 (inclusive) are powerful?\n",
+        "answer_variants": [
+          "519",
+          "646",
+          "766",
+          "1258",
+          "1378"
+        ],
+        "correct_answer": "646",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "RedDrink",
+        "markdown_statement": "Matei is preparing to study assiduously for the Baccalaureate exam.\n\nTo have more energy, he bought 100 cans of RedDrink energy drink. Matei prefers this drink also because of the promotion he can benefit from, respectively if he recycles 7 empty aluminum RedDrink cans, he receives one full can in exchange.\n\nHe made a plan to drink 3 cans of RedDrink per day (in the morning, at noon, and in the evening), to sustain a large learning effort. If he does not have 3 cans available, he settles for 2 cans, and if he does not have 2 cans available, he settles for one.\n\nIf Matei recycles all the empty cans that can be converted into free RedDrink cans filled with drink, after how many days can Matei no longer drink any RedDrink can?\n",
+        "answer_variants": [
+          "34",
+          "37",
+          "39",
+          "41",
+          "42"
+        ],
+        "correct_answer": "39",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Expresie",
+        "markdown_statement": "The value of an expression of the form (a < b) is 1 if the expression is true and 0 if it is false. What is the value of the expression E below?\n\n`$$E = (123^{345} < 654^{274}) \\\n      + 2 * (345^{322} < 654^{294}) \\\n      + 4 * (923^{263} < 452^{284})\n$$`\n",
+        "answer_variants": [
+          "0",
+          "2",
+          "3",
+          "5",
+          "6"
+        ],
+        "correct_answer": "3",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Insule",
+        "markdown_statement": "In an infinite matrix (like a boundless ocean) where the white squares represent water, and the black squares represent strips of land.\n\nSeveral strips form an island if it is possible to reach from any strip on the island to any other strip on the island by going either horizontally or vertically on adjacent strips of land (without going on diagonals). An island can also be formed from a single strip of land. From a strip on an island, we cannot reach another strip on another island. The size of an island represents the number of strips that make up the island. In the figure below there are 4 such islands with sizes 1, 4, 4 and 24.\n\nWe assume that for each strip of land we know the size of the island it is part of. Given an infinite matrix in which we know that there are 30 strips of land and the following sorted list of the sizes of the islands to which each strip of land belongs:\n\n```\n1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4\n```\n\nfind the number of islands.\n```",
+        "answer_variants": [
+          "5",
+          "7",
+          "11",
+          "13",
+          "15"
+        ],
+        "correct_answer": "11",
+        "difficulty": "easy",
+        "image_path": "./images/2023-insule.png",
+        "image_content": "The image represents some islands with the dimensions 1, 4, 4 and 24, in a space of 9 by 13, with cells colored in white, representing empty cells, and cells colored in black to describe portions of islands, the description of the cells is indexed from 0, the cell (6, 4) is colored in black and represents the island of size 1, the cells (6, 1), (5, 1), (4, 1) and (4, 2) colored in black represent an island of size 4, the cells (3, 8), (3, 9), (4, 8), (4, 9) colored in black represent another island of size 4, and the cells (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (2, 4), (2, 5), (2, 11), (3, 5), (3, 6), (3, 11), (4, 6), (4, 11), (5, 6), (5, 10), (5, 11), (6, 6), (6, 7), (6, 8), (6, 9), (6, 10), (6, 11), (7, 6) are colored in black and form an island of size 24.\n"
+      },
+      {
+        "title": "Reciclare",
+        "markdown_statement": "Matei wants to recycle. He has 6 objects that he wants to throw away, and for each of them, he knows how much glass, how much plastic, and how much paper each object contains. Unfortunately, for technical reasons, he must throw each object into exactly one of the 3 selective recycling bins.\n\nHow many units of raw material can he recycle at most, if he throws the objects into the bins in an optimal way?\nThe recycled raw material is the glass thrown into the glass bin, the plastic thrown into the plastic bin, and the paper thrown into the paper bin.\n\nThe 6 objects that Matei has have:\n1. 4 units of glass, 5 units of plastic, and 3 units of paper.\n2. 10 units of glass, 0 units of plastic, and 5 units of paper.\n3. 3 units of glass, 9 units of plastic, and 4 units of paper.\n4. 5 units of glass, 5 units of plastic, and 5 units of paper.\n5. 1 unit of glass, 2 units of plastic, and 3 units of paper.\n6. 9 units of glass, 9 units of plastic, and 8 units of paper.\n",
+        "answer_variants": [
+          "14",
+          "32",
+          "41",
+          "74",
+          "90"
+        ],
+        "correct_answer": "41",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Fort Leon",
+        "markdown_statement": "The Fort Leon archipelago consists of 14 islands, most of the inhabitants being novice programmers.\n\nOne sunny day, the inhabitants of the archipelago thought that they would very much like to build more bridges between the islands so that they can leave from any island, cross each bridge only once, and return to the island from where they left. To fulfill their wish faster, they wrote a program to help them.\n\nUnfortunately, they wrote a wrong program, which provided them with the following way to build bridges between the 14 islands (see the attached picture).\n\nBecause they are very impatient, the inhabitants of Fort Leon ask you to help them, specifying the minimum number of bridges that must be added to those already indicated by the program they wrote, so that they can fulfill their wish.\n",
+        "answer_variants": [
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "correct_answer": "6",
+        "difficulty": "easy",
+        "image_path": "./images/2023-graf.png",
+        "image_content": "The image represents a set of 4 undirected graphs, not connected to each other, the first graph represents a complete graph of 3 nodes, the second graph represents a complete graph of 4 nodes, the third graph represents a complete graph of 4 nodes, and the last graph represents a complete graph of 3 nodes.\n"
+      },
+      {
+        "title": "Oferte",
+        "markdown_statement": "Matei wants to buy bags of his favorite candies. He has 4 offers available, from which he must choose **at most one**, which he can use as many times as possible.\n\nThe offers are as follows:\n1. First offer: for every 24 bags bought, the next 12 are free.\n2. Second offer: for every 15 bags bought, the next 6 are free.\n3. Third offer: for every 3 bags bought, the next one is free.\n4. Fourth offer: for every 40 bags bought, the next 20 are free.\n\nAssuming that one bag of candies costs one leu, how much must he pay at minimum to buy at least 100 bags?\n",
+        "answer_variants": [
+          "25",
+          "72",
+          "75",
+          "80",
+          "100"
+        ],
+        "correct_answer": "72",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Ap\u0103",
+        "markdown_statement": "Matei has many containers of 5, 7, and 10 liters. Matei can put K liters of water in containers if there exists a number of 5, 7, and 10 liter containers that he can choose such that the sum of the capacities of the chosen containers is exactly K. Specifically, Matei can put K liters of water in containers if there exist a, b, and c such that `$$5a + 7b + 10c = K$$`.\n\nWhat is the largest number of liters of water that he cannot put in containers?\n",
+        "answer_variants": [
+          "13",
+          "17",
+          "23",
+          "26",
+          "27"
+        ],
+        "correct_answer": "23",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Configura\u021bii",
+        "markdown_statement": "Netty is very concerned about the data security of the PCs in her company, so she thought about interconnecting the PCs to make data backup fast and secure. Because she doesn't know exactly how to interconnect the PCs, Netty called an Apache oracle who suggested several magical configurations to her.\n\nBecause the Apache oracle was very rushed, he only told her, in each configuration, the number of PCs that each PC in the company must be interconnected with. For example, the configuration `(2, 3, 1, 2)` means that one PC must be interconnected with two other PCs, another PC must be interconnected with 3 PCs, etc.\n\nSome of these configurations are feasible (for example, the configuration mentioned above), and others are not (for example, the configuration `(3, 2, 3)`). Knowing that the oracle suggested the following magical configurations to Netty:\n\n```\nC1 = (5, 2, 6, 4, 3, 4, 2, 2, 1, 1),\nC2 = (5, 1, 1, 4, 4, 3, 5, 2, 2, 2),\nC3 = (6, 4, 4, 3, 9, 2, 2, 2, 1, 1),\nC4 = (6, 2, 6, 2, 6, 2, 6, 2, 8, 2),\nC5 = (7, 6, 7, 3, 3, 2, 2, 2, 4, 4),\n```\n\nhelp Netty by determining the number of feasible configurations out of the 5 specified!\n\n**Note**: For each PC, there must be exactly as many connections as specified in the configuration.\n",
+        "answer_variants": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correct_answer": "3",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Algoritm",
+        "markdown_statement": "Alex, Dan, and Matei are good friends. They participated together in a programming contest forming a team and won the grand prize, an XBOX console. Since they get along well, they decide to share the grand prize, respectively each of them will play on the console for a week in turn. The three friends must now decide the order in which they will play on the console. Alex proposes to establish this order using the following algorithm which shuffles the three elements from the vector v located at positions 0, 1 and 2:\n\n```\nv = [Alex, Dan, Matei]\nfor i from 0 to 2\n        swap(v[i], v[random(3)])\n```\n\nwhere `swap(a,b)` interchanges the values of elements a and b, and `random(3)` returns a random number 0, 1 or 2 with the uniform probability 1/3.\n\nWhat is the chance that Matei will be generated in the first position (position 0) of the vector v using the algorithm above?\n",
+        "answer_variants": [
+          "1/2",
+          "1/3",
+          "1/4",
+          "8/27",
+          "3/10"
+        ],
+        "correct_answer": "8/27",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "\u0218iruri de caractere",
+        "markdown_statement": "Consider character strings of length 10 that contain the letters a and b, but without containing three consecutive occurrences of the letters a or b.\n\nFor example, the string `ababababab` is a positive example (verifies the rules), and the string `aaabababab` is a negative example (does not verify the rules).\n\nHow many positive examples of such character strings exist?\n",
+        "answer_variants": [
+          "68",
+          "110",
+          "175",
+          "178",
+          "288"
+        ],
+        "correct_answer": "178",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Probabilitate",
+        "markdown_statement": "What is, on average, the probability that the function below returns `true`?\nThe function `rnd()` returns a real random number uniformly distributed between 0 and 1.\n\nAttention: the function `rnd()` is not the same as the function `rand()` from C/C++.\n\n```\nbool F() {\n    if (rnd() < 0.5)\n        return true;\n    if (rnd() < 0.4)\n        return false;\n    return rnd() < 0.3;\n}\n```\n",
+        "answer_variants": [
+          "0.5",
+          "0.56",
+          "0.59",
+          "0.9",
+          "0.94"
+        ],
+        "correct_answer": "0.59",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Func\u021bii",
+        "markdown_statement": "The following 3 functions are given:\n\n```\nint A(int x) {\n    if (x <= 1)\n        return x;\n    return A(x - 1) + A(x - 2);\n}\n\nint B(int x) {\n    if (x <= 1)\n        return 1;\n    return B(x / 2) + B(x / 2);\n}\n\nint C(int x) {\n    if (x < 0)\n        return 0;\n    return 1 + C(x - 10);\n}\n```\n\nIt is assumed that the int data type used does not overflow and can save values as large as possible.\n\nConsidering the numbers:\n```\na = A(123456789)\nb = B(123456789)\nc = C(123456789)\n```\n\nWhich of the following inequalities is true?\n```",
+        "answer_variants": [
+          "a < b < c",
+          "c < b < a",
+          "b < a < c",
+          "c < a < b",
+          "a < c < b"
+        ],
+        "correct_answer": "c < b < a",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Puncte \u0219a",
+        "markdown_statement": "In a matrix M of dimension m\u00d7n, a saddle point is an element `M[i][j]` with the property that it is either the minimum on row i and the maximum on column j, or it is the maximum on row i and the minimum on column j.\n\nIf the elements of matrix M are a permutation of the set `{1,2,...,m\u22c5n}`, where m \u2265 3 and n \u2265 3, then the maximum number of saddle points that matrix M can have is:\n",
+        "answer_variants": [
+          "minimul dintre m \u0219i n",
+          "maximul dintre m \u0219i n",
+          "0",
+          "1",
+          "2"
+        ],
+        "correct_answer": "2",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Furnicu\u021ba",
+        "markdown_statement": "An ant is moving on a leaf, represented by a triangular matrix of size 2023, with rows and columns numbered from 1 (so the matrix has 2023 rows, and each row i in the matrix has i columns).\n\nIt would like to calculate in how many ways it can reach from the top of the leaf, that is, from cell `(1,1)`, to the base of the leaf, that is, on the last row of the matrix (in any of its cells), knowing that because it is so small it can move from a cell of the matrix only one step down or one step right-down (from cell `(i,j)` to `(i+1,j)` or `(i+1, j+1)`).\n\nBefore it could find a counting strategy, a caterpillar came and bit a corner of the leaf, namely cells `(x,1)` where x is a multiple of 100. Moreover, the greedy caterpillar also bit cell `(2001, 1999)`.\n\nThe ant no longer knows how to calculate how many paths it can take without passing through the bitten cells, so it asks you to calculate what is the largest power of 2 that divides the number of these paths.\n",
+        "answer_variants": [
+          "22",
+          "25",
+          "2021",
+          "23",
+          "0"
+        ],
+        "correct_answer": "25",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Joc",
+        "markdown_statement": "X and Y play the following game:\nIt starts with the number `p = 1`, and, in turn, X and Y (starting with X) multiply the number p by a number between 2 and 9.\n\nThe first one to reach `p >= n` wins, where n is a given number.\n\nIf X and Y play 9 games in which n is fixed in turn to the values:\n```\n37, 89, 167, 2920, 5832, 66666, 104970, 131313, 34012226\n```\n\nHow many times does X win?\n",
+        "answer_variants": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "correct_answer": "4",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Tastatur\u0103",
+        "markdown_statement": "Matei just bought the keyboard in the picture and wants to press a total of 10 keys. The first key he presses can be any of them, but being very lazy he wants that starting from the second press, each key he presses to be adjacent to the one he just pressed (the i-th key he presses is adjacent to the (i-1)-th key for 2 \u2264 i \u2264 10).\n\nTwo keys are adjacent if they are different and touch on a side or half-side. For example, the keys \"1\" and \"0\" are adjacent, but the keys \"7\" and \"5\", or \"+\" and \"*\" are not.\n\nIn how many ways can Matei press the keys?\n",
+        "answer_variants": [
+          "1212334",
+          "4200301",
+          "2204913",
+          "1150905",
+          "1200908",
+          "3433058",
+          "9507809",
+          "7756489",
+          "8890506",
+          "6632980"
+        ],
+        "correct_answer": "1200908",
+        "difficulty": "hard",
+        "image_path": "./images/2023-tastatura.png",
+        "image_content": "The image represents a numpad, with numlock, /, *, - being the first keys, on the next line followed by 7, 8, 9, +, followed by 4, 5, 6, the extension of the + key, 1, 2, 3, enter, followed by 0, . and the extension of the enter key, 0 occupies 2 spaces.\n"
+      },
+      {
+        "title": "Func\u021bie recursiv\u0103",
+        "markdown_statement": "Consider the following recursive function:\n\n```\nvoid f(int n, unsigned long long int k, unsigned long long int t)\n{\n    if(n >= 0)\n    {\n        if(k <= t)\n        {\n            cout << k << \" \";\n            f(n, k+1, t);\n        }\n        else\n            f(n-1, 1, 2*t);\n    }\n}\n```\n\nWhat is the sum of all the numbers that will be displayed on the screen after executing the call `f(30,1,1)`?\n",
+        "answer_variants": [
+          "2^31-1",
+          "2^31+1",
+          "2^32-1",
+          "2^32+1",
+          "2^29\u22c5(2^30+1)",
+          "2^30\u22c5(2^31+1)",
+          "(2^62+3\u22c52^31-4)/3",
+          "(2^62+3\u22c52^31-3)/2",
+          "(2^61+3\u22c52^30-3)/3",
+          "(2^61+3\u22c52^30-2)/3"
+        ],
+        "correct_answer": "(2^61+3\u22c52^30-2)/3",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Multipli de 2023",
+        "markdown_statement": "How many numbers of the form `11...100...0` (with m ones and n zeroes, for `n, m \u2265 1`) such that `m + n \u2264 15000` are multiples of 2023?\n",
+        "answer_variants": [
+          "82361",
+          "337365",
+          "141361",
+          "225563",
+          "130464",
+          "246577",
+          "331547",
+          "459011",
+          "178023",
+          "267908"
+        ],
+        "correct_answer": "130464",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      }
+    ]
+  },
+  {
+    "name": "Edi\u021bia 2022 Bis",
+    "problems": [
+      {
+        "title": "Cafea",
+        "markdown_statement": "Matei has 5 coffees. Each coffee has a volume (given in ml) and a concentration given in percentages. Matei can mix two coffees. If he mixes a coffee with `$$v_1$$` ml and concentration `$$c_1$$` with one with `$$v_2$$` ml and concentration `$$c_2$$` then he will obtain a coffee with:\n\n- volume `$$v_1 + v_2$$`\n- concentration `$$\\frac{c_1 \\cdot v_1 + c_2 \\cdot v_2}{v_1 + v_2}$$`\n\nThe satisfaction brought to Matei by a coffee with volume `$$v$$` and concentration `$$c$$` is `$$v \\cdot c$$`.\n\nKnowing that Matei has:\n\n * a coffee of 50 ml and a concentration of 40% (`c = 0.4`)\n * a coffee of 100 ml and a concentration of 30% (`c = 0.3`)\n * a coffee of 300 ml and a concentration of 10% (`c = 0.1`)\n * a coffee of 250 ml and a concentration of 10% (`c = 0.1`)\n * a coffee of 500 ml and a concentration of 50% (`c = 0.5`)\n\nWhat is the largest satisfaction that Matei can obtain by optimally mixing the coffees?\n",
+        "answer_variants": [
+          "10",
+          "355",
+          "250",
+          "40",
+          "450"
+        ],
+        "correct_answer": "355",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Furnicu\u021ba",
+        "markdown_statement": "Consider an infinite surface (matrix) downwards and to the right with the rows numbered from top to bottom and the columns from left to right. An ant explores this surface starting from the top left corner `(1,1)`. Because the ant is cautious and wants to always stay close to the area already explored (and marked with pheromones), the exploration is done by successively expanding the already traversed square from the top left corner.\n\nThus, at the beginning the ant goes down to the cell `(2,1)`, then goes right to the cell `(2,2)` and then goes up to the cell `(1,2)`, completing a `$$2 \\times 2$$` square. It extends this by going right to the cell `(1,3)`, then goes down to `(2,3)` and `(3,3)`, after which it moves left to the cells `(3,2)` and `(3,1)` completing a `$$3 \\times 3$$` square.\n\nIt extends this by going down to `(4,1)`, going right to `(4,4)` and then going up to `(1,4)`. Continuing in this way, the ant can explore an area as large as it wants. Below you can see the steps at which each cell was visited until the ant explores a `$$5 \\times 5$$` square.\n\n| 1  | 4  | 5  | 16 | 17 |\n|----|----|----|----|----|\n| 2  | 3  | 6  | 15 | 18 |\n| 9  | 8  | 7  | 14 | 19 |\n| 10 | 11 | 12 | 13 | 20 |\n| 25 | 24 | 23 | 22 | 21 |\n\nOn what row and on what column will the ant be at step `100001`?\n",
+        "answer_variants": [
+          "(144,316)",
+          "(145,316)",
+          "(145,317)",
+          "(316, 145)",
+          "(317,145)"
+        ],
+        "correct_answer": "(145,317)",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Parol\u0103",
+        "markdown_statement": "Matei has a new PC, which runs PearOS. Alex managed to steal his computer and is now trying to change his password.\n\nAlex knows that Matei has a password of length 10 characters consisting of lowercase letters of the english alphabet. Also, for a more pleasant user experience, when a wrong password is entered, PearOS notifies the user whether the true password is lexicographically smaller or larger than the one entered.\n\nIf Alex searches for the password optimally, then the number of attempts he will perform is:\n",
+        "answer_variants": [
+          "cuprins \u00eentre 0 \u0219i 30",
+          "cuprins \u00eentre 31 \u0219i 60",
+          "cuprins \u00eentre 61 \u0219i 90",
+          "cuprins \u00eentre 91 \u0219i 120",
+          "mai mare sau egal cu 121"
+        ],
+        "correct_answer": "cuprins \u00eentre 31 \u0219i 60",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Servere",
+        "markdown_statement": "Alex tried to organize an online contest, but a few minutes before its start, he realized that the platform is not powerful enough to host all the candidates and risks crashing during the test.\n\n`1000` candidates are participating in the contest and Alex wants to rent some servers.\nA server is characterized by its price (how much it costs Alex to rent the server for the duration of the test) and its capacity (the number of contestants the server can serve).\n\nAlex has to choose between the following server options:\n\n- servers with price `2` and capacity `2`;\n- servers with price `5` and capacity `10`;\n- servers with price `10` and capacity `23`.\n\nNote that Alex can rent any number of servers, regardless of whether they are of the same type or not.\n\nWhat is the minimum cost with which Alex can rent servers with the sum of capacities greater than or equal to `1000`?\n",
+        "answer_variants": [
+          "500",
+          "433",
+          "440",
+          "439",
+          "437"
+        ],
+        "correct_answer": "437",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Permutare",
+        "markdown_statement": "Matei has the following permutation:\n```\n9, 1, 2, 6, 5, 4, 3, 7, 10, 8\n```\n\nHe is allowed to perform at most `5` operations of swapping two adjacent elements. What is the smallest permutation in lexicographical order that he can obtain?\n",
+        "answer_variants": [
+          "1, 2, 5, 6, 9, 4, 3, 7, 10, 8",
+          "1, 2, 4, 6, 9, 5, 3, 7, 10, 8",
+          "1, 2, 6, 5, 4, 9, 3, 7, 10, 8",
+          "1, 2, 4, 9, 6, 5, 3, 7, 10, 8",
+          "1, 2, 4, 9, 5, 6, 3, 7, 10, 8"
+        ],
+        "correct_answer": "1, 2, 4, 9, 6, 5, 3, 7, 10, 8",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Foc",
+        "markdown_statement": "During the camp in the mountains, Alex has to light a fire.\nHe has at his disposal a pile of wood of different sizes, identified by numbers from 1 to 100. The only stick of size 1 is a match, which Alex has to use to light the fire.\nAlthough the small log overturns the big cart, a match cannot light a log. In fact, a piece of wood of size `d` that catches fire at time `t` ignites at time `t+1` all unlit pieces of size less than or equal to `2*d`.\n\nKnowing that the pile of wood contains pieces with the sizes:\n```\n1, 2, 2, 2, 3, 5, 5, 5, 7, 13, 14, 15, 15, 25, 35, 50, 50, 51, 78, 99, 100\n```\n\nAnd that Alex lights the match at time `t=1`, what is the first moment in time when all the wood is lit?\n```",
+        "answer_variants": [
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "correct_answer": "9",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Plant\u0103",
+        "markdown_statement": "Matei bought a new plant, which he must water daily, with exactly one liter of water.\n\nHe has four bottles, initially empty, with volumes of 2, 8, 10 and 20 liters.\n\nIn an operation, Matei can:\n\n- take a bottle, which he fills completely from the tap;\n- take two bottles and pour as much as possible from the first into the second (either until the first bottle is empty, or until the second bottle is full);\n- water the plant, if he has a bottle filled with exactly 1 liter.\n\nWe consider the following statements:\n\n1. Matei can water the plant in 6 moves.\n2. Matei can water the plant using only 3 bottles.\n3. Matei can water the plant without using more than 22 liters of water.\n4. Matei cannot water the plant.\n\nWhich of the statements is true?\n",
+        "answer_variants": [
+          "afirma\u021biile 1, 2 \u0219i 3",
+          "afirma\u021biile 1 \u0219i 2",
+          "afirma\u021bia 4",
+          "afirma\u021biile 2 \u0219i 3",
+          "afirma\u021biile 1, 2 \u0219i 4"
+        ],
+        "correct_answer": "afirma\u021bia 4",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Matrice p\u0103tratic\u0103",
+        "markdown_statement": "We consider a square matrix A of dimension `n = 1000`, having rows and columns indexed from 1.\n\nAny element `A[i][j]` of the matrix is equal to `((i+j) **mod** n) + 1`.\n\nIf `sumlin(i)` represents the sum of all elements located on row _i_ and `sumcol(j)` represents the sum of all elements located on column _j_, then the maximum value of the expression:\n\n```katex\n|sumlin(i)-sumcol(j)|\n```\n\nWhere `$$i, j \\in \\{1,2, \\ldots,n\\}$$`, is equal to:\n```",
+        "answer_variants": [
+          "0",
+          "500",
+          "1000",
+          "1998",
+          "500500"
+        ],
+        "correct_answer": "0",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "\u0218ir infinit",
+        "markdown_statement": "We consider the infinite sequence:\n```\n1234567891011121314151617181920 ...\n```\n\nObtained by concatenating all the digits of all non-zero natural numbers.\n\nConsidering the respective sequence as being indexed from 0, then the digit found at position `21052022` is equal to:\n```",
+        "answer_variants": [
+          "1",
+          "2",
+          "3",
+          "6",
+          "9"
+        ],
+        "correct_answer": "1",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Palindromuri",
+        "markdown_statement": "Uli discovered palindromes and is very passionate about them, so she wants to calculate how many palindromes are smaller than 2022.\n\nHowever, after a traumatic experience in physics class, Uli can no longer stand the digit `4`, so she wants to calculate all the palindromes between `0` (inclusive) and `2022` that do not contain the digit `4`.\n\nHow many such palindromes are there?\n",
+        "answer_variants": [
+          "99",
+          "100",
+          "101",
+          "102",
+          "103"
+        ],
+        "correct_answer": "99",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Divizori",
+        "markdown_statement": "How many numbers between `1` and `2,000,000,000` (inclusive) have exactly `5` divisors?\n",
+        "answer_variants": [
+          "0",
+          "12",
+          "34",
+          "47",
+          "156"
+        ],
+        "correct_answer": "47",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Matrice",
+        "markdown_statement": "What is the maximum sum of the elements of the matrix below, after multiplying some rows and/or columns (possibly even all of them) by $-1$? Multiplying a row or column by $-1$ means multiplying all its elements by $-1$.\n\n|  4  | -1 |  6  | 4  | -5 |\n|-----|----|-----|----|----|\n| -2  |-33 | -12 | 10 | -11|\n|  1  | 0  | 3   |-1  | 4  |\n|-99  | -98|-40  |34  | 33 |\n",
+        "answer_variants": [
+          "233",
+          "234",
+          "235",
+          "361",
+          "427"
+        ],
+        "correct_answer": "361",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Monede",
+        "markdown_statement": "Everyone has at home a box with 10 and 50 bani coins that they don't know what to do with.\nAlex has decided to change this. Starting now, he has decided to pay any amount as precisely as he can.\n\nSpecifically, if he has to pay at the store, he will try to:\n\n- give as many 50 bani coins as he can, without exceeding the total amount;\n- after he can no longer give 50 bani coins, he tries to give as many 10 bani coins as possible, also without exceeding the total amount;\n- after that he pays the remaining amount with 1 leu banknotes.\n\nNote that the cashier always gives the exact change, with the minimum number of coins necessary.\nInitially, Alex has:\n\n- 10 coins of 50 bani\n- 10 coins of 10 bani.\n\nWhat coins will Alex have left, if he has to pay, in order, the amounts `4.7, 2.3, 10.1, 3.5`?\n",
+        "answer_variants": [
+          "o moned\u0103 de 50 de bani \u0219i o moned\u0103 de 10 bani",
+          "dou\u0103 monede de 50 de bani",
+          "nicio moned\u0103",
+          "4 monede de 10 bani",
+          "o moned\u0103 de 50 de bani"
+        ],
+        "correct_answer": "4 monede de 10 bani",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Ac\u021biuni",
+        "markdown_statement": "Alex looks at the price of his shares on the market.\n\nInexplicably, the price of the shares at minute i is:\n\n```katex\n(i^3 + 7 \\cdot i^2 + 3 \\cdot i + 84) \\textbf{ mod } 100\n```\n\nHaving the price of the shares for minute 1, 2, ..., 100, Alex asks himself the following question: if he could, during these 100 minutes, buy a share and sell it later, what is the maximum profit he could obtain?\n```",
+        "answer_variants": [
+          "0",
+          "34",
+          "55",
+          "73",
+          "96"
+        ],
+        "correct_answer": "96",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Numere speciale",
+        "markdown_statement": "Let the \"special\" numbers be:\n\n```katex\n100, 356, 440, 1137, 1901\n```\n\nWe define the power of an integer x as the distance to the nearest special number, respectively the minimum value of the absolute value `|x - s|`, where `s` is one of the special numbers.\n\nHow many numbers between `1` and `2022` (inclusive) have a prime number as their power?\n",
+        "answer_variants": [
+          "141",
+          "2008",
+          "446",
+          "431",
+          "1577"
+        ],
+        "correct_answer": "431",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Fotoliu",
+        "markdown_statement": "Matei's grandmother has an armchair. The armchair is very old and arches have started to come out of the upholstery.\n\nWe can view the armchair as a square matrix of 100 by 100, having the 4 corners at coordinates `(0, 0)`, `(0, 100)`, `(100, 0)` and `(100, 100)`. Matei observed 5 arches, each represented by the two coordinates `(X_i, Y_i)`, which indicate where it pierces the armchair.\n\nObviously, Matei does not want to sit on an arch, so he wonders what is the area of the largest square included in the upholstery, with sides parallel to the coordinate axes and inside which there is no arch. It should be noted that the arches are allowed to be on the sides and corners of the square.\n\nThe arches are characterized by the following coordinates:\n\n```\n(48, 47), (64, 27), (54, 28), (80, 83), (92, 36)\n```\n\nWhat is the maximum side of a square completely included in the upholstery, with sides parallel to the coordinate axes, inside which there is no arch?\n",
+        "answer_variants": [
+          "23",
+          "33",
+          "43",
+          "53",
+          "63"
+        ],
+        "correct_answer": "53",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "\u00centreb\u0103ri",
+        "markdown_statement": "Alex meets two people.\nOne of the two is named Matei. Alex knows this, but he doesn't know which of them is named Matei.\nAlso, one of the two always tells the truth and the other always lies. Alex knows this too, but again, he doesn't know who is lying and who is telling the truth.\n\nAlex has in mind 5 questions he wants to use to find out if Matei is lying or not:\n\n1. Is Matei lying?\n2. Are you Matei?\n3. What would the other one say if I asked him if Matei is lying?\n4. What would you say if I asked you if Matei is lying?\n5. Is it true that `1+1=2`?\n\nAlex wants to ask exactly one question out of the 5 to identify Matei. Which of the 5 questions can he use?\n",
+        "answer_variants": [
+          "\u00eentrebarea 1",
+          "\u00eentreb\u0103rile 1 \u0219i 5",
+          "\u00eentrebarea 2",
+          "\u00eentreb\u0103rile 1 \u0219i 4",
+          "\u00eentreb\u0103rile 2, 3 \u0219i 4"
+        ],
+        "correct_answer": "\u00eentreb\u0103rile 2, 3 \u0219i 4",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Func\u021bie",
+        "markdown_statement": "What will be the output of the following code sequence at the call of function `g()`?\n\n```C++\nlong long f(long long a, long long b)\n{\n    if (a == 0)\n        return 0;\n    else if (a & 1)\n        return (b + f(a ^ 1, b)) % 137;\n    else\n        return f(a >> 1, b << 1);\n}\n\nvoid g()\n{\n    long long suma = 0;\n    for (long long i = 0; i < 2LL * 1000LL * 1000LL * 1000LL; i++) {\n        suma += f(i, i);\n        suma %= 137;\n    }\n\n    cout << \"Suma este \" << suma << '\\n';\n}\n```\n",
+        "answer_variants": [
+          "Suma este 0",
+          "Suma este 1",
+          "Suma este 4",
+          "Suma este 8",
+          "Suma este 16",
+          "Suma este 32",
+          "Suma este 64",
+          "Suma este 128",
+          "Suma este 256",
+          "Suma este 512"
+        ],
+        "correct_answer": "Suma este 4",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Turnule\u021be",
+        "markdown_statement": "Ema has 22 cubes as follows: 7 green, 8 blue, and 7 red.\n\nShe would like to see how many small towers she can form with them without a green cube being placed immediately above a red cube.\n\nIn how many different ways can she build small towers of this type using all the cubes? Two ways are different if the color sequences starting from the first cube at the bottom are different.\n",
+        "answer_variants": [
+          "23519245",
+          "1097450640",
+          "41409225",
+          "37268302",
+          "10803075",
+          "194276877",
+          "298507535",
+          "107567859",
+          "251890065",
+          "462058202"
+        ],
+        "correct_answer": "41409225",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Sosii",
+        "markdown_statement": "Two people are called _look-alikes_ if they resemble each other a lot.\nEvidently, the relation of _being a look-alike_ is one of equivalence because:\n\n- `A` is always a look-alike with `A`;\n- if `A` is a look-alike with `B`, then `B` is also a look-alike with `A`;\n- if `A` is a look-alike with `B` and `B` with `C`, then `A` is also a look-alike with `C`.\n\nWe call a pair `(A, B)` _wonderful_ if it simultaneously fulfills the following two conditions:\n\n- `A < B`\n- `A` and `B` are look-alikes.\n\nIn a group of `N` people numbered from `1` to `N`, Matei observed that there are exactly `2022` wonderful pairs.\n\nWhat is the smallest value of the number `N` for which there can exist exactly `2022` wonderful pairs?\n",
+        "answer_variants": [
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74"
+        ],
+        "correct_answer": "68",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      }
+    ]
+  },
+  {
+    "name": "Edi\u021bia 2022",
+    "problems": [
+      {
+        "title": "Exponent",
+        "markdown_statement": "What is the largest exponent `k` such that `$$12^k$$` divides the number `$$100!$$` ?\n",
+        "answer_variants": [
+          "8",
+          "25",
+          "33",
+          "48",
+          "97"
+        ],
+        "correct_answer": "48",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Matrice p\u0103tratic\u0103",
+        "markdown_statement": "Consider a square matrix A of size `$$10 \\times 10$$`, having the rows and columns indexed from 1.\n\nAny element `A[i][j]` of the matrix is equal to the minimum between i and j (`$$1 \\leq i,j \\leq 10$$`).\n\nThe sum of all elements in the matrix A is equal to:\n",
+        "answer_variants": [
+          "285",
+          "385",
+          "500",
+          "550",
+          "715"
+        ],
+        "correct_answer": "385",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Func\u021bie",
+        "markdown_statement": "For the positive natural number `n` we define `f(n)` as follows:\n\n- `f(1) = 1`\n- `f(n) = 1 + f(n/2)`, if n is even\n- `1 + f(3n+1)`, if n is odd and different from 1.\n\nFor example:\n```\nf(10) = 1 + f(5) = 1 + 1 + f(16) = 1 + 1 + 1 + f(8) = ... = 7\n```\n\nWhat is `f(2022)` equal to?\n```",
+        "answer_variants": [
+          "64",
+          "128",
+          "256",
+          "512",
+          "1024"
+        ],
+        "correct_answer": "64",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Pagini",
+        "markdown_statement": "The numbers from `1` to `20,000` are written in order in a book with `100` sheets (`200` pages), `100` on each page.\n\nMore precisely, the first sheet, made up of pages `1` and `2`, contains on the first page the numbers from `1` to `100` and on the second page the numbers from `101` to `200`. The second sheet, composed of pages `3` and `4`, contains the numbers from `201` to `400` etc.\n\nSomeone unbinds the book, mixes the sheets and binds it back together. Attention, the sheets are not rotated or turned over but only permuted.\n\nWhat is the probability that the numbers from `1150` to `1250` are still consecutive?\n",
+        "answer_variants": [
+          "1",
+          "1/2",
+          "1/99",
+          "1/100",
+          "99/10100"
+        ],
+        "correct_answer": "1/100",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Submul\u021bime de produs maxim",
+        "markdown_statement": "Let the following set of real numbers be:\n\n```\nA = {\n  -3000, 3000,\n  -2000, 2000,\n  -1000, 1000,\n  -13, 13, -7,\n  7, -5, 5, -1.5,\n  1.5, -0.75, 0.75,\n  -0.5, 0.5, 0\n}\n```\n\nWhat is the number of elements of the subset of maximum product from A?\n",
+        "answer_variants": [
+          "9",
+          "13",
+          "14",
+          "15",
+          "18"
+        ],
+        "correct_answer": "15",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "\u021aara fermecat\u0103",
+        "markdown_statement": "In the enchanted country, there are `100` cities, identified with the numbers from `0` to `99` and the following bidirectional roads:\n\n- Highways between the cities `(0 and 9)`, `(10 and 19)`, `(20 and 29)`, ..., `(90 and 99)`, whose crossing takes `4` hours;\n- Communal roads between the cities `(0 and 1)`, `(1 and 2)`, ..., `(98 and 99)`, whose crossing takes one hour.\n\nHow long does the fastest route from city `12` to city `72` take?\n",
+        "answer_variants": [
+          "29",
+          "30",
+          "34",
+          "35",
+          "38"
+        ],
+        "correct_answer": "34",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Matrice binar\u0103",
+        "markdown_statement": "Let a square matrix of size `2022` containing values of `1` and `0`, such that there exists exactly one value equal to `1` on each row and on each column.\n\nIn the matrix, it is permitted to swap two values from cells that are vertical or horizontal neighbors (we consider that two cells are neighbors if they have a common side).\n\nConsidering all matrices with such a property, what is the minimum number of swaps required to bring all values of `1` on the same row or on the same column?\n",
+        "answer_variants": [
+          "2022",
+          "511566",
+          "510555",
+          "1021110",
+          "1022121"
+        ],
+        "correct_answer": "1022121",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Ultima cifr\u0103",
+        "markdown_statement": "The last digit of the following number is:\n```katex\n1^1 + 2^2 + 3^3 + \\ldots + 2022^{2022}\n```\n",
+        "answer_variants": [
+          "0",
+          "1",
+          "3",
+          "5",
+          "9"
+        ],
+        "correct_answer": "5",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Numere Fibonacci",
+        "markdown_statement": "How many Fibonacci numbers are there in the closed interval `[1234567890, 9876543210]`?\n",
+        "answer_variants": [
+          "1",
+          "2",
+          "4",
+          "8",
+          "16"
+        ],
+        "correct_answer": "4",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Cicluri de lungime 3",
+        "markdown_statement": "Let the undirected graph `G` be given by the set of nodes:\n\nV = { 1, 2, \u2026, 1000 }\n\nAnd the set of edges:\n\nE = { (i, j) | i + j is a prime number, and 1 \u2264 i, j \u2264 1000}\n\nWhat is the number of distinct cycles of length 3 in graph G?\n(We consider that two cycles are distinct if they differ by at least one edge.)\n",
+        "answer_variants": [
+          "0",
+          "1",
+          "27",
+          "64",
+          "125"
+        ],
+        "correct_answer": "0",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Netville",
+        "markdown_statement": "In the city of Netville there are `14052022` houses, identified by the natural numbers `1, 2,..., 14052022`.\n\nIn most of the houses live students (or future students) of the Faculty of Mathematics and Computer Science, who thought of creating a computer network using the following rule:\n\nThe house with the number `h` (`$$2 \\leq h \\leq 14052022$$`) will be interconnected with all the houses whose number `d` is a divisor of `h` (`$$1 \\leq d < h$$`).\n\nFor example, the house with the number `10` will be interconnected with the houses with the numbers `1, 2, 5, 20, 30, ..., 14052020`.\n\nThe number of connections that must be made between all the `14052022` houses is equal to:\n",
+        "answer_variants": [
+          "233442104",
+          "226416093",
+          "219390082",
+          "205338061",
+          "248511938"
+        ],
+        "correct_answer": "219390082",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Salturi",
+        "markdown_statement": "Alex is playing a game. Initially, he is with his back against the wall.\n\nAt each step he can make a jump forward or backward of length equal to `$$2^k$$` units, where k > 0.\n\nTo avoid accidents, Alex will not perform the jump backwards if the resulting position is less than 0.\n\nWhat is the minimum number of jumps needed for Alex to reach position `1340291`?\n",
+        "answer_variants": [
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ],
+        "correct_answer": "8",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "P\u0103trate perfecte",
+        "markdown_statement": "What is the minimum number of perfect squares needed such that their sum is `2022`?\n\nFor example:\n\n- `$$2=1^2 + 1^2$$`, so the answer for `2` is `2`.\n- `$$10=3^2 + 1^2$$`, so the answer for `10` is also `2`.\n- `$$100 = 10^2$$`, so the answer for `100` is `1`.\n- `$$18 = 3^2 + 3^2$$`, so the answer for `18` is `2`.\n",
+        "answer_variants": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "correct_answer": "3",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Zaruri",
+        "markdown_statement": "On the table there are 3 dice. On each of the 6 faces of the dice there is a digit inscribed.\n\nThe digits inscribed on each die are the following:\n\n```\nZ_1 \u21a6 [1, 3, 2, 4, 5, 7]\nZ_2 \u21a6 [1, 7, 6, 2, 1, 5]\nZ_3 \u21a6 [7, 9, 8, 2, 4, 21]\n```\n\nWe say that a 3-digit number can be formed using the dice if we can arrange the 3 dice on the table such that the top faces describe that number.\n\nFor example, we can form the number `562` using the dice `Z_1`, `Z_2`, `Z_3` (in this order).\n\nHow many distinct 3-digit numbers can be formed with the 3 dice?\n",
+        "answer_variants": [
+          "125",
+          "317",
+          "499",
+          "521",
+          "729"
+        ],
+        "correct_answer": "521",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Semne plus/minus",
+        "markdown_statement": "For which of the following values of `n` does there exist a choice of plus/minus signs such that the expression `$$1 \\pm 2 \\pm 3 \\pm 4 \\pm \\ldots \\pm n$$` takes the value 0?\n",
+        "answer_variants": [
+          "2021",
+          "2022",
+          "2023",
+          "2025",
+          "2026"
+        ],
+        "correct_answer": "2023",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Func\u021bie Simpl\u0103",
+        "markdown_statement": "We consider the function:\n\n```C\nint h(int a, int b, int k)\n{\n    if (a <= 0) {\n        if (k == 1)\n            return a + b;\n        else\n            return b;\n    }\n    else\n        return h(a - b, b, k + 1);\n}\n```\n\nWhat will be the value of the expression `h(14052022, 23, 0)`?\n",
+        "answer_variants": [
+          "14",
+          "23",
+          "2022",
+          "610957",
+          "14051999"
+        ],
+        "correct_answer": "23",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Func\u021bie Grea",
+        "markdown_statement": "Consider the function:\n\n```C\nconst int kLim = 1000000;\n\nvoid fun(int a, int b, int c)\n{\n    if (a > kLim || b > kLim || c > kLim)\n        return;\n    if (a != c && b != c)\n        cout << c << '\n';\n    fun(a + 1, b, c + b);\n    fun(a, b + 1, c + a);\n}\n```\n\nWhich of the following numbers will be displayed at some point as a result of the call `fun(0, 0, 0)`?\n",
+        "answer_variants": [
+          "361",
+          "5051",
+          "1787",
+          "53411",
+          "41"
+        ],
+        "correct_answer": "361",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Triunghiuri",
+        "markdown_statement": "We have `10` sticks of the following lengths:\n\n3, 4, 5, 8, 10, 12, 14, 32, 57, 64\n\nWe want to use some of these sticks (possibly all) to construct the outline of a triangle (placing the sticks end to end). For each side of the triangle, we can use one or more sticks. The triangle must have a strictly positive area.\n\nHow many distinct possible areas can such a triangle have?\n",
+        "answer_variants": [
+          "8193",
+          "22",
+          "55558",
+          "11495",
+          "105693",
+          "234126",
+          "17293",
+          "16639",
+          "132",
+          "49763"
+        ],
+        "correct_answer": "16639",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Submul\u021bimi",
+        "markdown_statement": "Let `S` be the sum of all elements of all subsets with `617` elements of the set:\n```\n{ 1, 2, 3, ..., 1234 }\n```\n\nHow many digits does S have?\n",
+        "answer_variants": [
+          "325",
+          "376",
+          "392",
+          "404",
+          "415",
+          "427",
+          "440",
+          "455",
+          "467",
+          "489"
+        ],
+        "correct_answer": "404",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Apari\u021bii",
+        "markdown_statement": "Alex has visions. As he's on Facebook reading updates from friends instead of studying for tomorrow's exam, he starts seeing the word `picat` among the posts.\n\nGiven a string of characters `s` consisting of lowercase letters of the English alphabet (without diacritics) and punctuation marks representing a post, an occurrence of the word \"picat\" is determined by the numbers `a_1 < a_2 < a_3 < a_4 < a_5`, such that:\n\n* `s[a_1] = 'p'`\n* `s[a_2] = 'i'`\n* `s[a_3] = 'c'`\n* `s[a_4] = 'a'`\n* `s[a_5] = 't'`\n\nTwo occurrences are considered different if at least one of the numbers `a_1`, `a_2`, `a_3`, `a_4` or `a_5` is different in the two occurrences.\nAlex has just read the following post:\n\n```\nAzi am putut in sfarsit ca din intamplare sa vizitez muzeul cunoscut al satului: cand am pasit acolo am simtit ca totul este minunat.\n```\n\nHow many occurrences of the word `picat` exist in this post?\n",
+        "answer_variants": [
+          "665",
+          "714",
+          "1923",
+          "2154",
+          "1315",
+          "1276",
+          "956",
+          "1672",
+          "1024",
+          "1948"
+        ],
+        "correct_answer": "1672",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      }
+    ]
+  },
+  {
+    "name": "Edi\u021bia 2021",
+    "problems": [
+      {
+        "title": "Num\u0103r divizibil cu 7",
+        "markdown_statement": "What is the last digit of the largest 7-digit number, divisible by 7, which contains in its composition only digits strictly smaller than 7?\n",
+        "answer_variants": [
+          "0",
+          "2",
+          "3",
+          "5",
+          "6"
+        ],
+        "correct_answer": "0",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Parte \u00eentreag\u0103 superioar\u0103",
+        "markdown_statement": "Which expression correctly implements `$$\\lceil \\frac{n}{k} \\rceil$$` for all pairs `n, k` of non-zero natural numbers?\n\nNotations:\n * `$$\\lceil a\\rceil$$` represents the ceiling of the real number `a`, for example `$$\\lceil 2.8\\rceil = 3$$`.\n * `[n / k]` represents the quotient of the division of `n` by `k` and `n mod k` represents the remainder of the division of `n` by `k`).\n",
+        "answer_variants": [
+          "[n / k]",
+          "[(n+k) / k]",
+          "[(n+k-1) / k]",
+          "[n / (k-1)]",
+          "[n / k] + (n mod k)"
+        ],
+        "correct_answer": "[(n+k-1) / k]",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Func\u021bie",
+        "markdown_statement": "Consider the following code written in C++ / Pascal language:\n\n```C\nint f(int t[10000], int n) {\n    int i = 0, s = 0;\n    while (i < n) {\n        int j = i + 1;\n        while (j < n && t[i] == t[j])\n            j += 1;\n        s += 1;\n        i = j;\n    }\n    return s;\n}\n```\n\n```Pascal\nfunction f(t : MyArray; n : Integer) : Integer;\nvar i, s, j : Integer;\nbegin\ni := 0; s := 0;\nwhile i < n do begin\n    j := i + 1;\n    while (j < n) and (t[i] = t[j]) do\n        j := j + 1;\n    s := s + 1;\n    i := j;\nend;\nf := s;\nend;\n```\n\nDefinitions:\n * A subsequence of `t` is a list of values on consecutive ascending positions, e.g., `[t[3], t[4], t[5]]`.\n * A sub-sequence of `t` is a list of values on ascending ordered positions (not necessarily consecutive), e.g., `[t[3], t[5], t[9]]`.\n * \nAssuming that the array `t` consists of `n` numbers sorted in ascending order, specify what `f(t, n)` returns:\n```",
+        "answer_variants": [
+          "num\u0103rul valorilor distincte din tabloul t",
+          "lungimea maxim\u0103 a unei subsecven\u021be din tabloul t format\u0103 din valori egale",
+          "num\u0103rul subsecven\u021belor strict cresc\u0103toare din tabloul t",
+          "lungimea maxim\u0103 a unui sub\u0219ir din tabloul t format din valori egale",
+          "num\u0103rul valorilor care se repet\u0103 de cel pu\u021bin dou\u0103 ori din tabloul t"
+        ],
+        "correct_answer": "num\u0103rul valorilor distincte din tabloul t",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Schimb de c\u0103r\u021bi de vizit\u0103",
+        "markdown_statement": "In a conference room there are several people, each having a sufficiently large stock of business cards.\n\nKnowing that any two people can exchange business cards at most once and `23052021` exchanges have been made, what is the minimum number of people that can be in the room?\n",
+        "answer_variants": [
+          "4801",
+          "4802",
+          "4803",
+          "6790",
+          "6791"
+        ],
+        "correct_answer": "6791",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Arbori par\u021biali",
+        "markdown_statement": "For a graph `G`, a spanning tree is a connected graph, without cycles, containing the same number of nodes as `G` and only edges from `G` (but not necessarily all of them).\n\nThe number of spanning trees of the graph below is equal to:\n",
+        "answer_variants": [
+          "12",
+          "11",
+          "9",
+          "15",
+          "16"
+        ],
+        "correct_answer": "11",
+        "difficulty": "easy",
+        "image_path": "./images/2021-arbori-partiali.png",
+        "image_content": "The given image describes an undirected graph with 5 nodes and 6 edges, an edge from node 0 to 2, from 0 to 4, from 2 to 3, from 2 to 4, from 4 to 1 and from 1 to 3.\n"
+      },
+      {
+        "title": "Pseudo-palindrom",
+        "markdown_statement": "A natural number is called a palindrome if it reads the same from left to right and from right to left.\n\nFor example, `13231` and `2662` are palindromes, but `145` or `1234322` are not.\n\nA natural number is called a pseudo-palindrome if its digits can be reordered so that it becomes a palindrome (in particular, any palindrome is also a pseudo-palindrome).\n\nFor example, `13321` and `2626` are pseudo-palindromes.\n\nLet `X` be the largest pseudo-palindrome number less than or equal to `1000465`. What is the remainder of `X` when divided by `37`?\n",
+        "answer_variants": [
+          "36",
+          "4",
+          "1",
+          "35",
+          "25"
+        ],
+        "correct_answer": "35",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Adunare",
+        "markdown_statement": "The following addition is given:\n\n```\nERAM + MARE = MARET\n```\n\nEach uppercase letter represents a digit (not necessarily distinct from the others).\n\nBeing the first digits of the numbers, the digits corresponding to `M` and `E` must be different from 0.\n\nWhat is the value of the sum `M + A + R + E + T`?\n",
+        "answer_variants": [
+          "21",
+          "7",
+          "16",
+          "18",
+          "30"
+        ],
+        "correct_answer": "18",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Creioane",
+        "markdown_statement": "Ionel has 10 pencils. The lengths of each pencil are:\n\n```\n4, 3, 7, 8, 7, 4, 5, 8, 13, 15\n```\n\nHe wants to obtain pencils having only two different lengths. To achieve this, he can shorten (by sharpening) some pencils.\n\nWhat is the maximum sum of the lengths of the pencils that Ionel can obtain, after performing the operations?\n",
+        "answer_variants": [
+          "46",
+          "50",
+          "54",
+          "56",
+          "62"
+        ],
+        "correct_answer": "54",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Mul\u021bime 13-liber\u0103",
+        "markdown_statement": "A set of natural numbers is called 13-free if we cannot obtain the number 13 as the sum of **distinct** elements from the set.\n\nFor example, the set `{ 1, 5, 7, 11 }` is not 13-free because `1 + 5 + 7 = 13`, but the set `{ 1, 5, 6 }` is 13-free (note that although `1 + 6 + 6 = 13`, the described condition is not violated, 6 being used twice).\n\nWhat is the maximum cardinality of a 13-free subset of the set `1, 2, 3, ..., 10`?\n",
+        "answer_variants": [
+          "5",
+          "4",
+          "3",
+          "6",
+          "8"
+        ],
+        "correct_answer": "5",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Num\u0103r prim",
+        "markdown_statement": "Let `n` be the largest 5-digit **prime** natural number with all distinct digits.\nWhat is the remainder of the division of `n` by 37?\n",
+        "answer_variants": [
+          "27",
+          "4",
+          "11",
+          "15",
+          "31"
+        ],
+        "correct_answer": "15",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Pa\u0219i",
+        "markdown_statement": "Do you remember Cristian the mischievous? His father decided to teach him some arithmetic.\n\nHe says that from a natural number `x` one can reach a natural number `y` (`y > x`) by going through the numbers between them using a sequence of steps.\n\nThe length of each step is positive and can be:\n * Equal to the length of the previous step, or\n * Greater by 1, or\n * Smaller by 1.\n\nThe lengths of the first and last step must be equal to 1.\n\nThe problem given to Cristian is to find the minimum number of steps to get from `2021` to `3110`. What should Cristian choose?\n",
+        "answer_variants": [
+          "64",
+          "65",
+          "66",
+          "67",
+          "68"
+        ],
+        "correct_answer": "65",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Postere",
+        "markdown_statement": "Mayor P. has to cover a wall that is 100 m long and 1 m high, which he wants to fill with advertising posters.\n\nFor this purpose, he bought 8 posters, with a height equal to 1 m and the following widths (expressed in meters):\n\n```\n12, 27, 13, 25, 26, 38, 28, 38\n```\n\nHe will have to arrange the posters along the wall. The posters are not allowed to overlap and cannot exceed the edges of the wall.\n\nWhat is the maximum wall area he can cover using the purchased posters (expressed in `$$m^2$$`)?\n",
+        "answer_variants": [
+          "93",
+          "94",
+          "95",
+          "96",
+          "97"
+        ],
+        "correct_answer": "94",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Triunghi infinit",
+        "markdown_statement": "We consider the infinite triangle below, formed of natural numbers, in which the number 1 is at level 1, the numbers 2 and 3 are at level 2, the numbers 4, 5 and 6 are at level 3, and so on.\n\nFor a certain level `k`, we want to calculate the sum of the numbers from the **interior** of the triangle which stops at level `k`.\n\nFor example, for level `k = 5` the numbers from the interior of the created triangle are `5, 8, 9`, and their sum is `22`, and for `k = 7` the numbers from the interior of the created triangle are `5, 8, 9, 12, 13, 14, 17, 18, 19, 20` and their sum is `135`.\n\nCalculate the sum of the numbers from the interior of the triangle which stops at level `k = 2021`.\n",
+        "answer_variants": [
+          "2076403516157",
+          "2080520640766",
+          "2080520640767",
+          "2084643884965",
+          "2084643884966"
+        ],
+        "correct_answer": "2080520640766",
+        "difficulty": "medium",
+        "image_path": "./images/2021-triunghi-infinit.png",
+        "image_content": "The given image describes an infinite triangle of natural numbers, in which the number 1 is at level 1, the numbers 2 and 3 are at level 2, the numbers 4, 5 and 6 are at level 3 and so on.\n"
+      },
+      {
+        "title": "Domino",
+        "markdown_statement": "Let `A` be a binary matrix with 50 rows and 50 columns (numbered from 1 to 50).\n\nThe cell on row `i` and column `j` contains the value 1 if and only if the number `$$50 \\cdot (i-1) + j$$` is divisible by 7 **or** by 13, otherwise it contains the value 0.\n\nWe want to place a single \"domino\" (piece of size `$$1 \\times 2$$` or `$$2 \\times 1$$`) in the matrix. The domino must cover 2 neighboring (horizontally or vertically) cells of 0 of the matrix.\n\nIn how many ways can we do this?\n",
+        "answer_variants": [
+          "1479",
+          "1480",
+          "1520",
+          "2959",
+          "3039"
+        ],
+        "correct_answer": "2959",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Algoritm de acoperire",
+        "markdown_statement": "Consider the following algorithm for covering a sum of money, using the banknotes available in the wallet:\n\nWhile the sum is uncovered and we have in the wallet a banknote with a value smaller than or equal to the sum, we choose the largest banknote of this type, take the banknote out of the wallet and reduce the sum by its value.\n\nIf the algorithm ends with the sum 0, it has succeeded, otherwise it has failed.\n\nDepending on the configuration of available banknotes and the sum to be covered, it is possible that this algorithm does not find a solution even though it exists.\n\nFor example, if we have the banknotes `{1, 1, 4, 5, 6}` and we need to cover the sum `S = 9`, the algorithm will select the banknotes `6, 1, 1`, after which it will block, because it can no longer cover the remaining sum (equal to 1). However, there is the solution `{4, 5}` which completely covers the sum. We call such a configuration of available banknotes, respectively the sum to be covered, a counterexample for the described algorithm.\n\nLet `S_MIN` be the smallest sum to be covered that appears in a counterexample built only with the Romanian banknote types in circulation, namely: `{1, 5, 10, 50, 100, 200, 500}`. Each banknote type can be used any number of times (including none).\n\nWhat is the remainder of `S_MIN` when divided by 37?\n",
+        "answer_variants": [
+          "13",
+          "3",
+          "8",
+          "18",
+          "23"
+        ],
+        "correct_answer": "8",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Dreptunghiuri",
+        "markdown_statement": "How many distinct rectangles are in the following figure?\n```\n+------+---+---+---+---+\n|      |   |   |   |   |\n+--+---+   +---+   |   |\n|  |   |   |   |   |   |\n+--+---+---+---+---+   |\n|  |       |       |   |\n+--+---+---+---+---+---+\n|      |   |   |       |\n+------+---+---+-------+\n```\n",
+        "answer_variants": [
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "correct_answer": "43",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Ecua\u021bie",
+        "markdown_statement": "On the table, the equation `a + b = c` is written. After a massive earthquake, all the digits and mathematical signs were permuted among themselves and a new \"equation\" was obtained (obviously wrong):\n\n```\n129129851 = 29552 + 1177003\n```\n\nWhat could have been the initial value of `c`?\n",
+        "answer_variants": [
+          "8739191",
+          "3001892",
+          "3072104",
+          "3735094",
+          "5790835",
+          "7192195",
+          "8952530",
+          "15038950",
+          "15111922",
+          "15839920"
+        ],
+        "correct_answer": "15111922",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Date robuste",
+        "markdown_statement": "In this problem we will refer to calendar dates that take into account the year, month, day, hour and minute.\n\nWe say that such a date is robust if we can uniquely deduce which valid date a set of numbers refers to, without knowing the correspondence between values and the date fields.\n\nFor example, having the values `{3, 20, 30, 53, 2021}`, we know that it can only be `30.03.2021 20:53`, so this date is robust. On the other hand, the date `23.05.2021 20:53` is not robust, because the set `{5, 20, 23, 53, 2021}` can also identify other dates (for example, `20.05.2021 23:53`).\n\nHow many dates between `01.01.2021 00:00` and `31.12.2021 23:59` (inclusive) are robust?\n\nA date is valid if the hour is in the interval `[0, 23]`, the minute in `[0, 59]`, the month in `[1, 12]`, the day in the interval corresponding to that month according to the 2021 year calendar.\n",
+        "answer_variants": [
+          "27412",
+          "29568",
+          "35797",
+          "37409",
+          "44382",
+          "44516",
+          "46870",
+          "512260",
+          "525600",
+          "535680"
+        ],
+        "correct_answer": "44382",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Secret",
+        "markdown_statement": "Consider 7 children (identified by numbers from 1 to 7) and the friendship relations (bidirectional):\n\n```\n{(1, 2), (4, 5), (4, 6), (6, 7), (7, 2), (4, 2), (3, 1), (5, 6), (4, 3), (3, 2)}\n```\n\nOn day 0, child 5 learns a secret from the teacher (that she wants to organize a name day celebration for child 2 at the end of the 4th day).\n\nIn each of the following 4 days, the following happens:\n\nEach child who knows the secret chooses exactly one random friend (equiprobably from his/her list of friends) and communicates the secret to him/her as well (it may happen that a child communicates the secret multiple times to the same friend, on different days).\n\nThus, new children can learn the secret, which they will further communicate starting with the following days.\n\nWhat is the probability for child 2 to learn the secret at the latest at the end of the 4th day?\n\n_Choose the variant closest to the real answer._\n",
+        "answer_variants": [
+          "0%",
+          "26%",
+          "32%",
+          "44%",
+          "58%",
+          "68%",
+          "76%",
+          "85%",
+          "94%",
+          "100%"
+        ],
+        "correct_answer": "68%",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Angaja\u021bi",
+        "markdown_statement": "The company _Grigorescu: Grilles, Barbecues and Railings_ has 7 employees. Tomorrow has a total of 1440 minutes. Each employee knows exactly how many minutes they can work tomorrow. These values are given by the sequence:\n\n```\n480, 360, 333, 1000, 285, 560, 15\n```\n\nAn employee who can work `X` minutes can choose any continuous interval of `X` minutes that starts at a fixed minute and is fully included in the 1440 minutes of the day.\n\nThe employees want to coordinate their choices so that any two of them have at least one minute in common in their schedule.\n\nHow many configurations of choices satisfy this requirement? The answer is very large, so we are interested in the remainder of this number when divided by `1000000007`.\n\nA configuration `A` differs from a configuration `B` if there is at least one employee who chose a specific interval in `A` and a different interval in `B`.\n",
+        "answer_variants": [
+          "82930407",
+          "195773645",
+          "231919841",
+          "353129100",
+          "371820425",
+          "469187746",
+          "715377483",
+          "67843200",
+          "802170567",
+          "918401827"
+        ],
+        "correct_answer": "195773645",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      }
+    ]
+  }
+]

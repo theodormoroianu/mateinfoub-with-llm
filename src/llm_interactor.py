@@ -8,6 +8,12 @@ from together import Together
 
 from enum import Enum
 
+# Get the logger for the 'google.genai' module
+logger = logging.getLogger("google.genai")
+
+# Set the logging level to WARNING or higher to suppress INFO and DEBUG messages
+logger.setLevel(logging.WARNING)
+
 # Gemini API key and model
 gemini_api_key = os.environ["GEMINI_API_KEY"]
 gemini_client = Gemini(api_key=gemini_api_key)
@@ -15,15 +21,21 @@ gemini_nr_questions = 0
 
 
 def ask_gemini(question: str) -> str:
-    global gemini_nr_questions
-    gemini_nr_questions += 1
-    logging.debug(f"Sending a question #{gemini_nr_questions} to gemini...")
-    response = gemini_client.models.generate_content(
-        model="gemini-2.0-flash",
-        contents=question,
-    )
-    logging.debug(f"Received a response.")
-    return response.text
+    try:
+        global gemini_nr_questions
+        gemini_nr_questions += 1
+        logging.debug(f"Sending a question #{gemini_nr_questions} to gemini...")
+        response = gemini_client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents=question,
+        )
+        logging.debug(f"Received a response.")
+        return response.text
+    except Exception as e:
+        logging.error(f"Failed to get a response from Gemini: {e}")
+        logging.error("Retrying in 15 seconds...")
+        time.sleep(5)
+        return ask_gemini(question)
 
 
 # Mistral API key and model

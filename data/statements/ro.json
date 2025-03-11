@@ -1,0 +1,1631 @@
+[
+  {
+    "name": "Edi\u021bia 2024",
+    "problems": [
+      {
+        "title": "Koningsberg",
+        "markdown_statement": "Se d\u0103 harta al\u0103turat\u0103.\n\nHarta reprezint\u0103 un r\u00e2u (albastru), dou\u0103 maluri \u0219i patru insule (verde), precum \u0219i opt poduri (negru).\n\nCare este num\u0103rul minim de poduri ce trebuie construite astfel \u00eenc\u00e2t un turist s\u0103 poat\u0103 traversa toate podurile exact o dat\u0103?\n\n**Aten\u021bie:** turistul \u00ee\u0219i poate \u00eencepe traseul oriunde dore\u0219te (pe un mal sau pe o insul\u0103) \u0219i, de asemenea, poate termina traseul oriunde dore\u0219te.",
+        "answer_variants": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "correct_answer": "1",
+        "difficulty": "easy",
+        "image_path": "./images/2024-koningsberg.png",
+        "image_content": "Imaginea reprezinta o hart\u0103, avem un rau (reprezentat de culoarea albastru), dou\u0103 maluri, un mal st\u00e2ng \u0219i un mal drept, \u0219i patru insule (reprezentate de culoarea verde), precum \u0219i opt poduri (reprezentat de culoarea negru), de la stanga la dreapta prima insul\u0103 este conectat\u0103 de cele dou\u0103 maluri, malul st\u00e2ng respectiv drept, prin dou\u0103 poduri, urmatoarele dou\u0103 insule, la dreapta primei insule descrise, sunt una deasupra celeilalte, insula aflata deasupra se contecteaza cu prima insul\u0103 descris\u0103 printr-un pod \u0219i se mai conecteaz\u0103 cu insula aflat\u0103 dedesupt, tot prin intermediul unui pod, ultima insul\u0103, \u0219i mai la dreapta fa\u021b\u0103 de cele dou\u0103 insule, se contecteaz cu insula de la stan\u00e2nga care se afla dedesupt, \u0219i cu cele dou\u0103 maluri, av\u00e2nd un total de trei poduri, \u0219i mai la st\u00e2nga se afl\u0103 ulimul pod care conecteaz\u0103 cele dou\u0103 maluri."
+      },
+      {
+        "title": "Buseala",
+        "markdown_statement": "Se d\u0103 urm\u0103toarea secven\u021b\u0103 de cod:\n\n```c++\nint n = 3;\nfor (int i = 0; i < n; i--) {\n    cout << '$';\n}\n```\n\nCare din urm\u0103toarele modific\u0103ri va face codul s\u0103 afi\u0219eze exact de 3 ori caracterul dolar (i.e., \"$$$\")?\n\n1. \u00eenlocuim \"n = 3\" cu \"n = -3\"\n2. \u00eenlocuim \"int i = 0\" cu \"long i = 0\"\n3. \u00eenlocuim \"i < n\" cu \"-i < n\"\n4. \u00eenlocuim \"i < n\" cu \"i + n\"\n5. \u00eenlocuim \"i--\" cu \"n--\"\n6. \u00eenlocuim \"cout << '$'\" cu \"cout << \"$$$\"\"",
+        "answer_variants": [
+          "1, 2 si 3.",
+          "2, 3 si 4.",
+          "3, 4 si 5.",
+          "3, 5 si 6.",
+          "1, 3 si 6."
+        ],
+        "correct_answer": "3, 4 si 5.",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Text",
+        "markdown_statement": "Se d\u0103 urm\u0103toarea list\u0103 de cuvinte:\n\n```c++\nchar cuvinte[10][5] = {\n  \"mate\",\n  \"buri\",\n  \"mute\",\n  \"mese\",\n  \"cute\",\n  \"mare\",\n  \"iute\",\n  \"sute\",\n  \"sate\",\n  \"muri\"\n};\n```\n\nDou\u0103 cuvinte sunt _similare_ dac\u0103 sunt exact la o liter\u0103 distan\u021b\u0103 (adic\u0103 se poate schimba exact o liter\u0103 din primul cuv\u00e2nt astfel \u00eenc\u00e2t el s\u0103 devin\u0103 egal cu al doilea cuv\u00e2nt). De exemplu, \"abab\" este similar cu \"abbb\", dar \"aaaa\" nu este similar cu \"aabb\" \u0219i de asemenea \"aaaa\" nu este similar cu \"aaaa\".\n\nC\u00e2te perechi neordonate (perechea (a, b) este considerat\u0103 egal\u0103 cu perechea (b, a)) de cuvinte similar exist\u0103?",
+        "answer_variants": [
+          "3",
+          "7",
+          "11",
+          "15",
+          "19"
+        ],
+        "correct_answer": "11",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "APM-uri",
+        "markdown_statement": "C\u00e2\u021bi arbori par\u021biali de cost minim are urm\u0103torul graf?",
+        "answer_variants": [
+          "6",
+          "5",
+          "7",
+          "3",
+          "9"
+        ],
+        "correct_answer": "7",
+        "difficulty": "easy",
+        "image_path": "./images/2024-APM-uri.png",
+        "image_content": "Imaginea reprezint\u0103 un graf neorientat cu 6 noduri \u0219i 7 muchii, fiecare muchie are ponderi asociate, anume avem muchia de la 1 la 2 cu pondere 2, 1 la 4 cu ponderea 2, 2 la 5 cu ponderea 2, 2 la 3 cu ponderea 1, 3 la 6 cu ponderea 2, 4 la 5 cu ponderea 2 \u0219i 5 la 6 cu ponderea 1."
+      },
+      {
+        "title": "Bilete norocoase",
+        "markdown_statement": "Alexandrina, fiind pasionat\u0103 de transport public, a cump\u0103rat 1 milion de bilete de autobuz, av\u00e2nd coduri distincte \u00eentre ele, formate din exact 6 cifre. Un bilet este considerat norocos dac\u0103 suma primelor 3 cifre ale sale este egal\u0103 cu suma ultimelor 3. De exemplu, biletul cu codul 000013 are suma primelor 3 cifre egal\u0103 0 \u0219i suma ultimelor 3 cifre egal\u0103 cu 4.\n\nAjuta\u021bi-o pe Alexandrina s\u0103 numere c\u00e2te bilete norocoase de\u021bine!",
+        "answer_variants": [
+          "50412",
+          "55252",
+          "57823",
+          "49575",
+          "45198"
+        ],
+        "correct_answer": "55252",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Cel mai mic num\u0103r reprezentabil",
+        "markdown_statement": "Marius i-a cump\u0103rat feti\u021bei sale, Luna, un calculator de juc\u0103rie. \u00cen mod curios, acest calculator are un procesor care func\u021bioneaz\u0103 pe 10 bi\u021bi. O variabil\u0103 de tip num\u0103r real p\u0103streaz\u0103 valoarea sa \u00een urm\u0103torul format: `$$m \\ \\times \\ 2^{-e}$$`, unde m \u0219i e sunt numere naturale a c\u0103ror reprezentare binar\u0103 este p\u0103strat\u0103 \u00een variabil\u0103. Mai exact primii 3 bi\u021bi semnificativi reprezint\u0103 valoarea lui e \u0219i urm\u0103torii 7 reprezint\u0103 valoarea lui m.\n\nDe exemplu, variabila x dat\u0103 prin secven\u021ba de bi\u021bi 1010101010 reprezint\u0103 num\u0103rul:\n```KaTeX\n(32 \\ + \\ 8 \\ + \\ 2) \\ \\times \\ 2^{-5} \\ = \\ 1.3125\n```\n\nMarius \u00eei d\u0103 urm\u0103toarea tem\u0103 Lunei: care este cea mai mic\u0103 valoare nenul\u0103 care poate fi reprezentat\u0103 de o variabil\u0103 \u00een noua ei juc\u0103rie? O pute\u021bi ajuta?",
+        "answer_variants": [
+          "0.001",
+          "0.0078125",
+          "0.00390625",
+          "0.005859375",
+          "0.015625"
+        ],
+        "correct_answer": "0.0078125",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Tastatur\u0103 rotund\u0103",
+        "markdown_statement": "La ora de design hardware, Teo inventeaz\u0103 o tastatur\u0103 circular\u0103 care con\u021bine cifrele de la 0 la 9 \u00een ordine cresc\u0103toare \u0219i un ac care indic\u0103 c\u0103tre una dintre ele. Aceast\u0103 tastatur\u0103 poate face de oric\u00e2te ori una dintre urm\u0103toarele dou\u0103 opera\u021bii:\n\n1. s\u0103 scrie pe ecran o dat\u0103 cifra c\u0103tre care indic\u0103 acul\n2. mut\u0103 acul pe pozi\u021bia succesoare (dac\u0103 acul ar\u0103ta c\u0103tre 0, va fi mutat c\u0103tre cifra 1; dac\u0103 ar\u0103ta c\u0103tre 9, va fi mutat c\u0103tre cifra 0)\n\nIni\u021bial acul arat\u0103 c\u0103tre cifra 0. Care este num\u0103rul **minim** de opera\u021bii de care este nevoie pentru a scrie pe ecran num\u0103rul 11052024?",
+        "answer_variants": [
+          "41",
+          "42",
+          "43",
+          "44",
+          "45"
+        ],
+        "correct_answer": "42",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Sockets",
+        "markdown_statement": "\u00cen datacenter-ul UniBuc, un server A de calcul \u0219tiin\u021bific porne\u0219te o conexiune c\u0103tre un serviciu extern o dat\u0103 la 17 **secunde**. Un alt server B porne\u0219te c\u00e2te o conexiune o dat\u0103 la 21 **secunde**.\n\nAlexandru, noul tehnician-\u0219ef al datacenter-ului, a f\u0103cut un program care monitorizeaz\u0103 num\u0103rul de conexiuni pornite la orice moment de timp. \u0218tiind c\u0103 fiecare conexiune r\u0103m\u00e2ne deschis\u0103 exact 5 **minute** de la pornire, care este num\u0103rul maxim de conexiuni care pot exista simultan?",
+        "answer_variants": [
+          "29",
+          "30",
+          "31",
+          "32",
+          "33"
+        ],
+        "correct_answer": "33",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Alian\u021be",
+        "markdown_statement": "\u0218tefan \u00eempreun\u0103 cu cei 23 de prieteni ai s\u0103i joac\u0103 un joc de strategie.\n\nAce\u0219tia primesc un ID unic \u00een cadrul jocului, un num\u0103r din intervalul [2, N+1] unde N este num\u0103rul de juc\u0103tori.\n\nJuc\u0103torii formeaz\u0103 alian\u021be astfel: doi juc\u0103tori sunt \u00een aceea\u0219i alian\u021b\u0103 dac\u0103 ID-urile lor au acela\u0219i num\u0103r de divizori (de exemplu juc\u0103torul cu ID-ul 2 este \u00een aceea\u0219i alian\u021b\u0103 cu juc\u0103torul cu ID-ul 3). Comunicarea este foarte important\u0103 \u00een acest joc, iar dup\u0103 stabilirea alian\u021belor doar membrii aceleia\u0219i alian\u021be pot stabili conexiuni securizate bidirec\u021bionale \u00eentre ei prin care comunic\u0103.\n\nCare este num\u0103rul total de conexiuni securizate ce se pot stabili?",
+        "answer_variants": [
+          "63",
+          "61",
+          "62",
+          "65",
+          "64"
+        ],
+        "correct_answer": "63",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Cifre distincte",
+        "markdown_statement": "Mara este pasionat\u0103 de numere. Dup\u0103 ce a analizat foarte multe tipuri de numere\n(pare/impare, prime, palindrom, p\u0103trate perfecte etc.)\n\u0219i-a dat seama c\u0103 favoritele ei sunt numerele cu toate cifrele distincte care nu con\u021bin cifra 0.\n\nMara a f\u0103cut o groaz\u0103 de studii pentru numerele scrise \u00een baza 10 dar acum este curioas\u0103 ce se \u00eent\u00e2mpl\u0103 \u00een alte baze de numera\u021bie. De exemplu, pentru baza 2 \u0219i-a dat seama c\u0103 \u00eei place doar un num\u0103r, iar pentru baza 3 \u00eei plac 4 numere.\n\nC\u00e2te numere o s\u0103-i plac\u0103 Marei pentru baza 5?",
+        "answer_variants": [
+          "31",
+          "68",
+          "15",
+          "64",
+          "260"
+        ],
+        "correct_answer": "64",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Cop\u0103cel",
+        "markdown_statement": "Comanda cop\u0103cel afi\u0219eaz\u0103 structura directoarelor. De exemplu, dac\u0103 avem un director A care con\u021bine directoarele B, C si D, directorul B con\u021bine directoarele E si F, iar directorul D con\u021bine directorul G, atunci rezultatul comenzii cop\u0103cel va ar\u0103ta \u00een felul urm\u0103tor:\n\n```c++\n> copacel A\nA\n|-- B\n|   |-- E\n|   |-- F\n|-- C\n|-- D\n    |-- G\n\n7 directories,  0 files\n```\n\n\u00cen exemplul de mai sus, directoarele C, E, F \u0219i G sunt goale.\n\nLa linkul <a href=\"data/2024-tree.txt\" target=\"_blank\">acesta</a> se afl\u0103 rezultatul rul\u0103rii comenzii cop\u0103cel pe un sistem cu 1500 de directoare (\u0219i niciun fi\u0219ier). C\u00e2te din directoarele prezente sunt goale?",
+        "answer_variants": [
+          "53",
+          "164",
+          "419",
+          "602",
+          "734",
+          "953",
+          "1231"
+        ],
+        "correct_answer": "734",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Valize",
+        "markdown_statement": "Matei are 6 valize cu capacit\u0103\u021bile de 14, 3, 16, 8, 2 si 5 litri. El \u00ee\u0219i alege o submul\u021bime de valize \u0219i calculeaz\u0103 suma capacit\u0103\u021bilor valizelor alese. Amuzat, Matei observ\u0103: _\"Exist\u0103 exact dou\u0103 alegeri posibile ale valizelor care s\u0103 dea suma aceasta!\"_.\n\nCare este suma maxim\u0103 a capacit\u0103\u021bilor valizelor alese de Matei?",
+        "answer_variants": [
+          "Este imposibil.",
+          "5",
+          "8",
+          "13",
+          "19",
+          "30",
+          "43"
+        ],
+        "correct_answer": "43",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Tractora\u0219",
+        "markdown_statement": "C\u00e2te numere X \u00eentre 5 si 999 (inclusiv) au proprietatea c\u0103 urm\u0103torul \u0219ir de opera\u021bii se termin\u0103:\n\n```c++\nX := numar intre 5 si 999\nY := 1\nWHILE Y != 3:\n    Y = Y * 2 % X\n```\n\nPentru cunosc\u0103tori, problema cere s\u0103 se afle pentru c\u00e2te numere n cuprinse \u00eentre 5 \u0219i 999, num\u0103rul 3 este generat de 2 \u00een `(Zn, *)`.",
+        "answer_variants": [
+          "0",
+          "10",
+          "64",
+          "134",
+          "257",
+          "752",
+          "989"
+        ],
+        "correct_answer": "134",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Playlist",
+        "markdown_statement": "Cecilia dore\u0219te s\u0103 asculte playlist-ul ei preferat \u00een recrea\u021bia mare care dureaz\u0103 15 minute. Playlist-ul ei este compus din 5 c\u00e2ntece cu urm\u0103toarele durate:\n1. c\u00e2ntecul 1: 4 minute \u0219i 35 de secunde\n2. c\u00e2ntecul 2: 3 minute \u0219i 25 de secunde\n3. c\u00e2ntecul 3: 6 minute \u0219i 20 de secunde\n4. c\u00e2ntecul 4: 12 minute \u0219i 20 de secunde\n5. c\u00e2ntecul 5: 5 minute \u0219i 40 de secunde\n\n\u00cenainte de a \u00eencepe s\u0103 asculte playlist-ul, Cecilia va ap\u0103sa pe butonul \u201cshuffle\u201d care va amesteca \u00een mod aleatoriu (uniform) c\u00e2ntecele. Care este num\u0103rul mediu de c\u00e2ntece pe care Cecilia le poate asculta \u00een totalitate?",
+        "answer_variants": [
+          "1.8",
+          "2.5",
+          "1.5",
+          "2.2",
+          "2.4",
+          "2.3",
+          "2.6"
+        ],
+        "correct_answer": "1.8",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Prietenel",
+        "markdown_statement": "Prietenel are 23 de colegi la firma la care lucreaz\u0103 (deci sunt \u00een total 24 de angaja\u021bi).\n\nEl a construit o re\u021bea cu rela\u021biile de prietenie dintre angaja\u021bii de la firm\u0103. Astfel, el a numerotat colegii cu numere de la 1 la 23 (pentru el a p\u0103strat num\u0103rul 24, pentru c\u0103 suntem \u00een 2024) \u0219i a constatat c\u0103 exist\u0103 `m` rela\u021bii de prietenie reciproc\u0103 \u00eentre perechi (neordonate) de angaja\u021bi de la firma la care lucreaz\u0103.\n\nSpunem c\u0103 i este prieten cu j dac\u0103 exist\u0103 o rela\u021bie de prietenie  \u00eentre i \u0219i j (rela\u021bia de prietenie \u00eentre i \u0219i j fiind reciproc\u0103, dac\u0103 i este prieten cu j, atunci \u0219i j este prieten cu i). Prietenel \u0219i-a f\u0103cut lista L1 a prietenilor s\u0103i \u0219i lista L2 a prietenilor prietenilor lui \u0219i a constatat c\u0103 exact doi colegi ai s\u0103i nu se afl\u0103 \u00een niciuna dintre aceste liste.\n\nCare este valoarea minim\u0103 \u0219i valoarea maxim\u0103 a lui `m`?",
+        "answer_variants": [
+          "21 \u0219i  252",
+          "23 \u0219i  252",
+          "21 \u0219i  251",
+          "23 \u0219i  251",
+          "21 \u0219i  232",
+          "23 \u0219i  232",
+          "22 \u0219i  231"
+        ],
+        "correct_answer": "21 \u0219i  252",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Turneu Jackpot",
+        "markdown_statement": "\u00centr-un turneu de table de tip jackpot particip\u0103 40 de juc\u0103tori \u0219i sunt premia\u021bi cu diverse sume doar primii 4 \u00een func\u021bie de clasamentul final al acestora. Valoarea total\u0103 a premiilor este de `10800` de dolari.\n\nDe\u0219i cei 4 nu vor primi exact aceea\u0219i sum\u0103, \u00een principiu fiecare dintre ei are \u0219ansa sa c\u00e2\u0219tige \u00een medie `$$\\frac{10800}{4} \\ = \\ 2700$$` dolari.\n\nTurneul se desf\u0103\u0219oar\u0103 astfel: juc\u0103torii sunt grupa\u021bi aleator c\u00e2te doi, joac\u0103 o partid\u0103, iar c\u00e2\u0219tig\u0103torii trec \u00een etapa urm\u0103toare. Astfel dup\u0103 3 runde r\u0103m\u00e2n 5 juc\u0103tori A, B, C, D \u0219i E.\n\nTeoretic acum, fiecare dintre cei cinci are \u0219ansa sa c\u00e2\u0219tige \u00een medie `$$\\frac{10800}{4} \\ = \\ 2160$$` dolari. Pentru a hot\u0103r\u00ee care vor fi cei 4 finali\u0219ti se aleg aleatoriu doi juc\u0103tori din cei cinci, s\u0103 zicem D \u0219i E, care vor juca o rund\u0103 suplimentar\u0103, c\u00e2\u0219tig\u0103torul intr\u00e2nd \u00een finala celor 4.\n\nAceast\u0103 rund\u0103 suplimentar\u0103 diminueaz\u0103 \u0219ansele lui D \u0219i E la c\u00e2\u0219tigul teoretic mediu. Cu c\u0103t ar trebui compensa\u021bi D \u0219i E din fondul total de premii, \u00eenainte de runda suplimentar\u0103 pe care o vor juca, astfel \u00eenc\u00e2t \u00een final \u0219ansa la c\u00e2\u0219tigul mediu (oricare ar fi acesta) s\u0103 r\u0103m\u00e2n\u0103 aceea\u0219i pentru cei cinci?",
+        "answer_variants": [
+          "0",
+          "540",
+          "720",
+          "1080",
+          "1350",
+          "2160",
+          "2700"
+        ],
+        "correct_answer": "1080",
+        "difficulty": "medium",
+        "image_path": "./images/2024-jackpot.png",
+        "image_content": "Imaginea reprezint\u0103 stadiul turneului, avem 5 juc\u0103tori A, B, C, D \u0219i E, juc\u0103torii D \u0219i E vor juca o runda, c\u00e2\u0219tig\u0103torul intr\u00e2nd \u00een final\u0103 cu C, \u00een timp ce A \u0219i B vor juca \u00eentre ei, c\u0103\u0219tig\u0103torii celor dou\u0103 runde vor juca \u00een final\u0103."
+      },
+      {
+        "title": "5 Eyes",
+        "markdown_statement": "Se consider\u0103 urm\u0103toarea secven\u021b\u0103 de cod C++, din care lipse\u0219te valoarea tabloului de caractere secret:\n\n```c++\n// Lungimea secretului (excluzand '\\0').\nint n = 12;\n\n// Secretul, format din n+1 caractere (incluzand caracterul '\\0').\nchar secret[] = \"????????????\"; // secretul lipseste\n\nfor (int i = 1; i < n; i++)\n    for (int j = 2 * i; j < n; j += i)\n        secret[j] ^= secret[i];\n\nfor (int i = 0; i < n; i++)\n    cout << (int)secret[i] << ' ';\n```\n\nRezultatul rul\u0103rii codului este urm\u0103torul \u0219ir, de lungime 12:\n\n```c++\n109 97 21 4 89 40 62 39 98 72 9 35\n```\n\nCare este ultimul caracter nenul (diferit de `\\0`) al secretului?",
+        "answer_variants": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J"
+        ],
+        "correct_answer": "B",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Z\u0103p\u0103ceal\u0103",
+        "markdown_statement": "Br\u0103du\u021b este un b\u0103iat z\u0103p\u0103cit care \u00eencurc\u0103 mereu drumul c\u0103tre \u0219coal\u0103.\nHarta cartierului s\u0103u poate fi reprezentat\u0103 ca un sistem ortogonal \u00een care casa lui Br\u0103du\u021b se afl\u0103 \u00een origine, iar \u0219coala acestuia se afl\u0103 \u00een punctul de coordonate `(3, 4)`.\n\nDac\u0103 Br\u0103du\u021b se afl\u0103 \u00een punctul de coordonate `(x, y)` acesta se poate deplasa \u00eentr-un minut \u00een unul din punctele `(x + 1, y)`, `(x - 1, y)`, `(x, y + 1)` \u0219i `(x, y - 1)`.\n\nPentru c\u0103 este z\u0103p\u0103cit, acesta nu va considera mereu alegerea cea mai bun\u0103, ci va alege aleatoriu una dintre cele 4 direc\u021bii de deplasare, astfel:\n1. Va merge \u00een `(x + 1, y)` cu probabilitatea `Pdreapta = 0.4`.\n2. Va merge \u00een `(x - 1, y)` cu probabilitatea `Pstanga = 0.05`.\n3. Va merge \u00een `(x, y + 1)` cu probabilitatea `Psus = 0.45`.\n4. Va merge \u00een `(x, y - 1)` cu probabilitatea `Pjos = 0.1`.\n\nMai mult dec\u00e2t at\u00e2t, lui Br\u0103du\u021b \u00eei este permanent dor de cas\u0103. Astfel, dup\u0103 fiecare deplasare \u00eentr-o anumit\u0103 direc\u021bie, probabilitatea de deplasare \u00een acea direc\u021bie scade cu `0.01`, iar probabilitatea de deplasare \u00een direc\u021bia opus\u0103 cre\u0219te cu `0.01`.\n\nCare este probabilitatea ca Br\u0103du\u021b s\u0103 ajung\u0103 la \u0219coal\u0103 (punctul `(3, 4)`) folosind un drum de durat\u0103 minim\u0103?\n\nConsider\u0103m una dintre variantele de r\u0103spuns corect\u0103, dac\u0103 diferen\u021ba dintre aceasta \u0219i valoarea real\u0103 a probabilit\u0103\u021bii este mai mic\u0103 dec\u00e2t `0.001`.",
+        "answer_variants": [
+          "0.002",
+          "0.015",
+          "0.023",
+          "0.043",
+          "0.074",
+          "0.087",
+          "0.092",
+          "0.131",
+          "0.176",
+          "0.5"
+        ],
+        "correct_answer": "0.074",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "2024 ca sub\u0219ir",
+        "markdown_statement": "Consider\u0103m \u0219irul **finit** `123456789101112131415...2024` format prin alipirea \u00een ordine a tuturor cifrelor numerelor naturale nenule mai mici sau egale cu 2024. Pierre vrea s\u0103 \u0219tie de c\u00e2te ori apare `2024` ca sub\u0219ir \u00een acest \u0219ir. Ajuta\u021bi-l pe Pierre.\n\n**Not\u0103**: \u0219irul `a` este un sub\u0219ir al \u0219irului `b` dac\u0103 `a` poate fi ob\u021binut din `b` \u0219terg\u00e2nd 0 sau mai multe caractere din b.",
+        "answer_variants": [
+          "1421010813",
+          "4858581392",
+          "5144380298",
+          "5715978109",
+          "8173848695",
+          "6859173730",
+          "3268324869",
+          "1278909731",
+          "3429586865",
+          "5430179203"
+        ],
+        "correct_answer": "5715978109",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Plimbare prin matrice",
+        "markdown_statement": "Dup\u0103 ce a lucrat toat\u0103 noaptea la propriul sistem de operare, Ioan a adormit bu\u0219tean \u0219i a \u00eenceput s\u0103 viseze.\n\nAcesta se pomene\u0219te \u00een celula `(0, 0)` a unei matrice bidimensionale infinite. \u00cen aceast\u0103 matrice, Ioan poate face doar un pas sau doi **jos sau la dreapta**. Cu alte cuvinte, daca el se afl\u0103 in celula `(i, j)`, \u00eentr-o mutare poate ajunge in una dintre celulele `(i + 1, j)`, `(i + 2, j)`, `(i, j + 1)` sau `(i, j + 2)`.\n\nPentru a putea sc\u0103pa de vis, Ioan trebuie sa r\u0103spund\u0103 la urm\u0103toarea \u00eentrebare: \\\n_\u00cen c\u00e2te moduri poate ajunge \u00een celula `(20, 24)`, av\u00e2nd \u00een vedere restric\u021biile de mi\u0219care pe care le are?_",
+        "answer_variants": [
+          "59713569536180432",
+          "436844856458564300",
+          "152596701737090864",
+          "1119576038404099820",
+          "384848943308945522",
+          "20810114480126744",
+          "52291395481992608",
+          "1735342859526354688",
+          "1343491246084919808",
+          "27053148824164768"
+        ],
+        "correct_answer": "1119576038404099820",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      }
+    ]
+  },
+  {
+    "name": "Edi\u021bia 2023",
+    "problems": [
+      {
+        "title": "Num\u0103rul N",
+        "markdown_statement": "Consider\u0103m num\u0103rul `N = 1! + 2! + ... + 2023!`.\n\nCare este ultima cifr\u0103 a num\u0103rului `N`?",
+        "answer_variants": [
+          "0",
+          "1",
+          "3",
+          "5",
+          "8"
+        ],
+        "correct_answer": "3",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Numere puternice",
+        "markdown_statement": "Un num\u0103r este puternic dac\u0103 este strict mai mare dec\u00e2t r\u0103sturnatul s\u0103u.\n\nDe exemplu, 10 \u0219i 21 sunt numere puternice, dar 1 \u0219i 34 nu sunt. R\u0103sturnatul lui 10 este 1.\n\nC\u00e2te numere pozitive p\u00e2n\u0103 \u00een 2023 (inclusiv) sunt puternice?",
+        "answer_variants": [
+          "519",
+          "646",
+          "766",
+          "1258",
+          "1378"
+        ],
+        "correct_answer": "646",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "RedDrink",
+        "markdown_statement": "Matei se preg\u0103te\u0219te s\u0103 \u00eenve\u021be asiduu pentru examenul de Bacalaureat.\n\nPentru a avea mai mult\u0103 energie, el \u0219i-a cump\u0103rat 100 de doze de b\u0103utur\u0103 energizant\u0103 RedDrink. Matei prefer\u0103 aceast\u0103 b\u0103utur\u0103 \u0219i pentru promo\u021bia de care poate beneficia, respectiv dac\u0103 recicleaz\u0103 7 doze de aluminiu goale de RedDrink prime\u0219te una plin\u0103 la schimb.\n\nEl \u0219i-a f\u0103cut un plan s\u0103 bea 3 doze de RedDrink pe zi (diminea\u021ba, la pr\u00e2nz \u0219i seara), pentru a sus\u021bine un efort mare de \u00eenv\u0103\u021bare. Dac\u0103 nu are 3 doze la dispozi\u021bie se mul\u021bume\u0219te cu 2 doze, iar dac\u0103 nu are 2 doze la dispozi\u021bie se mul\u021bume\u0219te cu una.\n\nDac\u0103 Matei recicleaz\u0103 toate dozele goale care pot fi convertite \u00een doze gratuite RedDrink pline cu b\u0103utur\u0103, dup\u0103 c\u00e2te zile Matei nu mai poate s\u0103 bea nicio doz\u0103 de RedDrink?",
+        "answer_variants": [
+          "34",
+          "37",
+          "39",
+          "41",
+          "42"
+        ],
+        "correct_answer": "39",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Expresie",
+        "markdown_statement": "Valoarea unei expresii de forma (a < b) este 1 dac\u0103 expresia este adev\u0103rat\u0103 \u0219i 0 dac\u0103 ea este fals\u0103. Care este valoarea expresiei E de mai jos?\n\n`$$E = (123^{345} < 654^{274}) \\\n      + 2 * (345^{322} < 654^{294}) \\\n      + 4 * (923^{263} < 452^{284})\n$$`",
+        "answer_variants": [
+          "0",
+          "2",
+          "3",
+          "5",
+          "6"
+        ],
+        "correct_answer": "3",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Insule",
+        "markdown_statement": "\u00centr-o matrice infinit\u0103 (asemenea unui ocean nem\u0103rginit) \u00een care p\u0103tratele albe reprezint\u0103 ap\u0103, iar p\u0103tratele negre reprezint\u0103 f\u00e2\u0219ii de p\u0103m\u00e2nt.\n\nMai multe f\u00e2\u0219ii formeaz\u0103 o insul\u0103 dac\u0103 se poate ajunge din orice f\u00e2\u0219ie din insul\u0103 \u00een orice alt\u0103 f\u00e2\u0219ie din insul\u0103 merg\u00e2nd fie pe orizontal\u0103, fie pe vertical\u0103 pe f\u00e2\u0219ii de p\u0103m\u00e2nt adiacente (f\u0103r\u0103 a merge pe diagonale). O insul\u0103 poate fi format\u0103 \u0219i dintr-o singur\u0103 f\u00e2\u0219ie de p\u0103m\u00e2nt. De pe o f\u00e2\u0219ie dintr-o insul\u0103 nu putem ajunge pe o alt\u0103 f\u00e2\u0219ie de pe alt\u0103 insul\u0103. Dimensiunea unei insule reprezint\u0103 num\u0103rul de f\u00e2\u0219ii care alc\u0103tuiesc insula. \u00cen figura de mai jos sunt 4 astfel de insule cu dimensiunile 1, 4, 4 \u0219i 24.\n\nPresupunem c\u0103 pentru fiecare f\u00e2\u0219ie de p\u0103m\u00e2nt cunoa\u0219tem dimensiunea insulei din care face parte. D\u00e2ndu-se o matrice infinit\u0103 \u00een care \u0219tim c\u0103 se afl\u0103 30 de f\u00e2\u0219ii de p\u0103m\u00e2nt \u0219i lista urm\u0103toare sortat\u0103 a dimensiunilor insulelor din care face parte fiecare f\u00e2\u0219ie de p\u0103m\u00e2nt:\n\n```\n1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4\n```\n\ns\u0103 se afle num\u0103rul de insule.",
+        "answer_variants": [
+          "5",
+          "7",
+          "11",
+          "13",
+          "15"
+        ],
+        "correct_answer": "11",
+        "difficulty": "easy",
+        "image_path": "./images/2023-insule.png",
+        "image_content": "Imaginea reprezint\u0103 ni\u0219te insule cu dimensiunile 1, 4, 4 \u0219i 24, \u00eentr-un spa\u021biu de 9 pe 13, cu celule colorate \u00een alb, reprezent\u00e2nd celule goele, \u0219i celule colorate \u00een negru pentru a descrie por\u021biuni din insule, descrierea celulelor este indexat\u0103 de la 0, celula (6, 4) este colorat\u0103 \u00een negru \u0219i reprezint\u0103 insula de dimensiune 1, celulele (6, 1), (5, 1), (4, 1) \u0219i (4, 2) colorate \u00een negru reprezint\u0103 o insul\u0103 de dimensiune 4, celulele (3, 8), (3, 9), (4, 8), (4, 9) colorate \u00een negru reprezint\u0103 o alt\u0103 insul\u0103 de dimensiune 4, iar celule (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (2, 4), (2, 5), (2, 11), (3, 5), (3, 6), (3, 11), (4, 6), (4, 11), (5, 6), (5, 10), (5, 11), (6, 6), (6, 7), (6, 8), (6, 9), (6, 10), (6, 11), (7, 6) sunt colorate \u00een negru \u0219i formeaz\u0103 o insula de dimensiune 24."
+      },
+      {
+        "title": "Reciclare",
+        "markdown_statement": "Matei vrea s\u0103 recicleze. Are 6 obiecte pe care vrea s\u0103 le arunce \u0219i pentru fiecare din ele \u0219tie c\u00e2t\u0103 sticl\u0103, c\u00e2t plastic \u0219i c\u00e2t\u0103 h\u00e2rtie con\u021bine fiecare obiect. Din p\u0103cate, din motive tehnice, trebuie s\u0103 arunce fiecare obiect la exact unul din cele 3 tomberoane de reciclare selectiv\u0103.\n\nC\u00e2te unit\u0103\u021bi de materie prim\u0103 poate recicla maxim, dac\u0103 arunc\u0103 obiectele \u00een tomberoane \u00een mod optim? \\\nMateria prim\u0103 reciclat\u0103 este sticla aruncat\u0103 la tomberonul de sticl\u0103, plasticul aruncat la tomberonul de plastic \u0219i h\u00e2rtia aruncat\u0103 la tomberonul de h\u00e2rtie.\n\nCele 6 obiecte pe care le are Matei au:\n1. 4 unit\u0103\u021bi de sticl\u0103, 5 unit\u0103\u021bi de plastic \u0219i 3 unit\u0103\u021bi de h\u00e2rtie.\n2. 10 unit\u0103\u021bi de sticl\u0103, 0 unit\u0103\u021bi de plastic \u0219i 5 unit\u0103\u021bi de h\u00e2rtie.\n3. 3 unit\u0103\u021bi de sticl\u0103, 9 unit\u0103\u021bi de plastic \u0219i 4 unit\u0103\u021bi de h\u00e2rtie.\n4. 5 unit\u0103\u021bi de sticl\u0103, 5 unit\u0103\u021bi de plastic \u0219i 5 unit\u0103\u021bi de h\u00e2rtie.\n5. 1 unit\u0103\u021bide sticl\u0103, 2 unit\u0103\u021bi de plastic \u0219i 3 unit\u0103\u021bi de h\u00e2rtie.\n6. 9 unit\u0103\u021bi de sticl\u0103, 9 unit\u0103\u021bi de plastic \u0219i 8 unit\u0103\u021bi de h\u00e2rtie.",
+        "answer_variants": [
+          "14",
+          "32",
+          "41",
+          "74",
+          "90"
+        ],
+        "correct_answer": "41",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Fort Leon",
+        "markdown_statement": "Arhipelagul Fort Leon este format din 14 insule, majoritatea locuitorilor fiind programatori \u00eencep\u0103tori.\n\n\u00centr-o zi cu soare, locuitorii arhipelagului s-au g\u00e2ndit c\u0103 le-ar pl\u0103cea foarte mult s\u0103 construiasc\u0103 mai multe poduri \u00eentre insule astfel \u00eenc\u00e2t s\u0103 poate pleca de pe orice insul\u0103, s\u0103 treac\u0103 o singur\u0103 dat\u0103 pe fiecare pod \u0219i s\u0103 ajung\u0103 tot pe insula de unde au plecat. Pentru a-\u0219i \u00eendeplini mai repede dorin\u021ba, ei au scris un program care s\u0103-i ajute.\n\nDin p\u0103cate, ei au scris un program gre\u0219it, care le-a furnizat urm\u0103toarea modalitate de construire a unor poduri \u00eentre cele 14 insule (vede\u021bi poza al\u0103turat\u0103).\n\nDeoarece sunt foarte ner\u0103bd\u0103tori, locuitorii din Fort Leon v\u0103 roag\u0103 s\u0103-i ajuta\u021bi, preciz\u00e2ndu-le num\u0103rul minim de poduri pe care trebuie s\u0103 le adauge la cele deja indicate de programul scris de ei, astfel \u00eenc\u0103t s\u0103-\u0219i \u00eendeplineasc\u0103 dorin\u021ba.",
+        "answer_variants": [
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "correct_answer": "6",
+        "difficulty": "easy",
+        "image_path": "./images/2023-graf.png",
+        "image_content": "Imainea reprezin\u0103 o mul\u021bime de 4 grafuri neorientate, neconectate \u00eentre ele, primul graf reprezint\u0103 un graf complet de 3 noduri, al doilea graf reprezint\u0103 un graf complet de 4 noduri, al treilea graf reprezint\u0103 un graf complete de 4 noduri, iar ultimul graf reprezint\u0103 un graf complet de 3 noduri."
+      },
+      {
+        "title": "Oferte",
+        "markdown_statement": "Matei vrea s\u0103 \u00ee\u0219i cumpere pungi cu bomboanele lui favorite. Are la dispozi\u021bie 4 oferte, dintre care trebuie s\u0103 aleag\u0103 **cel mult una**, pe care o poate folosi de cel mai multe ori.\n\nOfertele sunt urm\u0103toarele:\n1. Prima ofert\u0103: pentru fiecare 24 pungi cump\u0103rate, urm\u0103toarele 12 sunt gratuite.\n2. A doua ofert\u0103: pentru fiecare 15 pungi cump\u0103rate, urm\u0103toarele 6 sunt gratuite.\n3. A treia ofert\u0103: pentru fiecare 3 pungi cump\u0103rate, urm\u0103toarea este gratuit\u0103.\n4. A patra ofert\u0103: pentru fiecare 40 pungi cump\u0103rate, urm\u0103toarele 20 sunt gratuite.\n\nPresupun\u00e2nd c\u0103 o pung\u0103 de bomboane cost\u0103 un leu, c\u00e2t trebuie s\u0103 pl\u0103teasc\u0103 minim pentru a \u00ee\u0219i cump\u0103ra minim 100 pungi?",
+        "answer_variants": [
+          "25",
+          "72",
+          "75",
+          "80",
+          "100"
+        ],
+        "correct_answer": "72",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Ap\u0103",
+        "markdown_statement": "Matei are multe bidoane de 5, 7 \u0219i 10 litri. Matei poate pune K litri de ap\u0103 \u00een bidoane dac\u0103 exist\u0103 un num\u0103r de bidoane de 5, 7 \u0219i 10 litri pe care le poate alege astfel \u00eenc\u00e2t suma capacit\u0103\u021bilor bidoanelor alese s\u0103 fie exact K. Concret, Matei poate pune K litri de ap\u0103 \u00een bidoane dac\u0103 exist\u0103 a, b \u0219i c astfel \u00eenc\u00e2t `$$5a + 7b + 10c = K$$`.\n\nCare este cel mai mare num\u0103r de litri de ap\u0103 pe care nu \u00eel poate pune \u00een bidoane?",
+        "answer_variants": [
+          "13",
+          "17",
+          "23",
+          "26",
+          "27"
+        ],
+        "correct_answer": "23",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Configura\u021bii",
+        "markdown_statement": "Netty este foarte preocupat\u0103 de siguran\u021ba datelor din PC-urile aflate \u00een firm\u0103 sa, a\u0219a c\u0103 s-a g\u00e2ndit s\u0103 interconecteze PC-urile pentru a realiza rapid \u0219i sigur backup-ul datelor. Deoarece nu \u0219tie exact cum trebuie s\u0103 interconecteze PC-urile, Netty a apelat la un oracol apa\u0219 care i-a sugerat mai multe configura\u021bii magice. \n\nDeoarece oracolul apa\u0219 era foarte gr\u0103bit, acesta i-a spus, \u00een fiecare configura\u021bie, doar num\u0103rul PC-urilor cu care trebuie interconectate fiecare PC din firm\u0103. De exemplu, configura\u021bia `(2, 3, 1, 2)` \u00eenseamn\u0103 c\u0103 un PC trebuie interconectat cu alte dou\u0103 PC-uri, alt PC trebuie interconectat cu 3 PC-uri etc.\n\nUnele dintre configura\u021biile respective sunt realizabile (de exemplu, configura\u021bia men\u021bionat\u0103 anterior), iar altele nu (de exemplu, configura\u021bia `(3, 2, 3)`). \u0218tiind c\u0103 oracolul i-a sugerat lui Netty urm\u0103toarele configura\u021biile magice:\n\n```\nC1 = (5, 2, 6, 4, 3, 4, 2, 2, 1, 1),\nC2 = (5, 1, 1, 4, 4, 3, 5, 2, 2, 2),\nC3 = (6, 4, 4, 3, 9, 2, 2, 2, 1, 1),\nC4 = (6, 2, 6, 2, 6, 2, 6, 2, 8, 2),\nC5 = (7, 6, 7, 3, 3, 2, 2, 2, 4, 4),\n```\n\najut\u0103-o pe Netty, determin\u00e2nd num\u0103rul de configura\u021bii realizabile din cele 5 precizate!\n\n**Not\u0103**: Pentru fiecare PC trebuie s\u0103 existe exact c\u00e2te conexiuni c\u00e2te sunt specificate \u00een configura\u021bie.",
+        "answer_variants": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correct_answer": "3",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Algoritm",
+        "markdown_statement": "Alex, Dan \u0219i Matei sunt prieteni buni. Ei au participat \u00eempreun\u0103 la un concurs de programare form\u00e2nd o echip\u0103 \u0219i au c\u00e2\u0219tigat marele premiu, o consol\u0103 XBOX. Cum ei se \u00een\u021beleg bine, se hot\u0103r\u0103sc s\u0103 \u00eempart\u0103 marele premiu, respectiv fiecare dintre ei se va juca pe r\u00e2nd o s\u0103pt\u0103m\u00e2n\u0103 pe consol\u0103. Cei trei prieteni trebuie s\u0103 decid\u0103 acum ordinea \u00een care se vor juca pe consol\u0103. Alex propune s\u0103 stabileasc\u0103 aceast\u0103 ordine folosind urm\u0103torul algoritm care amestec\u0103 cele trei elemente din vectorul v situate pe pozi\u021biile 0, 1 \u0219i 2:\n\n```\nv = [Alex, Dan, Matei]\npentru i de la 0 la 2\n        swap(v[i], v[random(3)])\n```\n\nunde `swap(a,b)` interschimb\u0103 valorile elementelor a \u0219i b, iar `random(3)` returneaz\u0103 un num\u0103r aleator 0, 1 sau 2 cu probabilitatea uniform\u0103 1/3.\n\nCare este \u0219ansa ca Matei s\u0103 fie generat pe prima pozi\u021bie (pozi\u021bia 0) a vectorului v folosind algoritmul de mai sus?",
+        "answer_variants": [
+          "1/2",
+          "1/3",
+          "1/4",
+          "8/27",
+          "3/10"
+        ],
+        "correct_answer": "8/27",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "\u0218iruri de caractere",
+        "markdown_statement": "Consider\u0103m \u0219irurile de caractere de lungime 10 care con\u021bin literele a si b, dar f\u0103r\u0103 a con\u021bine trei apari\u021bii consecutive ale literelor a sau b.\n\nSpre exemplu, \u0219irul `ababababab` este un exemplu pozitiv (verific\u0103 regulile), iar \u0219irul `aaabababab` este un exemplu negativ (nu verific\u0103 regulile).\n\nC\u00e2te exemple pozitive de astfel de \u0219iruri de caractere exist\u0103?",
+        "answer_variants": [
+          "68",
+          "110",
+          "175",
+          "178",
+          "288"
+        ],
+        "correct_answer": "178",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Probabilitate",
+        "markdown_statement": "Care este, \u00een medie, probabilitatea ca func\u021bia de mai jos s\u0103 returneze `true`?\nFunctia `rnd()` returneaz\u0103 un num\u0103r aleator real uniform distribuit \u00eentre 0 \u0219i 1.\n\nAten\u021bie: func\u021bia `rnd()` nu este aceea\u0219i cu func\u021bia `rand()` din C/C++.\n\n```\nbool F() {\n    if (rnd() < 0.5)\n        return true;\n    if (rnd() < 0.4)\n        return false;\n    return rnd() < 0.3;\n}\n```",
+        "answer_variants": [
+          "0.5",
+          "0.56",
+          "0.59",
+          "0.9",
+          "0.94"
+        ],
+        "correct_answer": "0.59",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Func\u021bii",
+        "markdown_statement": "Se dau urm\u0103toarele 3 func\u021bii:\n\n```\nint A(int x) {\n    if (x <= 1)\n        return x;\n    return A(x - 1) + A(x - 2);\n}\n\nint B(int x) {\n    if (x <= 1)\n        return 1;\n    return B(x / 2) + B(x / 2);\n}\n\nint C(int x) {\n    if (x < 0)\n        return 0;\n    return 1 + C(x - 10);\n}\n```\n\nSe presupune ca tipul de date int folosit nu d\u0103 overflow \u0219i poate salva valori oric\u00e2t de mari.\n\nConsider\u00e2nd numerele:\n```\na = A(123456789)\nb = B(123456789)\nc = C(123456789)\n```\n\nCare dintre urm\u0103toarele inegalit\u0103\u021bi este adev\u0103rat\u0103?",
+        "answer_variants": [
+          "a < b < c",
+          "c < b < a",
+          "b < a < c",
+          "c < a < b",
+          "a < c < b"
+        ],
+        "correct_answer": "c < b < a",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Puncte \u0219a",
+        "markdown_statement": "\u00centr-o matrice M de dimensiune m\u00d7n se nume\u0219te punct \u0219a un element `M[i][j]` cu proprietatea c\u0103 fie este minim pe linia i \u0219i maxim pe coloana j, fie este maxim pe linia i \u0219i minim pe coloana j.\n\nDac\u0103 elementele matricei M sunt o permutare a mul\u021bimii `{1,2,...,m\u22c5n}`, unde m \u2265 3 \u0219i n \u2265 3, atunci num\u0103rul maxim de puncte \u0219a pe care poate s\u0103 le aib\u0103 matricea M este:",
+        "answer_variants": [
+          "minimul dintre m \u0219i n",
+          "maximul dintre m \u0219i n",
+          "0",
+          "1",
+          "2"
+        ],
+        "correct_answer": "2",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Furnicu\u021ba",
+        "markdown_statement": "O furnicu\u021b\u0103 se deplaseaz\u0103 pe o frunz\u0103, reprezentat\u0103 printr-o matrice triunghiular\u0103 de dimensiune 2023, cu liniile \u0219i coloanele numerotate de la 1 (matricea are deci 2023 linii, iar fiecare linie i din matrice are i coloane).\n\nEa ar vrea s\u0103 calculeze \u00een c\u00e2te moduri poate ajunge din v\u00e2rful frunzei, adic\u0103 din celula `(1,1)`, la baza frunzei, adic\u0103 pe ultima linie a matricei (\u00een oricare dintre celulele acesteia), \u0219tiind c\u0103 pentru c\u0103 este a\u0219a de mic\u0103 se poate deplasa dintr-o celul\u0103 a matricei doar un pas \u00een jos sau un pas \u00een dreapta-jos (din celula `(i,j)` \u00een `(i+1,j)` sau `(i+1, j+1)`).\n\nP\u00e2n\u0103 s\u0103 g\u0103seasc\u0103 ea o strategie de num\u0103rare, o omid\u0103 a venit \u0219i a mu\u0219cat dintr-o margine a frunzei celulele `(x,1)` unde x este multiplu de 100. Mai mult, omida pofticioas\u0103 a mu\u0219cat \u0219i celula `(2001, 1999)`.\n\nFurnicu\u021ba nu mai \u0219tie acum s\u0103 calculeze c\u00e2te trasee poate face f\u0103r\u0103 a trece prin celulele mu\u0219cate, a\u0219a ca va roag\u0103 pe voi s\u0103 calcula\u021bi care este cea mai mare putere a lui 2 care divide num\u0103rul acestor trasee.",
+        "answer_variants": [
+          "22",
+          "25",
+          "2021",
+          "23",
+          "0"
+        ],
+        "correct_answer": "25",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Joc",
+        "markdown_statement": "X \u0219i Y joac\u0103 urm\u0103torul joc:\\\nSe porne\u0219te cu num\u0103rul `p = 1`, \u0219i, pe r\u00e2nd. X \u0219i Y (\u00eencep\u00e2nd cu X) multiplic\u0103 num\u0103rul p cu un num\u0103r \u00eentre 2 \u0219i 9.\n\nC\u00e2\u0219tig\u0103 primul care ajunge cu `p >= n` unde n este num\u0103r dat.\n\nDac\u0103 X \u0219i Y joac\u0103 9 jocuri \u00een care n este fixat pe r\u00e2nd la valorile:\n```\n37, 89, 167, 2920, 5832, 66666, 104970, 131313, 34012226\n```\n\nDe c\u00e2te ori c\u00e2\u0219tig\u0103 X?",
+        "answer_variants": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "correct_answer": "4",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Tastatur\u0103",
+        "markdown_statement": "Matei tocmai a cump\u0103rat tastatura din imagine \u0219i dore\u0219te s\u0103 apese \u00een total pe 10 taste. Prima tast\u0103 pe care apas\u0103 poate fi oricare dintre ele, dar fiind foarte lene\u0219 vrea ca \u00eencep\u00e2nd de la a doua ap\u0103sare, fiecare tast\u0103 pe care o apas\u0103 s\u0103 fie al\u0103turat\u0103 celei pe care tocmai a ap\u0103sat-o (tasta a i-a pe care apas\u0103 s\u0103 fie al\u0103turat\u0103 tastei a i-1-a pentru 2 \u2264 i \u2264 10).\n\nDou\u0103 taste sunt al\u0103turate dac\u0103 sunt diferite \u0219i se ating pe o latur\u0103 sau jum\u0103tate de latur\u0103. De exemplu, tastele \"1\" si \"0\" sunt al\u0103turate, dar tastele \"7\" si \"5\", sau \"+\" si \"*\" nu sunt.\n\n\u00cen c\u00e2te moduri poate ap\u0103sa Matei pe taste?",
+        "answer_variants": [
+          "1212334",
+          "4200301",
+          "2204913",
+          "1150905",
+          "1200908",
+          "3433058",
+          "9507809",
+          "7756489",
+          "8890506",
+          "6632980"
+        ],
+        "correct_answer": "1200908",
+        "difficulty": "hard",
+        "image_path": "./images/2023-tastatura.png",
+        "image_content": "Imaginea reprezint\u0103 un numpad, cu numlock, /, *, - fiind primele taste, pe urmatoarea linie urmate de 7, 8, 9, +, urmate de 4, 5, 6, prelungirea tastei +, 1, 2, 3, enter, urmate de 0, . \u0219i prelungirea tastei enter, 0 ocupa 2 spatii."
+      },
+      {
+        "title": "Func\u021bie recursiv\u0103",
+        "markdown_statement": "Consider\u0103m urm\u0103toarea func\u021bie recursiv\u0103:\n\n```\nvoid f(int n, unsigned long long int k, unsigned long long int t)\n{\n    if(n >= 0)\n    {\n        if(k <= t)\n        {\n            cout << k << \" \";\n            f(n, k+1, t);\n        }\n        else\n            f(n-1, 1, 2*t);\n    }\n}\n```\n\nCu c\u00e2t este egal\u0103 suma tuturor numerelor care vor fi afi\u0219ate pe ecran dup\u0103 executarea apelului `f(30,1,1)`?",
+        "answer_variants": [
+          "2^31-1",
+          "2^31+1",
+          "2^32-1",
+          "2^32+1",
+          "2^29\u22c5(2^30+1)",
+          "2^30\u22c5(2^31+1)",
+          "(2^62+3\u22c52^31-4)/3",
+          "(2^62+3\u22c52^31-3)/2",
+          "(2^61+3\u22c52^30-3)/3",
+          "(2^61+3\u22c52^30-2)/3"
+        ],
+        "correct_answer": "(2^61+3\u22c52^30-2)/3",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Multipli de 2023",
+        "markdown_statement": "C\u00e2te numere de forma `11...100...0` (cu m de 1 \u0219i n de 0, pentru `n, m \u2265 1`) cu proprietatea c\u0103 `m + n \u2264 15000` sunt multipli de 2023?",
+        "answer_variants": [
+          "82361",
+          "337365",
+          "141361",
+          "225563",
+          "130464",
+          "246577",
+          "331547",
+          "459011",
+          "178023",
+          "267908"
+        ],
+        "correct_answer": "130464",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      }
+    ]
+  },
+  {
+    "name": "Edi\u021bia 2022 Bis",
+    "problems": [
+      {
+        "title": "Cafea",
+        "markdown_statement": "Matei are 5 cafele. Fiecare cafea are un volum (dat \u00een ml) \u0219i o concentra\u021bie dat\u0103 \u00een procente. Matei poate amesteca dou\u0103 cafele. Dac\u0103 amestec\u0103 o cafea cu `$$v_1$$` ml \u0219i concentra\u021bie `$$c_1$$` cu una cu `$$v_2$$` ml \u0219i concentra\u021bie `$$c_2$$` atunci el va ob\u021bine o cafea cu:\n\n- volum `$$v_1 + v_2$$`\n- concentra\u021bie `$$\\frac{c_1 \\cdot v_1 + c_2 \\cdot v_2}{v_1 + v_2}$$`\n\nSatisfac\u021bia adus\u0103 lui Matei de o cafea cu volum `$$v$$` \u0219i concentra\u021bie `$$c$$` este `$$v \\cdot c$$`.\n\n\u0218tiind c\u0103 Matei are:\n\n * o cafea de 50 ml \u0219i concentra\u021bie de 40% (`c = 0.4`)\n * o cafea de 100 ml \u0219i concentra\u021bie de 30% (`c = 0.3`)\n * o cafea de 300 ml \u0219i concentra\u021bie de 10% (`c = 0.1`)\n * o cafea de 250 ml \u0219i concentra\u021bie de 10% (`c = 0.1`)\n * o cafea de 500 ml \u0219i concentra\u021bie de 50% (`c = 0.5`)\n\nCare este cea mai mare satisfac\u021bie pe care o poate ob\u021bine Matei amestec\u00e2nd optim cafelele?",
+        "answer_variants": [
+          "10",
+          "355",
+          "250",
+          "40",
+          "450"
+        ],
+        "correct_answer": "355",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Furnicu\u021ba",
+        "markdown_statement": "Se consider\u0103 o suprafa\u021b\u0103 (matrice) infinit\u0103 \u00een jos \u0219i \u00een dreapta cu liniile numerotate de sus \u00een jos \u0219i coloanele de la st\u00e2nga la dreapta. O furnic\u0103 exploreaz\u0103 aceast\u0103 suprafa\u021b\u0103 pornind din col\u021bul st\u00e2nga sus `(1,1)`. Deoarece furnica este prudent\u0103 \u0219i vrea s\u0103 r\u0103m\u00e2n\u0103 mereu aproape de zona explorat\u0103 deja (\u0219i marcat\u0103 cu feromoni), explorarea se face extinz\u00e2nd succesiv p\u0103tratul deja parcurs din col\u021bul st\u00e2nga sus.\n\nAstfel, la \u00eenceput furnica coboar\u0103 \u00een celula `(2,1)`, apoi merge \u00een dreapta \u00een celula `(2,2)` \u0219i apoi urc\u0103 \u00een celula `(1,2)`, complet\u00e2nd un p\u0103trat `$$2 \\times 2$$`. Pe acesta \u00eel extinde merg\u00e2nd \u00een dreapta \u00een celula `(1,3)`, apoi coboar\u0103 \u00een `(2,3)` \u0219i `(3,3)`, dup\u0103 care se deplaseaz\u0103 spre st\u00e2nga \u00een celulele `(3,2)` \u0219i `(3,1)` complet\u00e2nd un p\u0103trat `$$3 \\times 3$$`.\n\nPe acesta \u00eel extinde cobor\u00e2nd \u00een `(4,1)`, merg\u00e2nd \u00een dreapta p\u00e2n\u0103 \u00een `(4,4)` \u0219i apoi urc\u00e2nd \u00een `(1,4)`. Continu\u00e2nd \u00een acest fel furnica poate explora o suprafa\u021b\u0103 oric\u00e2t de mare. Mai jos se pot vedea pa\u0219ii la care a fost vizitat\u0103 fiecare celul\u0103 p\u00e2n\u0103 c\u00e2nd furnica exploreaz\u0103 un p\u0103trat `$$5 \\times 5$$`.\n\n| 1  | 4  | 5  | 16 | 17 |\n|----|----|----|----|----|\n| 2  | 3  | 6  | 15 | 18 |\n| 9  | 8  | 7  | 14 | 19 |\n| 10 | 11 | 12 | 13 | 20 |\n| 25 | 24 | 23 | 22 | 21 |\n\nPe ce linie \u0219i pe ce coloan\u0103 se va afla furnica la pasul `100001`?",
+        "answer_variants": [
+          "(144,316)",
+          "(145,316)",
+          "(145,317)",
+          "(316, 145)",
+          "(317,145)"
+        ],
+        "correct_answer": "(145,317)",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Parol\u0103",
+        "markdown_statement": "Matei are un PC nou, care ruleaz\u0103 PearOS. Alex a reu\u0219it s\u0103 \u00eei fure calculatorul \u0219i acum \u00eencearc\u0103 s\u0103 \u00eei schimbe parola.\n\nAlex \u0219tie c\u0103 Matei are o parol\u0103 de lungime 10 caractere format\u0103 din litere mici ale alfabetului englez. De asemenea, pentru o experien\u021b\u0103 mai pl\u0103cut\u0103 a utilizatorului, atunci c\u00e2nd o parol\u0103 gre\u0219it\u0103 este introdus\u0103, PearOS notific\u0103 utilizatorul dac\u0103 parola adev\u0103rat\u0103 este mai mic\u0103 sau mai mare lexicografic dec\u00e2t cea introdus\u0103.\n\nDac\u0103 Alex caut\u0103 parola \u00een mod optim, atunci num\u0103rul de \u00eencerc\u0103ri pe care le va efectua este:",
+        "answer_variants": [
+          "cuprins \u00eentre 0 \u0219i 30",
+          "cuprins \u00eentre 31 \u0219i 60",
+          "cuprins \u00eentre 61 \u0219i 90",
+          "cuprins \u00eentre 91 \u0219i 120",
+          "mai mare sau egal cu 121"
+        ],
+        "correct_answer": "cuprins \u00eentre 31 \u0219i 60",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Servere",
+        "markdown_statement": "Alex a \u00eencercat s\u0103 organizeze un concurs online, dar cu c\u00e2teva minute \u00eenainte de \u00eenceperea sa, \u0219i-a dat seama c\u0103 platforma nu este suficient de puternic\u0103 pentru a g\u0103zdui to\u021bi candida\u021bii \u0219i risc\u0103 s\u0103 pic\u0103 \u00een timpul probei.\n\nLa concurs particip\u0103 `1000` de candida\u021bi \u0219i Alex dore\u0219te s\u0103 \u00eenchirieze c\u00e2teva servere.\nUn server este caracterizat de pre\u021bul s\u0103u (c\u00e2t \u00eel cost\u0103 pe Alex s\u0103 \u00eenchirieze serverul pe durata probei) \u0219i capacitatea sa (num\u0103rul de concuren\u021bi pe care serverul \u00eei poate servi).\n\nAlex are de ales \u00eentre urm\u0103toarele op\u021biuni de servere:\n\n- servere cu pre\u021bul `2` \u0219i capacitate `2`;\n- servere cu pre\u021bul `5` \u0219i capacitate `10`;\n- servere cu pre\u021bul `10` \u0219i capacitate `23`.\n\nDe notat c\u0103 Alex poate \u00eenchiria oricate servere, indiferent dac\u0103 sunt sau nu de acela\u0219i tip.\n\nCare este costul minim cu care Alex poate \u00eenchiria servere cu suma capacit\u0103\u021bilor mai mare sau egal\u0103 cu `1000`?",
+        "answer_variants": [
+          "500",
+          "433",
+          "440",
+          "439",
+          "437"
+        ],
+        "correct_answer": "437",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Permutare",
+        "markdown_statement": "Matei are urm\u0103toarea permutare:\n```\n9, 1, 2, 6, 5, 4, 3, 7, 10, 8\n```\n\nEl are voie s\u0103 efectueze cel mult `5` opera\u021bii de interschimbare a dou\u0103 elemente al\u0103turate. Care este cea mai mic\u0103 permutare \u00een ordine lexicografic\u0103 pe care o poate ob\u021bine?",
+        "answer_variants": [
+          "1, 2, 5, 6, 9, 4, 3, 7, 10, 8",
+          "1, 2, 4, 6, 9, 5, 3, 7, 10, 8",
+          "1, 2, 6, 5, 4, 9, 3, 7, 10, 8",
+          "1, 2, 4, 9, 6, 5, 3, 7, 10, 8",
+          "1, 2, 4, 9, 5, 6, 3, 7, 10, 8"
+        ],
+        "correct_answer": "1, 2, 4, 9, 6, 5, 3, 7, 10, 8",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Foc",
+        "markdown_statement": "\u00cen timpul taberei la munte, Alex are de aprins un foc.\nEl are la dispozi\u021bie o gr\u0103mad\u0103 de lemne de diferite m\u0103rimi, identificate prin numere de la 1 la 100. Unicul b\u0103\u021b de dimensiune 1 este un chibrit, cu care Alex are de aprins focul.\nDe\u0219i buturuga mic\u0103 r\u0103stoarn\u0103 carul mare, nu poate ca un chibrit s\u0103 aprind\u0103 un bu\u0219tean. De fapt, o bucat\u0103 de lemn de dimensiune `d` care ia foc la momentul `t` aprinde la momentul `t+1` toate buc\u0103\u021bile neaprinse de dimensiune mai mic\u0103 sau egal\u0103 cu `2*d`.\n\n\u0218tiind c\u0103 gr\u0103mada de lemne con\u021bine buc\u0103\u021bi cu dimensiunile:\n```\n1, 2, 2, 2, 3, 5, 5, 5, 7, 13, 14, 15, 15, 25, 35, 50, 50, 51, 78, 99, 100\n```\n\n\u0218i c\u0103 Alex d\u0103 foc chibritului \u00een momentul `t=1`, care este primul moment de timp c\u00e2nd toate lemnele sunt aprinse?",
+        "answer_variants": [
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "correct_answer": "9",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Plant\u0103",
+        "markdown_statement": "Matei \u0219i-a cump\u0103rat o plant\u0103 nou\u0103, pe care trebuie s\u0103 o ude zilnic, cu exact un litru de ap\u0103.\n\nEl are patru sticle, ini\u021bial goale, cu volumele de 2, 8, 10 \u0219i 20 litri.\n\n\u00centr-o opera\u021bie, Matei poate s\u0103:\n\n- ia o sticl\u0103, pe care o umple complet de la robinet;\n- ia dou\u0103 sticle \u0219i vars\u0103 c\u00e2t de mult poate din prima \u00een a doua (fie p\u00e2n\u0103 c\u00e2nd prima sticl\u0103 se gole\u0219te, fie p\u00e2n\u0103 c\u00e2nd a doua sticl\u0103 se umple);\n- ude planta, dac\u0103 are o sticl\u0103 umplut\u0103 cu exact 1 litru.\n\nConsider\u0103m afirma\u021biile urm\u0103toare:\n\n1. Matei poate uda planta \u00een 6 mut\u0103ri.\n2. Matei poate uda planta folosind numai 3 sticle.\n3. Matei poate uda planta f\u0103r\u0103 s\u0103 foloseasc\u0103 mai mult de 22 de litri de ap\u0103.\n4. Matei nu poate uda planta.\n\nCare din afirma\u021bii este adev\u0103rat\u0103?",
+        "answer_variants": [
+          "afirma\u021biile 1, 2 \u0219i 3",
+          "afirma\u021biile 1 \u0219i 2",
+          "afirma\u021bia 4",
+          "afirma\u021biile 2 \u0219i 3",
+          "afirma\u021biile 1, 2 \u0219i 4"
+        ],
+        "correct_answer": "afirma\u021bia 4",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Matrice p\u0103tratic\u0103",
+        "markdown_statement": "Consider\u0103m o matrice p\u0103tratic\u0103 A de dimensiune `n = 1000`, av\u00e2nd liniile \u0219i coloanele indexate de la 1.\n\nOrice element `A[i][j]` al matricei este egal cu `((i+j) **mod** n) + 1`.\n\nDac\u0103 `sumlin(i)` reprezint\u0103 suma tuturor elementelor aflate pe linia _i_ \u0219i `sumcol(j)` reprezint\u0103 suma tuturor elementelor aflate pe coloana _j_, atunci valoarea maxim\u0103 a expresiei:\n\n```katex\n|sumlin(i)-sumcol(j)|\n```\n\nUnde `$$i, j \\in \\{1,2, \\ldots,n\\}$$`, este egal\u0103 cu:",
+        "answer_variants": [
+          "0",
+          "500",
+          "1000",
+          "1998",
+          "500500"
+        ],
+        "correct_answer": "0",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "\u0218ir infinit",
+        "markdown_statement": "Consider\u0103m \u0219irul infinit:\n```\n1234567891011121314151617181920 ...\n```\n\nOb\u021binut prin alipirea tuturor cifrelor tuturor numerelor naturale nenule.\n\nConsider\u00e2nd \u0219irul respectiv ca fiind indexat de la 0, atunci cifra aflat\u0103 pe pozi\u021bia `21052022` este egal\u0103 cu:",
+        "answer_variants": [
+          "1",
+          "2",
+          "3",
+          "6",
+          "9"
+        ],
+        "correct_answer": "1",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Palindromuri",
+        "markdown_statement": "Uli a descoperit palindromurile \u0219i este foarte pasionat\u0103 de ele, a\u0219a c\u0103 dore\u0219te s\u0103 calculeze c\u00e2te palindromuri sunt mai mici ca 2022.\n\nTotu\u0219i, dup\u0103 o experien\u021b\u0103 traumatizant\u0103 la ora de fizic\u0103, Uli nu mai suport\u0103 cifra `4`, a\u0219a c\u0103 dore\u0219te s\u0103 calculeze toate palindromurile \u00eentre `0` (inclusiv) \u0219i `2022` care nu con\u021bin cifra `4`.\n\nC\u00e2te astfel de palindromuri sunt?",
+        "answer_variants": [
+          "99",
+          "100",
+          "101",
+          "102",
+          "103"
+        ],
+        "correct_answer": "99",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Divizori",
+        "markdown_statement": "C\u00e2te numere \u00eentre `1` \u0219i `2.000.000.000` (inclusiv) au exact `5` divizori?",
+        "answer_variants": [
+          "0",
+          "12",
+          "34",
+          "47",
+          "156"
+        ],
+        "correct_answer": "47",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Matrice",
+        "markdown_statement": "Care este suma maxim\u0103 a elementelor matricei de mai jos, dup\u0103 \u00eenmul\u021birea unor linii \u0219i/sau coloane (posibil chiar toate) cu $-1$? \u00cenmul\u021birea unei linii sau coloane cu $-1$ presupune \u00eenmul\u021birea tuturor elementelor sale cu $-1$.\n\n|  4  | -1 |  6  | 4  | -5 |\n|-----|----|-----|----|----|\n| -2  |-33 | -12 | 10 | -11|\n|  1  | 0  | 3   |-1  | 4  |\n|-99  | -98|-40  |34  | 33 |",
+        "answer_variants": [
+          "233",
+          "234",
+          "235",
+          "361",
+          "427"
+        ],
+        "correct_answer": "361",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Monede",
+        "markdown_statement": "Toat\u0103 lumea are acas\u0103 o cutie cu monede de 10 \u0219i 50 bani cu care nu are ce s\u0103 fac\u0103.\nAlex a decis s\u0103 schimbe acest lucru. \u00cencep\u00e2nd de acum, el s-a hot\u0103r\u00e2t s\u0103 pl\u0103teasc\u0103 orice sum\u0103 c\u00e2t mai exact poate.\n\nConcret, dac\u0103 are de pl\u0103tit la magazin, va \u00eencerca:\n\n- s\u0103 dea c\u00e2t mai multe monede de 50 de bani poate, f\u0103r\u0103 s\u0103 dep\u0103\u0219easc\u0103 suma total\u0103;\n- dup\u0103 ce nu mai poate da monede de 50 de bani, \u00eencearc\u0103 s\u0103 dea c\u00e2t mai multe de 10 bani, de asemenea f\u0103r\u0103 a dep\u0103\u0219i suma total\u0103;\n- dup\u0103 aceea pl\u0103te\u0219te suma r\u0103mas\u0103 cu bancnote de 1 leu.\n\nDe notat c\u0103 mereu casierul d\u0103 restul exact, cu num\u0103rul minim de monede necesar.\n\u00cen\u021bial, Alex are:\n\n- 10 monede de 50 de bani\n- 10 monede de 10 bani.\n\nCu ce monede va r\u0103m\u00e2ne Alex, dac\u0103 are de pl\u0103tit, \u00een ordine, sumele `4.7, 2.3, 10.1, 3.5`?",
+        "answer_variants": [
+          "o moned\u0103 de 50 de bani \u0219i o moned\u0103 de 10 bani",
+          "dou\u0103 monede de 50 de bani",
+          "nicio moned\u0103",
+          "4 monede de 10 bani",
+          "o moned\u0103 de 50 de bani"
+        ],
+        "correct_answer": "4 monede de 10 bani",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Ac\u021biuni",
+        "markdown_statement": "Alex se uit\u0103 la pre\u021bul ac\u021biunilor sale pe pia\u021b\u0103.\n\n\u00cen mod inexplicabil, pre\u021bul ac\u021biunilor la minutul i este:\n\n```katex\n(i^3 + 7 \\cdot i^2 + 3 \\cdot i + 84) \\textbf{ mod } 100\n```\n\nAv\u00e2nd pre\u021bul ac\u021biunilor pentru minutul 1, 2, ..., 100, Alex \u00ee\u0219i pune urm\u0103toarea \u00eentrebare: dac\u0103 ar putea, pe parcursul acestor 100 de minute, s\u0103 cumpere o ac\u021biune \u0219i s\u0103 o v\u00e2nd\u0103 mai t\u00e2rziu, care este profitul maxim pe care ar putea s\u0103 \u00eel ob\u021bin\u0103?",
+        "answer_variants": [
+          "0",
+          "34",
+          "55",
+          "73",
+          "96"
+        ],
+        "correct_answer": "96",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Numere speciale",
+        "markdown_statement": "Fie numerele \"speciale\":\n\n```katex\n100, 356, 440, 1137, 1901\n```\n\nDefinim puterea unui num\u0103r \u00eentreg x ca fiind distan\u021ba fa\u021b\u0103 de cel mai apropiat num\u0103r special, respectiv valoarea minim\u0103 a modulului `|x - s|`, unde `s` este unul dintre numerele speciale.\n\nC\u00e2te numere cuprinse \u00eentre `1` \u0219i `2022` (inclusiv) au puterea un num\u0103r prim?",
+        "answer_variants": [
+          "141",
+          "2008",
+          "446",
+          "431",
+          "1577"
+        ],
+        "correct_answer": "431",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Fotoliu",
+        "markdown_statement": "Bunica lui Matei are un fotoliu. Fotoliul este foarte vechi \u0219i din tapi\u021berie au \u00eenceput s\u0103 ias\u0103 arce.\n\nPutem privi fotoliul ca o matrice p\u0103tratic\u0103 de 100 pe 100, av\u00e2nd cele 4 col\u021buri la coordonatele `(0, 0)`, `(0, 100)`, `(100, 0)` \u0219i `(100, 100)`. Matei a observat 5 arce, fiecare reprezentat prin cele dou\u0103 coordonate `(X_i, Y_i)`, care indic\u0103 pe unde acesta str\u0103punge fotoliul.\n\nEvident, Matei nu vrea s\u0103 se a\u0219eze pe un arc, deci se \u00eentreab\u0103 care este aria celui mai mare p\u0103trat inclus \u00een tapi\u021berie, cu laturile paralele cu axele de coordonate \u0219i \u00een interiorul c\u0103ruia s\u0103 nu se afle niciun arc. De observat faptul c\u0103 arcele au voie s\u0103 se afle pe laturile \u0219i col\u021burile p\u0103tratului.\n\nArcele sunt caracterizate prin urm\u0103toarele coordonate:\n\n```\n(48, 47), (64, 27), (54, 28), (80, 83), (92, 36)\n```\n\nCare este latura maxim\u0103 a unui p\u0103trat complet inclus \u00een tapi\u021berie, cu laturile paralele cu axele de coordonate, \u00een interiorul c\u0103ruia nu se afl\u0103 niciun arc?",
+        "answer_variants": [
+          "23",
+          "33",
+          "43",
+          "53",
+          "63"
+        ],
+        "correct_answer": "53",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "\u00centreb\u0103ri",
+        "markdown_statement": "Alex \u00eent\u00e2lne\u0219te doi oameni.\nPe unul dintre cei doi \u00eel cheam\u0103 Matei. Alex \u0219tie acest lucru, dar nu \u0219tie pe care dintre ei \u00eel cheam\u0103 Matei.\nDe asemenea, unul dintre cei doi spune mereu adev\u0103rul \u0219i cel\u0103lalt minte mereu. Alex \u0219tie \u0219i el lucrul acesta, dar, din nou, nu \u0219tie cine minte \u0219i cine spune adev\u0103rul.\n\nAlex are \u00een minte 5 \u00eentreb\u0103ri pe care vrea s\u0103 le foloseasc\u0103 pentru a afla dac\u0103 Matei minte sau nu:\n\n1. Matei minte?\n2. E\u0219ti Matei?\n3. Ce ar spune cel\u0103lalt dac\u0103 l-a\u0219i \u00eentreba dac\u0103 Matei minte?\n4. Ce ai spune dac\u0103 te-a\u0219 \u00eentreba dac\u0103 Matei minte?\n5. Este adev\u0103rat c\u0103 `1+1=2`?\n\nAlex dore\u0219te s\u0103 pun\u0103 exact o \u00eentrebare dintre cele 5 pentru a-l identifica pe Matei. Pe care dintre cele 5 \u00eentreb\u0103ri le poate folosi?",
+        "answer_variants": [
+          "\u00eentrebarea 1",
+          "\u00eentreb\u0103rile 1 \u0219i 5",
+          "\u00eentrebarea 2",
+          "\u00eentreb\u0103rile 1 \u0219i 4",
+          "\u00eentreb\u0103rile 2, 3 \u0219i 4"
+        ],
+        "correct_answer": "\u00eentreb\u0103rile 2, 3 \u0219i 4",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Func\u021bie",
+        "markdown_statement": "Care va fi output-ul urm\u0103toarei secven\u021be de cod la apelul func\u021biei `g()`?\n\n```C++\nlong long f(long long a, long long b)\n{\n    if (a == 0)\n        return 0;\n    else if (a & 1)\n        return (b + f(a ^ 1, b)) % 137;\n    else\n        return f(a >> 1, b << 1);\n}\n\nvoid g()\n{\n    long long suma = 0;\n    for (long long i = 0; i < 2LL * 1000LL * 1000LL * 1000LL; i++) {\n        suma += f(i, i);\n        suma %= 137;\n    }\n\n    cout << \"Suma este \" << suma << '\\n';\n}\n```",
+        "answer_variants": [
+          "Suma este 0",
+          "Suma este 1",
+          "Suma este 4",
+          "Suma este 8",
+          "Suma este 16",
+          "Suma este 32",
+          "Suma este 64",
+          "Suma este 128",
+          "Suma este 256",
+          "Suma este 512"
+        ],
+        "correct_answer": "Suma este 4",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Turnule\u021be",
+        "markdown_statement": "Ema are 22 de cuburi astfel: 7 verzi, 8 albastre \u0219i 7 ro\u0219ii.\n\nEa ar vrea s\u0103 vad\u0103 c\u00e2te turnule\u021be poate forma cu ele f\u0103r\u0103 ca un cub verde s\u0103 fie plasat imediat peste un cub ro\u0219u.\n\n\u00cen c\u00e2te moduri diferite poate construi turnule\u021be de acest tip folosind toate cuburile? Dou\u0103 moduri sunt diferite dac\u0103 \u0219irurile de culori ce \u00eencep de la primul cub de jos sunt diferite.",
+        "answer_variants": [
+          "23519245",
+          "1097450640",
+          "41409225",
+          "37268302",
+          "10803075",
+          "194276877",
+          "298507535",
+          "107567859",
+          "251890065",
+          "462058202"
+        ],
+        "correct_answer": "41409225",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Sosii",
+        "markdown_statement": "Doi oameni se numesc _sosii_ dac\u0103 seam\u0103n\u0103 mult unul cu altul.\nEvident, rela\u021bia de _a fi sosie_ este una de echivalen\u021b\u0103 deoarece:\n\n- `A` este mereu sosie cu `A`;\n- dac\u0103 `A` este sosie cu `B`, atunci \u0219i `B` este sosie cu `A`;\n- dac\u0103 `A` este sosie cu `B` \u0219i `B` cu `C`, atunci \u0219i `A` este sosie cu `C`.\n\nNumim o pereche `(A, B)` _minunat\u0103_ dac\u0103 \u00eendepline\u0219te simultan urm\u0103toarele dou\u0103 condi\u021bii:\n\n- `A < B`\n- `A` \u0219i `B` sunt sosii.\n\n\u00centr-un grup de `N` oameni numerota\u021bi de la `1` la `N`, Matei a observat c\u0103 sunt exact `2022` de perechi minunate.\n\nCare este cea mai mic\u0103 valoare a num\u0103rului `N` pentru care pot exista exact `2022` de perechi minunate?",
+        "answer_variants": [
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74"
+        ],
+        "correct_answer": "68",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      }
+    ]
+  },
+  {
+    "name": "Edi\u021bia 2022",
+    "problems": [
+      {
+        "title": "Exponent",
+        "markdown_statement": "Care este cel mai mare exponent `k` astfel \u00eenc\u00e2t `$$12^k$$` divide num\u0103rul `$$100!$$` ?",
+        "answer_variants": [
+          "8",
+          "25",
+          "33",
+          "48",
+          "97"
+        ],
+        "correct_answer": "48",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Matrice p\u0103tratic\u0103",
+        "markdown_statement": "Consider\u0103m o matrice p\u0103tratic\u0103 A de dimensiune `$$10 \\times 10$$`, av\u00e2nd liniile \u0219i coloanele indexate de la 1.\n\nOrice element `A[i][j]` al matricei este egal cu minimul dintre i \u0219i j (`$$1 \\leq i,j \\leq 10$$`).\n\nSuma tuturor elementelor din matricea A este egal\u0103 cu:",
+        "answer_variants": [
+          "285",
+          "385",
+          "500",
+          "550",
+          "715"
+        ],
+        "correct_answer": "385",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Func\u021bie",
+        "markdown_statement": "Pentru num\u0103rul natural pozitiv `n` definim `f(n)` astfel:\n\n- `f(1) = 1`\n- `f(n) = 1 + f(n/2)`, dac\u0103 n este par\n- `1 + f(3n+1)`, dac\u0103 n este impar \u0219i diferit de 1.\n\nSpre exemplu:\n```\nf(10) = 1 + f(5) = 1 + 1 + f(16) = 1 + 1 + 1 + f(8) = ... = 7\n```\n\nCu c\u00e2t este egal `f(2022)`?",
+        "answer_variants": [
+          "64",
+          "128",
+          "256",
+          "512",
+          "1024"
+        ],
+        "correct_answer": "64",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Pagini",
+        "markdown_statement": "Numerele de la `1` la `20.000` sunt scrise \u00een ordine \u00eentr-o carte cu `100` de foi (`200` de pagini), c\u00e2te `100` pe pagin\u0103.\n\nMai exact, prima foaie, alc\u0103tuit\u0103 din paginile `1` \u0219i `2`, con\u021bine pe prima pagin\u0103 numerele de la `1` la `100` \u0219i pe a doua pagin\u0103 numerele de la `101` la `200`. A doua foaie, compus\u0103 din paginile `3` \u0219i `4` con\u021bine numerele de la `201` la `400` etc.\n\nCineva dezleag\u0103 cartea, amestec\u0103 foile \u0219i o leag\u0103 la loc. Aten\u021bie, foile nu sunt rotite sau \u00eentoarse ci doar permutate.\n\nCare este probabilitatea, ca numerele de la `1150` la `1250` s\u0103 fie \u00een continuare consecutive?",
+        "answer_variants": [
+          "1",
+          "1/2",
+          "1/99",
+          "1/100",
+          "99/10100"
+        ],
+        "correct_answer": "1/100",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Submul\u021bime de produs maxim",
+        "markdown_statement": "Fie mul\u021bimea de numere reale urm\u0103toare:\n```\nA = {\n  -3000, 3000,\n  -2000, 2000,\n  -1000, 1000,\n  -13, 13, -7,\n  7, -5, 5, -1.5,\n  1.5, -0.75, 0.75,\n  -0.5, 0.5, 0\n}\n```\n\nCare este num\u0103rul de elemente al submul\u021bimii de produs maxim din A?",
+        "answer_variants": [
+          "9",
+          "13",
+          "14",
+          "15",
+          "18"
+        ],
+        "correct_answer": "15",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "\u021aara fermecat\u0103",
+        "markdown_statement": "\u00cen \u021bara fermecat\u0103, exist\u0103 `100` ora\u0219e, identificate cu numerele de la `0` la `99` \u0219i urm\u0103toarele drumuri bidirec\u021bionale:\n\n- Autostr\u0103zi \u00eentre ora\u0219ele `(0 \u0219i 9)`, `(10 \u0219i 19)`, `(20 \u0219i 29)`, ..., `(90 \u0219i 99)`, a c\u0103ror traversare dureaz\u0103 `4` ore;\n- Drumuri comunale \u00eentre ora\u0219ele `(0 \u0219i 1)`, `(1 \u0219i 2)`, ..., `(98 \u0219i 99)`, a c\u0103ror traversare dureaz\u0103 o or\u0103.\n\nC\u00e2t dureaz\u0103 cel mai rapid traseu de la ora\u0219ul `12` la ora\u0219ul `72`?",
+        "answer_variants": [
+          "29",
+          "30",
+          "34",
+          "35",
+          "38"
+        ],
+        "correct_answer": "34",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Matrice binar\u0103",
+        "markdown_statement": "Fie o matrice p\u0103tratic\u0103 de dimensiune `2022` ce con\u021bine valori de `1` \u0219i `0`, astfel \u00eenc\u00e2t exist\u0103 exact o valoare egal\u0103 cu `1` pe fiecare linie \u0219i pe fiecare coloan\u0103.\n\n\u00cen matrice este permis\u0103 interschimbarea a dou\u0103 valori din celule vecine pe vertical\u0103 sau pe orizontal\u0103 (consider\u0103m c\u0103 dou\u0103 celule sunt vecine dac\u0103 au o latur\u0103 comun\u0103).\n\nConsider\u00e2nd toate matricele cu o asemenea proprietate, care este num\u0103rul minim de interschimb\u0103ri necesare pentru a aduce toate valorile de `1` pe aceea\u0219i linie sau pe aceea\u0219i coloan\u0103?",
+        "answer_variants": [
+          "2022",
+          "511566",
+          "510555",
+          "1021110",
+          "1022121"
+        ],
+        "correct_answer": "1022121",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Ultima cifr\u0103",
+        "markdown_statement": "Ultima cifr\u0103 a num\u0103rului urmator este:\n```katex\n1^1 + 2^2 + 3^3 + \\ldots + 2022^{2022}\n```",
+        "answer_variants": [
+          "0",
+          "1",
+          "3",
+          "5",
+          "9"
+        ],
+        "correct_answer": "5",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Numere Fibonacci",
+        "markdown_statement": "C\u00e2te numere Fibonacci sunt \u00een intervalul \u00eenchis `[1234567890, 9876543210]`?",
+        "answer_variants": [
+          "1",
+          "2",
+          "4",
+          "8",
+          "16"
+        ],
+        "correct_answer": "4",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Cicluri de lungime 3",
+        "markdown_statement": "Fie graful neorientat `G` dat prin mul\u021bimea nodurilor:\n```\nV = { 1, 2, \u2026, 1000 }\n```\n\u0218i mul\u021bimea muchiilor:\n```\nE = { (i, j) | i + j este num\u0103r prim, \u0219i 1 \u2264 i, j \u2264 1000}\n```\n\nCare este num\u0103rul ciclurilor distincte de lungime 3 din graful G?\n(Consider\u0103m ca doua cicluri sunt distincte daca ele difer\u0103 prin cel putin o muchie.)",
+        "answer_variants": [
+          "0",
+          "1",
+          "27",
+          "64",
+          "125"
+        ],
+        "correct_answer": "0",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Netville",
+        "markdown_statement": "\u00cen ora\u0219ul Netville sunt `14052022` de case, identificate prin numerele naturale `1, 2,..., 14052022`.\n\n\u00cen majoritatea caselor locuiesc studen\u021bi (sau viitori studen\u021bi) ai Facult\u0103\u021bii de Matematic\u0103 \u0219i Informatic\u0103, care s-au g\u00e2ndit s\u0103 creeze o re\u021bea de calculatoare folosind urm\u0103toarea regul\u0103:\n\nCasa cu num\u0103rul `h` (`$$2 \\leq h \\leq 14052022$$`) va fi interconectat\u0103 cu toate casele al c\u0103ror num\u0103r `d` este un divizor al lui `h` (`$$1 \\leq d < h$$`).\n\nDe exemplu, casa cu num\u0103rul `10` va fi interconectat\u0103 cu casele cu numerele `1, 2, 5, 20, 30, ..., 14052020`.\n\nNum\u0103rul de conexiuni care trebuie realizate \u00eentre toate cele `14052022` de case este egal cu:",
+        "answer_variants": [
+          "233442104",
+          "226416093",
+          "219390082",
+          "205338061",
+          "248511938"
+        ],
+        "correct_answer": "219390082",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Salturi",
+        "markdown_statement": "Alex joac\u0103 un joc. Ini\u021bial, acesta se afl\u0103 lipit cu spatele de perete.\n\nLa fiecare pas poate s\u0103 fac\u0103 un salt \u00een fa\u021b\u0103 sau \u00een spate de lungime egal\u0103 cu `$$2^k$$` unit\u0103\u021bi, unde k > 0.\n\nPentru a evita accidente, Alex nu va efectua saltul \u00een spate dac\u0103 pozi\u021bia rezultat\u0103 va fi mai mic\u0103 dec\u00e2t 0.\n\nCare este num\u0103rul minim de salturi necesare lui Alex pentru a ajunge la pozi\u021bia `1340291`?",
+        "answer_variants": [
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ],
+        "correct_answer": "8",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "P\u0103trate perfecte",
+        "markdown_statement": "Care este num\u0103rul minim de p\u0103trate perfecte necesar astfel \u00eenc\u00e2t suma acestora s\u0103 fie `2022`?\n\nDe exemplu:\n\n- `$$2=1^2 + 1^2$$`, deci r\u0103spunsul pentru `2` este `2`.\n- `$$10=3^2 + 1^2$$`, deci r\u0103spunsul pentru `10` este tot `2`.\n- `$$100 = 10^2$$`, deci r\u0103spunsul pentru `100` este `1`.\n- `$$18 = 3^2 + 3^2$$`, deci r\u0103spunsul pentru `18` este `2`.",
+        "answer_variants": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "correct_answer": "3",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Zaruri",
+        "markdown_statement": "Pe mas\u0103 se afl\u0103 3 zaruri. Pe fiecare dintre cele 6 fe\u021be ale zarurilor e inscrip\u021bionat\u0103 c\u00e2te o cifr\u0103.\n\nCifrele \u00eenscrise pe ficare zar sunt urm\u0103toarele:\n\n```\nZ_1 \u21a6 [1, 3, 2, 4, 5, 7]\nZ_2 \u21a6 [1, 7, 6, 2, 1, 5]\nZ_3 \u21a6 [7, 9, 8, 2, 4, 21]\n```\n\nSpunem c\u0103 un num\u0103r de 3 cifre se poate forma folosind zarurile dac\u0103 putem aranja cele 3 zaruri pe mas\u0103 astfel \u00eenc\u00e2t fe\u021bele de sus s\u0103 descrie acel num\u0103r.\n\nDe exemplu, putem forma num\u0103rul `562` folosind zarurile `Z_1`, `Z_2`, `Z_3` (\u00een aceast\u0103 ordine).\n\nC\u00e2te numere distincte de 3 cifre se pot forma cu cele 3 zaruri?",
+        "answer_variants": [
+          "125",
+          "317",
+          "499",
+          "521",
+          "729"
+        ],
+        "correct_answer": "521",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Semne plus/minus",
+        "markdown_statement": "Pentru care din urm\u0103toarele valori ale lui `n` exist\u0103 o alegere de semne plus/minus astfel \u00eenc\u00e2t expresia `$$1 \\pm 2 \\pm 3 \\pm 4 \\pm \\ldots \\pm n$$` s\u0103 ia valoarea 0?",
+        "answer_variants": [
+          "2021",
+          "2022",
+          "2023",
+          "2025",
+          "2026"
+        ],
+        "correct_answer": "2023",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Func\u021bie Simpl\u0103",
+        "markdown_statement": "Se consider\u0103 func\u021bia:\n\n```C\nint h(int a, int b, int k)\n{\n    if (a <= 0) {\n        if (k == 1)\n            return a + b;\n        else\n            return b;\n    }\n    else\n        return h(a - b, b, k + 1);\n}\n```\n\nCare va fi valoarea expresiei `h(14052022, 23, 0)`?",
+        "answer_variants": [
+          "14",
+          "23",
+          "2022",
+          "610957",
+          "14051999"
+        ],
+        "correct_answer": "23",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Func\u021bie Grea",
+        "markdown_statement": "Consider\u0103m func\u021bia:\n\n```C\nconst int kLim = 1000000;\n\nvoid fun(int a, int b, int c)\n{\n    if (a > kLim || b > kLim || c > kLim)\n        return;\n    if (a != c && b != c)\n        cout << c << '\n';\n    fun(a + 1, b, c + b);\n    fun(a, b + 1, c + a);\n}\n```\n\nCare dintre urm\u0103toarele numere va fi afi\u0219at la un moment dat ca urmare a apelului `fun(0, 0, 0)`?",
+        "answer_variants": [
+          "361",
+          "5051",
+          "1787",
+          "53411",
+          "41"
+        ],
+        "correct_answer": "361",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Triunghiuri",
+        "markdown_statement": "Avem `10` be\u021be de lungimile:\n```\n3, 4, 5, 8, 10, 12, 14, 32, 57, 64\n```\n\nVrem s\u0103 folosim unele dintre aceste be\u021be (posibil toate) pentru a construi conturul unui triunghi (pun\u00e2nd be\u021bele cap la cap). Pentru fiecare latur\u0103 a triunghiului, putem folosi unul sau mai multe be\u021be. Triunghiul trebuie s\u0103 aib\u0103 aria strict pozitiv\u0103.\n\nC\u00e2te arii distincte posibile poate avea un asemenea triunghi?",
+        "answer_variants": [
+          "8193",
+          "22",
+          "55558",
+          "11495",
+          "105693",
+          "234126",
+          "17293",
+          "16639",
+          "132",
+          "49763"
+        ],
+        "correct_answer": "16639",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Submul\u021bimi",
+        "markdown_statement": "Fie `S` suma tuturor elementelor tuturor submul\u021bimilor cu `617` elemente ale mul\u021bimii:\n```\n{ 1, 2, 3, ..., 1234 }\n```\n\nC\u00e2te cifre are S?",
+        "answer_variants": [
+          "325",
+          "376",
+          "392",
+          "404",
+          "415",
+          "427",
+          "440",
+          "455",
+          "467",
+          "489"
+        ],
+        "correct_answer": "404",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Apari\u021bii",
+        "markdown_statement": "Alex are vedenii. Cum st\u0103 pe facebook s\u0103 citeasc\u0103 update-uri de la prieteni \u00een loc s\u0103 \u00eenve\u021be pentru examenul de m\u00e2ine, acesta \u00eencepe s\u0103 vad\u0103 cuv\u00e2ntul `picat` printre post\u0103ri.\n\nDat fiind un \u0219ir de caractere `s` format din literele mici ale alfabetului englez (f\u0103r\u0103 diacritice) \u0219i semne de punctua\u021bie reprezent\u00e2nd o postare, o apari\u021bie a cuv\u00e2ntului \"picat\" este determinat\u0103 de numerele `a_1 < a_2 < a_3 < a_4 < a_5`, astfel \u00eenc\u00e2t:\n\n* `s[a_1] = 'p'`\n* `s[a_2] = 'i'`\n* `s[a_3] = 'c'`\n* `s[a_4] = 'a'`\n* `s[a_5] = 't'`\n\nDou\u0103 apari\u021bii se consider\u0103 diferite dac\u0103 cel pu\u021bin unul dintre numerele `a_1`, `a_2`, `a_3`, `a_4` sau `a_5` este diferit \u00een cele dou\u0103 apari\u021bii.\nAlex tocmai a citit urm\u0103toarea postare:\n\n```\nAzi am putut in sfarsit ca din intamplare sa vizitez muzeul cunoscut al satului: cand am pasit acolo am simtit ca totul este minunat.\n```\n\nC\u00e2te apari\u021bii ale cuv\u00e2ntului `picat` exist\u0103 \u00een aceast\u0103 postare?",
+        "answer_variants": [
+          "665",
+          "714",
+          "1923",
+          "2154",
+          "1315",
+          "1276",
+          "956",
+          "1672",
+          "1024",
+          "1948"
+        ],
+        "correct_answer": "1672",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      }
+    ]
+  },
+  {
+    "name": "Edi\u021bia 2021",
+    "problems": [
+      {
+        "title": "Num\u0103r divizibil cu 7",
+        "markdown_statement": "Care este ultima cifr\u0103 a celui mai mare num\u0103r de 7 cifre, divizibil cu 7, care con\u021bine \u00een componen\u021ba sa doar cifre strict mai mici dec\u00e2t 7?",
+        "answer_variants": [
+          "0",
+          "2",
+          "3",
+          "5",
+          "6"
+        ],
+        "correct_answer": "0",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Parte \u00eentreag\u0103 superioar\u0103",
+        "markdown_statement": "Care expresie implementeaz\u0103 corect `$$\\lceil \\frac{n}{k} \\rceil$$` pentru toate perechile `n, k` de numere naturale nenule?\n\nNota\u021bii:\n * `$$\\lceil a\\rceil$$` reprezint\u0103 partea \u00eentreag\u0103 superioar\u0103 a num\u0103rului real `a`, spre exemplu `$$\\lceil 2.8\\rceil = 3$$`.\n * `[n / k]` reprezint\u0103 c\u00e2tul \u00eemp\u0103r\u021birii lui `n` la `k` \u0219i `n mod k` reprezint\u0103 restul \u00eemp\u0103r\u021birii lui `n` la `k`).",
+        "answer_variants": [
+          "[n / k]",
+          "[(n+k) / k]",
+          "[(n+k-1) / k]",
+          "[n / (k-1)]",
+          "[n / k] + (n mod k)"
+        ],
+        "correct_answer": "[(n+k-1) / k]",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Func\u021bie",
+        "markdown_statement": "Consider\u0103m urm\u0103torul cod scris \u00een limbajul C++ / Pascal:\n\n```C\nint f(int t[10000], int n) {\n    int i = 0, s = 0;\n    while (i < n) {\n        int j = i + 1;\n        while (j < n && t[i] == t[j])\n            j += 1;\n        s += 1;\n        i = j;\n    }\n    return s;\n}\n```\n\n```Pascal\nfunction f(t : MyArray; n : Integer) : Integer;\nvar i, s, j : Integer;\nbegin\ni := 0; s := 0;\nwhile i < n do begin\n    j := i + 1;\n    while (j < n) and (t[i] = t[j]) do\n        j := j + 1;\n    s := s + 1;\n    i := j;\nend;\nf := s;\nend;\n```\n\nDefini\u021bii:\n * O subsecven\u021b\u0103 a lui `t` este o list\u0103 de valori aflate pe pozi\u021bii consecutive cresc\u0103toare, e.g., `[t[3], t[4], t[5]]`.\n * Un sub\u0219ir al lui `t` este o list\u0103 de valori aflate pe pozi\u021bii ordonate cresc\u0103tor (nu neap\u0103rat consecutive), e.g., `[t[3], t[5], t[9]]`.\n * \nPresupun\u00e2nd c\u0103 tabloul `t` este format din `n` numere ordonate cresc\u0103tor, preciza\u021bi ce returneaz\u0103 `f(t, n)`:",
+        "answer_variants": [
+          "num\u0103rul valorilor distincte din tabloul t",
+          "lungimea maxim\u0103 a unei subsecven\u021be din tabloul t format\u0103 din valori egale",
+          "num\u0103rul subsecven\u021belor strict cresc\u0103toare din tabloul t",
+          "lungimea maxim\u0103 a unui sub\u0219ir din tabloul t format din valori egale",
+          "num\u0103rul valorilor care se repet\u0103 de cel pu\u021bin dou\u0103 ori din tabloul t"
+        ],
+        "correct_answer": "num\u0103rul valorilor distincte din tabloul t",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Schimb de c\u0103r\u021bi de vizit\u0103",
+        "markdown_statement": "\u00centr-o sal\u0103 de conferin\u021be sunt mai multe persoane, fiecare av\u00e2nd o rezerv\u0103 suficient de mare de c\u0103r\u021bi de vizit\u0103.\n\n\u0218tiind c\u0103 oricare dou\u0103 persoane pot s\u0103 fac\u0103 schimb de c\u0103r\u021bi de vizit\u0103 cel mult o dat\u0103 \u0219i s-au efectuat `23052021` de schimburi, care este num\u0103rul minim de persoane care se pot afla \u00een sal\u0103?",
+        "answer_variants": [
+          "4801",
+          "4802",
+          "4803",
+          "6790",
+          "6791"
+        ],
+        "correct_answer": "6791",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Arbori par\u021biali",
+        "markdown_statement": "Pentru un graf `G`, un arbore par\u021bial este un graf conex, f\u0103r\u0103 cicluri, con\u021bin\u00e2nd acela\u0219i num\u0103r de noduri ca `G` \u0219i doar muchii din `G` (dar nu neap\u0103rat toate).\n\nNum\u0103rul de arbori par\u021biali ai grafului de mai jos este egal cu:",
+        "answer_variants": [
+          "12",
+          "11",
+          "9",
+          "15",
+          "16"
+        ],
+        "correct_answer": "11",
+        "difficulty": "easy",
+        "image_path": "./images/2021-arbori-partiali.png",
+        "image_content": "Imaginea dat\u0103 descrie un graf neorientat cu 5 noduri \u0219i 6 muchii, o muchie de la nodul 0 la 2, de la 0 la 4, de la 2 la 3, de la 2 la 4, de la 4 la 1 \u0219i de la 1 la 3."
+      },
+      {
+        "title": "Pseudo-palindrom",
+        "markdown_statement": "Un num\u0103r natural se nume\u0219te palindrom dac\u0103 se cite\u0219te la fel de la st\u00e2nga la dreapta \u0219i de la dreapta la st\u00e2nga.\n\nSpre exemplu, `13231` \u0219i `2662` sunt palindromuri, dar `145` sau `1234322` nu sunt.\n\nUn num\u0103r natural se nume\u0219te pseudo-palindrom dac\u0103 cifrele sale pot fi reordonate astfel \u00eenc\u00e2t s\u0103 devin\u0103 palindrom (\u00een particular orice palindrom este \u0219i pseudo-palindrom).\n\nSpre exemplu, `13321` \u0219i `2626` sunt pseudo-palindromuri.\n\nFie `X` cel mai mare num\u0103r pseudo-palindrom mai mic sau egal cu `1000465`. Care este restul lui `X` la \u00eemp\u0103r\u021birea cu `37`?",
+        "answer_variants": [
+          "36",
+          "4",
+          "1",
+          "35",
+          "25"
+        ],
+        "correct_answer": "35",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Adunare",
+        "markdown_statement": "Se d\u0103 urm\u0103toarea adunare:\n\n```\nERAM + MARE = MARET\n```\n\nFiecare majuscul\u0103 reprezint\u0103 o cifr\u0103 (nu neap\u0103rat distinct\u0103 de celelalte).\n\nFiind primele cifre ale numerelor, cifrele corespunz\u0103toare lui `M` \u0219i `E` trebuie s\u0103 fie diferite de 0.\n\nCare este valoarea sumei `M + A + R + E + T`?",
+        "answer_variants": [
+          "21",
+          "7",
+          "16",
+          "18",
+          "30"
+        ],
+        "correct_answer": "18",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Creioane",
+        "markdown_statement": "Ionel are 10 creioane. Lungimile fiec\u0103rui creion sunt:\n\n```\n4, 3, 7, 8, 7, 4, 5, 8, 13, 15\n```\n\nEl \u00ee\u0219i dore\u0219te s\u0103 ob\u021bin\u0103 creioane av\u00e2nd doar dou\u0103 lungimi diferite. Pentru a realiza acest lucru, el poate scurta (prin ascu\u021bire) unele creioane.\n\nCare este suma maxim\u0103 a lungimilor creioanelor pe care o poate ob\u021bine Ionel, dup\u0103 ce efectueaz\u0103 opera\u021biile?",
+        "answer_variants": [
+          "46",
+          "50",
+          "54",
+          "56",
+          "62"
+        ],
+        "correct_answer": "54",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Mul\u021bime 13-liber\u0103",
+        "markdown_statement": "O mul\u021bime de numere naturale se nume\u0219te 13-liber\u0103 dac\u0103 nu putem ob\u021bine num\u0103rul 13 ca sum\u0103 a unor elemente **distincte** din mul\u021bime.\n\nSpre exemplu, mul\u021bimea `{ 1, 5, 7, 11 }` nu este 13-liber\u0103 fiindc\u0103 `1 + 5 + 7 = 13`, dar mul\u021bimea `{ 1, 5, 6 }` este 13-liber\u0103 (nota\u021bi c\u0103 de\u0219i `1 + 6 + 6 = 13`, condi\u021bia descris\u0103 nu este \u00eenc\u0103lcat\u0103, 6 fiind folosit de dou\u0103 ori).\n\nCare este cardinalul maxim al unei submul\u021bimi 13-libere a mul\u021bimii `1, 2, 3, ..., 10`?",
+        "answer_variants": [
+          "5",
+          "4",
+          "3",
+          "6",
+          "8"
+        ],
+        "correct_answer": "5",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Num\u0103r prim",
+        "markdown_statement": "Fie `n` cel mai mare num\u0103r natural **prim** de 5 cifre cu toate cifrele distincte.\nCare este restul \u00eemp\u0103r\u021birii lui `n` la 37?",
+        "answer_variants": [
+          "27",
+          "4",
+          "11",
+          "15",
+          "31"
+        ],
+        "correct_answer": "15",
+        "difficulty": "easy",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Pa\u0219i",
+        "markdown_statement": "V\u0103 aminti\u021bi de Cristian cel neast\u00e2mp\u0103rat? Tat\u0103l lui s-a hot\u0103r\u00e2t s\u0103 \u00eel \u00eenve\u021be pu\u021bin\u0103 aritmetic\u0103.\n\nEl spune c\u0103 de la un num\u0103r natural `x` se poate ajunge la un num\u0103r natural `y` (`y > x`) trec\u00e2nd prin numerele dintre ele utiliz\u00e2nd o secven\u021b\u0103 de pa\u0219i.\n\nLungimea fiec\u0103rui pas este pozitiv\u0103 \u0219i poate fi:\n * Egal\u0103 cu lungimea pasului anterior, sau\n * Mai mare cu 1, sau\n * Mai mare cu 1.\n\nLungimile primului \u0219i ultimului pas trebuie s\u0103 fie egale cu 1.\n\nProblema dat\u0103 lui Cristian este de a g\u0103si num\u0103rul minim de pa\u0219i prin care se poate ajunge de la `2021` la `3110`. Ce s\u0103 aleag\u0103 Cristian?",
+        "answer_variants": [
+          "64",
+          "65",
+          "66",
+          "67",
+          "68"
+        ],
+        "correct_answer": "65",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Postere",
+        "markdown_statement": "Primarul P. are de acoperit un perete lung de 100 m \u0219i \u00eenalt de 1 m, pe care vrea s\u0103 \u00eel \u00eemp\u00e2nzeasc\u0103 cu postere publicitare.\n\n\u00cen acest sens, a cump\u0103rat 8 postere, de \u00een\u0103l\u021bime egal\u0103 cu 1 m \u0219i l\u0103\u021bimile (exprimate \u00een metri):\n\n```\n12, 27, 13, 25, 26, 38, 28, 38\n```\n\nEl va trebui s\u0103 aranjeze posterele de-a lungul peretelui. Posterele nu au voie s\u0103 se suprapun\u0103 \u0219i nu pot dep\u0103\u0219i marginile peretelui.\n\nCare este aria maxim\u0103 de perete pe care o poate acoperi folosind posterele cump\u0103rate (exprimat\u0103 \u00een `$$m^2$$`)?",
+        "answer_variants": [
+          "93",
+          "94",
+          "95",
+          "96",
+          "97"
+        ],
+        "correct_answer": "94",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Triunghi infinit",
+        "markdown_statement": "Consider\u0103m triunghiul infinit de mai jos, format din numere naturale, \u00een care num\u0103rul 1 se afl\u0103 la nivelul 1, numerele 2 \u0219i 3 se afl\u0103 la nivelul 2, numerele 4, 5 \u0219i 6 se afl\u0103 la nivelul 3 \u0219i a\u0219a mai departe.\n\nPentru un anumit nivel `k`, vrem s\u0103 calcul\u0103m suma numerelor din **interiorul** triunghiului care se opre\u0219te la nivelul `k`.\n\nSpre exemplu, pentru nivelul `k = 5` numerele din interiorul triunghiului creat sunt `5, 8, 9`, \u0219i suma lor este `22`, iar pentru `k = 7` numerele din interiorul triunghiului creat sunt `5, 8, 9, 12, 13, 14, 17, 18, 19, 20` \u0219i suma lor este `135`.\n\nCalcula\u021bi suma numerelor din interiorul triunghiului care se opre\u0219te la nivelul `k = 2021`.",
+        "answer_variants": [
+          "2076403516157",
+          "2080520640766",
+          "2080520640767",
+          "2084643884965",
+          "2084643884966"
+        ],
+        "correct_answer": "2080520640766",
+        "difficulty": "medium",
+        "image_path": "./images/2021-triunghi-infinit.png",
+        "image_content": "Imaginea data descrie un triunghi infinit de numere naturale, in care numarul 1 se afla la nivelul 1, numerele 2 si 3 se afla la nivelul 2, numerele 4, 5 si 6 se afla la nivelul 3 si a\u0219a mai departe."
+      },
+      {
+        "title": "Domino",
+        "markdown_statement": "Fie `A` o matrice binar\u0103 cu 50 de linii \u0219i 50 de coloane (numerotate de la 1 la 50).\n\nCelula de pe r\u00e2ndul `i` \u0219i coloana `j` con\u021bine valoarea 1 dac\u0103 \u0219i numai dac\u0103 num\u0103rul `$$50 \\cdot (i-1) + j$$` se divide cu 7 **sau** cu 13, altfel con\u021bine valoarea 0.\n\nVrem s\u0103 plas\u0103m un singur \"domino\" (pies\u0103 de m\u0103rime `$$1 \\times 2$$` sau `$$2 \\times 1$$`) \u00een matrice. Domino-ul trebuie s\u0103 acopere 2 celule vecine (pe orizontal\u0103 sau vertical\u0103) de 0 ale matricei.\n\n\u00cen c\u00e2te feluri putem face acest lucru?",
+        "answer_variants": [
+          "1479",
+          "1480",
+          "1520",
+          "2959",
+          "3039"
+        ],
+        "correct_answer": "2959",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Algoritm de acoperire",
+        "markdown_statement": "Consider\u0103m urm\u0103torul algoritm de acoperire a unei sume de bani, folosind bancnotele disponibile \u00een portofel:\n\nC\u00e2t timp suma este neacoperit\u0103 \u0219i avem \u00een portofel o bancnot\u0103 de valoare mai mic\u0103 sau egal\u0103 cu suma, alegem cea mai mare bancnot\u0103 de acest tip, scoatem bancnota din portofel \u0219i reducem suma cu valoarea ei.\n\nDac\u0103 algoritmul se \u00eencheie cu suma 0, a reu\u0219it, altfel a e\u0219uat.\n\n\u00cen func\u021bie de configura\u021bia de bancnote disponibile \u0219i suma de acoperit, e posibil ca acest algoritm s\u0103 nu g\u0103seasc\u0103 o solu\u021bie de\u0219i ea exist\u0103.\n\nSpre exemplu, dac\u0103 avem bancnotele `{1, 1, 4, 5, 6}` \u0219i trebuie s\u0103 acoperim suma `S = 9`, algoritmul va selecta bancnotele `6, 1, 1`, dup\u0103 care se va bloca, fiindc\u0103 nu mai poate acoperi suma r\u0103mas\u0103 (egal\u0103 cu 1). Totu\u0219i, exist\u0103 solu\u021bia `{4, 5}` care acoper\u0103 complet suma. Numim o astfel de configura\u021bie de bancnote disponibile, respectiv sum\u0103 de acoperit, un contraexemplu pentru algoritmul descris.\n\nFie `S_MIN` cea mai mic\u0103 sum\u0103 de acoperit care apare \u00eentr-un contraexemplu construit doar cu tipurile de bancnote rom\u00e2ne\u0219ti aflate \u00een circula\u021bie, anume: `{1, 5, 10, 50, 100, 200, 500}`. Fiecare tip de bancnot\u0103 poate fi folosit de oric\u00e2te ori (inclusiv deloc).\n\nCare este restul lui `S_MIN` la \u00eemp\u0103r\u021birea cu 37?",
+        "answer_variants": [
+          "13",
+          "3",
+          "8",
+          "18",
+          "23"
+        ],
+        "correct_answer": "8",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Dreptunghiuri",
+        "markdown_statement": "C\u00e2te dreptunghiuri distincte sunt \u00een figura urm\u0103toare?\n\n```\n+------+---+---+---+---+\n|      |   |   |   |   |\n+--+---+   +---+   |   |\n|  |   |   |   |   |   |\n+--+---+---+---+---+   |\n|  |       |       |   |\n+--+---+---+---+---+---+\n|      |   |   |       |\n+------+---+---+-------+\n```",
+        "answer_variants": [
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "correct_answer": "43",
+        "difficulty": "medium",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Ecua\u021bie",
+        "markdown_statement": "Pe mas\u0103 este scris\u0103 ecua\u021bia `a + b = c`. Dup\u0103 un cutremur masiv, s-au permutat toate cifrele \u0219i semnele matematice \u00eentre ele \u0219i s-a ob\u021binut o nou\u0103 \"ecua\u021bie\" (evident, gre\u0219it\u0103):\n\n```\n129129851 = 29552 + 1177003\n```\n\nCare ar fi putut fi valoarea ini\u021bial\u0103 a lui `c`?",
+        "answer_variants": [
+          "8739191",
+          "3001892",
+          "3072104",
+          "3735094",
+          "5790835",
+          "7192195",
+          "8952530",
+          "15038950",
+          "15111922",
+          "15839920"
+        ],
+        "correct_answer": "15111922",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Date robuste",
+        "markdown_statement": "\u00cen aceast\u0103 problem\u0103 ne vom referi la date calendaristice care \u021bin cont de an, lun\u0103, zi, ora \u0219i minut.\n\nSpunem c\u0103 o astfel de dat\u0103 este robust\u0103 dac\u0103 putem deduce \u00een mod unic la ce dat\u0103 valid\u0103 se refer\u0103 o mul\u021bime de numere, f\u0103r\u0103 s\u0103 \u0219tim coresponden\u021ba dintre valori \u0219i c\u00e2mpurile datei.\n\nSpre exemplu, av\u00e2nd valorile `{3, 20, 30, 53, 2021}`, \u0219tim c\u0103 nu poate fi vorba dec\u00e2t de `30.03.2021 20:53`, deci aceast\u0103 dat\u0103 este robust\u0103. Pe de alt\u0103 parte, data `23.05.2021 20:53` nu este robust\u0103, deoarece mul\u021bimea `{5, 20, 23, 53, 2021}` poate identifica \u0219i alte date (de exemplu, `20.05.2021 23:53`).\n\nC\u00e2te date \u00eentre `01.01.2021 00:00` \u0219i `31.12.2021 23:59` (inclusiv) sunt robuste?\n\nO dat\u0103 este valid\u0103 dac\u0103 ora este \u00een intervalul `[0, 23]`, minutul \u00een `[0, 59]`, luna \u00een `[1, 12]`, ziua \u00een intervalul corespunz\u0103tor lunii respective conform calendarului anului 2021.",
+        "answer_variants": [
+          "27412",
+          "29568",
+          "35797",
+          "37409",
+          "44382",
+          "44516",
+          "46870",
+          "512260",
+          "525600",
+          "535680"
+        ],
+        "correct_answer": "44382",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Secret",
+        "markdown_statement": "Consider\u0103m 7 copii (identifica\u021bi prin numere de la 1 la 7) \u0219i rela\u021biile de prietenie (bidirec\u021bionale):\n\n```\n{(1, 2), (4, 5), (4, 6), (6, 7), (7, 2), (4, 2), (3, 1), (5, 6), (4, 3), (3, 2)}\n```\n\n\u00cen ziua 0, copilul 5 afl\u0103 de la profesoar\u0103 un secret (c\u0103 aceasta vrea s\u0103 organizeze o onomastic\u0103 pentru copilul 2 la sf\u00e2r\u0219itul celei de-a 4-a zi).\n\n\u00cen fiecare dintre urm\u0103toarele 4 zile, se \u00eent\u00e2mpl\u0103 urm\u0103torul lucru:\n\nFiecare copil care \u0219tie secretul \u00ee\u0219i alege exact un prieten aleator (echiprobabil din lista lui de prieteni) \u0219i \u00eei comunic\u0103 \u0219i lui secretul (se poate \u00eent\u00e2mpla ca un copil s\u0103 comunice secretul de mai multe ori aceluia\u0219i prieten, \u00een zile diferite).\n\nAstfel, noi copii pot afla secretul, pe care \u00eel vor comunica \u00een continuare \u00eencep\u00e2nd cu zilele urm\u0103toare.\n\nCare este probabilitatea pentru copilul 2 s\u0103 afle secretul cel t\u00e2rziu la sf\u00e2r\u0219itul celei de-a 4-a zi?\n\n_Alege\u021bi varianta cea mai apropiat\u0103 de r\u0103spunsul real._",
+        "answer_variants": [
+          "0%",
+          "26%",
+          "32%",
+          "44%",
+          "58%",
+          "68%",
+          "76%",
+          "85%",
+          "94%",
+          "100%"
+        ],
+        "correct_answer": "68%",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      },
+      {
+        "title": "Angaja\u021bi",
+        "markdown_statement": "Compania _Grigorescu: Grile, gr\u0103tare \u0219i grilaje_ are 7 angaja\u021bi. Ziua de m\u00e2ine are un total de 1440 de minute. Fiecare angajat \u0219tie exact c\u00e2te minute poate lucra m\u00e2ine. Aceste valori sunt date de \u0219irul:\n\n```\n480, 360, 333, 1000, 285, 560, 15\n```\n\nUn angajat care poate lucra `X` minute poate alege orice interval continuu de `X` minute care \u00eencepe la minut fix \u0219i este inclus complet \u00een cele 1440 de minute ale zilei.\n\nAngaja\u021bii vor s\u0103-\u0219i coordoneze alegerile astfel \u00eenc\u00e2t oricare doi dintre ei s\u0103 aib\u0103 cel pu\u021bin un minut comun \u00een program.\n\nC\u00e2te configura\u021bii de alegeri satisfac aceast\u0103 cerin\u021b\u0103? R\u0103spunsul este foarte mare, deci suntem interesa\u021bi de restul acestui num\u0103r la \u00eemp\u0103r\u021birea cu `1000000007`.\n\nO configura\u021bie `A` difer\u0103 de o configura\u021bie `B` dac\u0103 exist\u0103 cel pu\u021bin un angajat care \u0219i-a ales un anumit interval \u00een `A` \u0219i un interval diferit \u00een `B`.",
+        "answer_variants": [
+          "82930407",
+          "195773645",
+          "231919841",
+          "353129100",
+          "371820425",
+          "469187746",
+          "715377483",
+          "67843200",
+          "802170567",
+          "918401827"
+        ],
+        "correct_answer": "195773645",
+        "difficulty": "hard",
+        "image_path": null,
+        "image_content": null
+      }
+    ]
+  }
+]

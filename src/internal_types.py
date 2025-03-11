@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from enum import Enum
 from typing import Optional
 import json
@@ -7,21 +7,20 @@ import pathlib
 
 import script_runner
 
+# Directory where our statements and results are stored.
+DATA_DIR = pathlib.Path(__file__).parent.parent / "data" / "statements"
 
-class ProblemDificulty(Enum):
+# Original statements.
+RO_STATEMENTS_FILE = DATA_DIR / "ro.json"
+
+# Translated statements.
+EN_STATEMENTS_FILE = DATA_DIR / "en.json"
+
+
+class ProblemDificulty(str, Enum):
     EASY = "easy"
     MEDIUM = "medium"
     HARD = "hard"
-
-    @staticmethod
-    def from_romanian(s: str) -> "ProblemDificulty":
-        if s == "usor":
-            return ProblemDificulty.EASY
-        if s == "mediu":
-            return ProblemDificulty.MEDIUM
-        if s == "greu":
-            return ProblemDificulty.HARD
-        raise ValueError(f"Invalid difficulty: {s}")
 
 
 @dataclass
@@ -39,56 +38,24 @@ class Problem:
     image_content: Optional[str]
 
     @staticmethod
-    def from_romanian_json(obj: dict) -> "Problem":
-        return Problem(
-            title=obj["titlu"],
-            markdown_statement=obj["enunt_markdown"],
-            answer_variants=list(map(str, obj["variante"])),
-            correct_answer=str(obj["raspuns"]),
-            difficulty=ProblemDificulty.from_romanian(obj["dificultate"]),
-            image_path=obj.get("imagine"),
-            image_content=obj.get("continut_imagine"),
-        )
-
-    @staticmethod
-    def from_english_json(obj: dict) -> "Problem":
+    def from_json(obj: dict) -> "Problem":
         return Problem(
             title=obj["title"],
             markdown_statement=obj["markdown_statement"],
-            answer_variants=list(map(obj["answer_variants"], str)),
-            correct_answer=str(obj["correct_answer"]),
+            answer_variants=obj["answer_variants"],
+            correct_answer=obj["correct_answer"],
             difficulty=ProblemDificulty(obj["difficulty"]),
             image_path=obj.get("image_path"),
-            image_content=obj.get("image_content"),
+            image_content=(
+                obj.get("image_content") if obj.get("image_content") else None
+            ),
         )
 
-    def to_romanian_json(self) -> dict:
-        obj = {
-            "titlu": self.title,
-            "enunt_statement": self.markdown_statement,
-            "variante": self.answer_variants,
-            "raspuns": self.correct_answer,
-            "dificultate": self.difficulty.value,
-        }
-        if self.image_path is not None:
-            obj["imagine"] = self.image_path
-        if self.image_content is not None:
-            obj["continut_imagine"] = self.image_content
-        return obj
-
-    def to_english_json(self) -> dict:
-        obj = {
-            "title": self.title,
-            "markdown_statement": self.markdown_statement,
-            "answer_variants": self.answer_variants,
-            "correct_answer": self.correct_answer,
-            "difficulty": self.difficulty.value,
-        }
-        if self.image_path is not None:
-            obj["image_path"] = self.image_path
-        if self.image_content is not None:
-            obj["image_content"] = self.image_content
-        return obj
+    def to_json(self) -> dict:
+        result = asdict(self)
+        if self.image_content is None:
+            result.pop("image_content")
+        return result
 
     def image_url(self) -> Optional[str]:
         """
@@ -109,32 +76,17 @@ class Contest:
     problems: list[Problem]
 
     @staticmethod
-    def from_romanian_json(obj: dict) -> "Contest":
+    def from_json(obj: dict) -> "Contest":
         return Contest(
             name=obj["name"],
-            problems=list(map(Problem.from_romanian_json, obj["probleme"])),
+            problems=[Problem.from_json(p) for p in obj["problems"]],
         )
 
-    def to_romanian_json(self) -> dict:
-        return {
-            "name": self.name,
-            "probleme": list(map(Problem.to_romanian_json, self.problems)),
-        }
-
-    @staticmethod
-    def from_english_json(obj: dict) -> "Contest":
-        return Contest(
-            name=obj["name"],
-            problems=list(map(Problem.from_english_json, obj["problems"])),
-        )
-
-    def to_english_json(self) -> dict:
-        return {
-            "name": self.name,
-            "problems": list(map(Problem.to_english_json, self.problems)),
-        }
+    def to_json(self) -> dict:
+        return asdict(self)
 
 
+@dataclass
 class LLMAnswer:
     """
     An LLM's solution. Can either be a python script or a punctual answer.
@@ -170,7 +122,7 @@ class LLMAnswer:
         return answer
 
     @staticmethod
-    def from_json(content: str) -> Optional["LLMAnswer"]:
+    def from_reply_json(content: str) -> Optional["LLMAnswer"]:
         """
         Tries to parse the answer, returns None if the answer
         is not in the right format.
@@ -190,3 +142,10 @@ class LLMAnswer:
         except Exception as e:
             logging.warning(f"Failed to parse json: {e}")
             return None
+
+    @staticmethod
+    def from_json(obj: dict) -> "LLMAnswer":
+        return LLMAnswer(**obj)
+
+    def to_json(self) -> dict:
+        return asdict(self)

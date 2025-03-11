@@ -4,18 +4,10 @@ import sys
 import logging
 
 from tqdm import tqdm
+from internal_types import EN_STATEMENTS_FILE, RO_STATEMENTS_FILE
 
 import internal_types
 import llm_interactor
-
-# Directory where our statements and results are stored.
-DATA_DIR = pathlib.Path(__file__).parent.parent / "data" / "statements"
-
-# Original statements.
-RO_STATEMENTS_FILE = DATA_DIR / "ro_statements.json"
-
-# Translated statements.
-EN_STATEMENTS_FILE = DATA_DIR / "en_statements.json"
 
 
 def run_models_on_statements():
@@ -55,7 +47,7 @@ def run_models_on_statements():
     print(f"Saved to {EN_STATEMENTS_FILE}")
 
 
-def convert_statements(force: bool = False):
+def translate_statements(force: bool = False):
     """
     Ingest data from the format it is stored
     """
@@ -75,7 +67,7 @@ def convert_statements(force: bool = False):
     with open(RO_STATEMENTS_FILE, "r") as f:
         content = json.loads(f.read())
         ro_data: list[internal_types.Contest] = [
-            internal_types.Contest.from_romanian_json(c) for c in content
+            internal_types.Contest.from_json(c) for c in content
         ]
 
     # Convert to English.
@@ -113,5 +105,5 @@ def convert_statements(force: bool = False):
     # Save the data.
     print("Saving data...")
     with open(EN_STATEMENTS_FILE, "w") as f:
-        f.write(json.dumps([c.to_english_json() for c in en_data], indent=2))
+        f.write(json.dumps([c.to_json() for c in en_data], indent=2))
     print(f"Saved to {EN_STATEMENTS_FILE}")
