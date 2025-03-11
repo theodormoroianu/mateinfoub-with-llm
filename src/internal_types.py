@@ -3,6 +3,7 @@ from enum import Enum
 from typing import Optional
 import json
 import logging
+import pathlib
 
 import script_runner
 
@@ -107,8 +108,8 @@ class Contest:
     name: str
     problems: list[Problem]
 
-    @classmethod
-    def from_romanian_json(cls, obj: dict) -> "Contest":
+    @staticmethod
+    def from_romanian_json(obj: dict) -> "Contest":
         return Contest(
             name=obj["name"],
             problems=list(map(Problem.from_romanian_json, obj["probleme"])),
@@ -120,8 +121,8 @@ class Contest:
             "probleme": list(map(Problem.to_romanian_json, self.problems)),
         }
 
-    @classmethod
-    def from_english_json(cls, obj: dict) -> "Contest":
+    @staticmethod
+    def from_english_json(obj: dict) -> "Contest":
         return Contest(
             name=obj["name"],
             problems=list(map(Problem.from_english_json, obj["problems"])),

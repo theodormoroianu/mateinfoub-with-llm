@@ -4,6 +4,7 @@ This module is useful for running containerized python scripts, and capture stdo
 
 import os
 import subprocess
+import logging
 import tempfile
 
 
@@ -19,6 +20,7 @@ def run_script(
     :param timeout: The maximum time in seconds to run the script.
     :return: The stdout of the script, or "Timeout" if the script ran for more than timeout seconds.
     """
+    logging.info("Running script...")
     # Create a temporary directory.
     with tempfile.TemporaryDirectory() as temp_dir:
         # Write the script to a file.
@@ -45,6 +47,18 @@ def run_script(
         except subprocess.TimeoutExpired:
             process.kill()
             stdout, stderr = process.communicate()
+            logging.warning(
+                f"Timeout expired for script. Make sure that the python image is downloaded."
+            )
             return "Timeout"
 
-        return stdout.decode("utf-8")
+        if b"database static dir" in stderr:
+            logging.error(
+                "Unable to run the script. This is probably because you are "
+                "trying to run the script from a snap container (VSCode) or "
+                "something similar. Please run the script from a normal terminal."
+            )
+            raise Exception("Unable to run the script.")
+
+    logging.info("Script ran successfully.")
+    return stdout.decode("utf-8")

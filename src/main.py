@@ -2,8 +2,11 @@
 
 import os
 import argparse
+import logging
 
-import statements_importer
+import statements_processor
+
+logging.basicConfig(level=logging.INFO)
 
 
 def main():
@@ -26,7 +29,7 @@ def main():
     args = parser.parse_args()
 
     if args.command == "translate":
-        statements_importer.convert_statements(force=args.force)
+        statements_processor.convert_statements(force=args.force)
     else:
         parser.print_help()
 
