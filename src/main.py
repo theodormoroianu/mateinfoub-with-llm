@@ -5,8 +5,14 @@ import argparse
 import logging
 
 import statements_processor
+import exp1_get_solutions
 
 logging.basicConfig(level=logging.INFO)
+logging.getLogger("google.genai").setLevel(logging.WARNING)
+logging.getLogger("google_genai").setLevel(logging.WARNING)
+logging.getLogger("together").setLevel(logging.WARNING)
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("urllib3").setLevel(logging.WARNING)
 
 
 def main():
@@ -26,8 +32,8 @@ def main():
     )
 
     # Run the models on the statements.
-    parser_run_models = subparsers.add_parser(
-        "run_models", help="Run the models on the statements."
+    parser_solve_problems = subparsers.add_parser(
+        "solve", help="Run the models on the statements."
     )
 
     # Parse the arguments
@@ -35,6 +41,8 @@ def main():
 
     if args.command == "translate":
         statements_processor.translate_statements(force=args.force)
+    if args.command == "solve":
+        exp1_get_solutions.solve_tasks_asking_llms()
     else:
         parser.print_help()
 

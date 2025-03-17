@@ -10,12 +10,15 @@ import internal_types
 import llm_interactor
 
 
+logger = logging.getLogger(__name__)
+
+
 def run_models_on_statements():
     """
     Run the models on the statements and save the results.
     """
     if not EN_STATEMENTS_FILE.exists() or not RO_STATEMENTS_FILE.exists():
-        logging.error(
+        logger.error(
             f"Could not find {EN_STATEMENTS_FILE} or {RO_STATEMENTS_FILE}. Please create the files first"
         )
         sys.exit(-1)

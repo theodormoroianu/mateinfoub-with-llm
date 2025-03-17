@@ -8,11 +8,7 @@ from together import Together
 
 from enum import Enum
 
-# Get the logger for the 'google.genai' module
-logger = logging.getLogger("google.genai")
-
-# Set the logging level to WARNING or higher to suppress INFO and DEBUG messages
-logger.setLevel(logging.WARNING)
+logger = logging.getLogger(__name__)
 
 # Gemini API key and model
 gemini_api_key = os.environ["GEMINI_API_KEY"]
@@ -24,16 +20,17 @@ def ask_gemini(question: str) -> str:
     try:
         global gemini_nr_questions
         gemini_nr_questions += 1
-        logging.debug(f"Sending a question #{gemini_nr_questions} to gemini...")
+        logger.debug(f"Sending a question #{gemini_nr_questions} to gemini...")
+        logger.debug(f"Question: {question}")
         response = gemini_client.models.generate_content(
             model="gemini-2.0-flash",
             contents=question,
         )
-        logging.debug(f"Received a response.")
+        logger.debug(f"Received a response: {response.text}")
         return response.text
     except Exception as e:
-        logging.error(f"Failed to get a response from Gemini: {e}")
-        logging.error("Retrying in 15 seconds...")
+        logger.error(f"Failed to get a response from Gemini: {e}")
+        logger.error("Retrying in 15 seconds...")
         time.sleep(5)
         return ask_gemini(question)
 
@@ -47,7 +44,7 @@ mistral_nr_questions = 0
 def ask_mistral(question: str) -> str:
     global mistral_nr_questions
     mistral_nr_questions += 1
-    logging.debug(f"Sending a question #{mistral_nr_questions} to mistral...")
+    logger.debug(f"Sending a question #{mistral_nr_questions} to mistral...")
     response = mistral_client.chat.complete(
         model="mistral-large-latest",
         messages=[
@@ -57,7 +54,7 @@ def ask_mistral(question: str) -> str:
             },
         ],
     )
-    logging.debug(f"Received a response.")
+    logger.debug(f"Received a response.")
     return response.choices[0].message.content
 
 
@@ -67,19 +64,27 @@ together_client = Together(api_key=together_api_key)
 together_nr_questions = 0
 
 
-def ask_together(question: str, model: str) -> str:
+def ask_together(question: str, model: str, retries=10) -> str:
     global together_nr_questions
     together_nr_questions += 1
-    logging.debug(f"Sending a question #{together_nr_questions} to together...")
-    response = together_client.chat.completions.create(
-        model=model,
-        messages=[{"role": "user", "content": question}],
-    )
-    logging.debug(f"Received a response.")
-    return response.choices[0].message.content
+    try:
+        logger.debug(f"Sending a question #{together_nr_questions} to together...")
+        response = together_client.chat.completions.create(
+            model=model,
+            messages=[{"role": "user", "content": question}],
+        )
+        logger.debug(f"Received a response: {response.choices[0].message.content}")
+        return response.choices[0].message.content
+    except Exception as e:
+        if retries == 0:
+            return "Failed to get a response from Together."
+        logger.error(f"Failed to get a response from Together: {e}")
+        logger.error("Retrying in 15 seconds...")
+        time.sleep(30)
+        return ask_together(question, model, retries - 1)
 
 
-class Model(Enum):
+class Model(str, Enum):
     # Provided by Google
     GEMINI = "gemini"
 
@@ -88,7 +93,7 @@ class Model(Enum):
 
     # Provided by TogetherAI
     LLAMA3_3_FREE = "Llama-3.3-70B-Instruct-Turbo-Free"
-    DEEPSEEK_R1 = "DeepSeek-R1"
+    # DEEPSEEK_R1 = "DeepSeek-R1"
     DEEPSEEK_V3 = "DeepSeek-V3"
 
 
@@ -102,8 +107,8 @@ def ask_model(model: Model, question: str) -> str:
         return ask_mistral(question)
     elif model == Model.LLAMA3_3_FREE:
         return ask_together(question, "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free")
-    elif model == Model.DEEPSEEK_R1:
-        return ask_together(question, "deepseek-ai/DeepSeek-R1")
+    # elif model == Model.DEEPSEEK_R1:
+    #     return ask_together(question, "deepseek-ai/DeepSeek-R1")
     elif model == Model.DEEPSEEK_V3:
         return ask_together(question, "deepseek-ai/DeepSeek-V3")
     raise ValueError(f"Invalid model: {model}")

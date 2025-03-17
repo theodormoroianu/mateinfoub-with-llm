@@ -8,6 +8,9 @@ import logging
 import tempfile
 
 
+logger = logging.getLogger(__name__)
+
+
 def run_script(
     script: str,
     timeout: int = 10,
@@ -20,7 +23,7 @@ def run_script(
     :param timeout: The maximum time in seconds to run the script.
     :return: The stdout of the script, or "Timeout" if the script ran for more than timeout seconds.
     """
-    logging.info("Running script...")
+    logger.info("Running script...")
     # Create a temporary directory.
     with tempfile.TemporaryDirectory() as temp_dir:
         # Write the script to a file.
@@ -33,6 +36,8 @@ def run_script(
             "docker",
             "run",
             "--rm",
+            "--cpus=1",  # Limit to 1 CPU
+            "--memory=4g",  # Limit to 4GB of RAM
             "-v",
             f"{temp_dir}:/app",
             "python",
@@ -47,18 +52,18 @@ def run_script(
         except subprocess.TimeoutExpired:
             process.kill()
             stdout, stderr = process.communicate()
-            logging.warning(
+            logger.warning(
                 f"Timeout expired for script. Make sure that the python image is downloaded."
             )
             return "Timeout"
 
         if b"database static dir" in stderr:
-            logging.error(
+            logger.error(
                 "Unable to run the script. This is probably because you are "
                 "trying to run the script from a snap container (VSCode) or "
                 "something similar. Please run the script from a normal terminal."
             )
             raise Exception("Unable to run the script.")
 
-    logging.info("Script ran successfully.")
-    return stdout.decode("utf-8")
+    logger.info("Script ran successfully.")
+    return stdout.decode("utf-8").strip()
