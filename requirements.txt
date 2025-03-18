@@ -1,4 +1,4 @@
 google-genai==1.5.0
 mistralai==1.5.1
 together==1.4.1
-demjson3
+dirtyjson

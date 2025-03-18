@@ -4,7 +4,7 @@ from typing import Optional
 import json
 import logging
 import pathlib
-import demjson3
+import dirtyjson
 
 import llm_interactor
 import script_runner
@@ -166,11 +166,12 @@ Answer = {'reasoning': str, 'answer': optional[str], 'python_code': optional[str
 Return: Answer
 """
         answer += "For instance, your output could be this:\n"
-        answer += '{"reasoning": "I used the following techniques to solve the problem...", "answer": "42"}\n'
+        answer += '{"reasoning": "I used the following techniques to solve the problem\\n", "answer": "42"}\n'
         answer += "or\n"
-        answer += '{"reasoning": "I used the following techniques to solve the problem:\\n", "python_code": "print("42")"}\n'
-        answer += "\nPlease do NOT return multiple JSONs or add anything else outside of the JSON's brackets."
-        answer += "Your answer needs to be a valid JSON, so make sure to ESCAPE THE DOUBLE QUOTES and special characters like new lines within the JSON.\n"
+        answer += '{"reasoning": "I used the following techniques to solve the problem:\\n", "python_code": "print(\'42\')"}\n'
+        answer += "\nThe reasoning field is mandatory, and MUST NOT contain any LaTeX, quotes, formulas with dollar signs, or special characters. The python code MUST NOT contain double quotes, use single quotes instead.\n"
+        # answer += "Your answer needs to be a valid JSON, so make sure to ESCAPE ALL THE DOUBLE QUOTES within the JSON.\n"
+        # answer += "AGAIN, ESCAPE ALL DOUBLE QUOTES!!!"
         return answer
 
     @staticmethod
@@ -190,11 +191,14 @@ Return: Answer
             content = content[3:]
         if content.endswith("```"):
             content = content[:-3]
+        content = content.replace("\\(", "(").replace("\\)", ")")
+        content = content.replace("\\[", "[").replace("\\]", "]")
+        content = content.replace("\\{", "{").replace("\\}", "}")
 
         logger.debug(f"Content: {content}")
         try:
             # obj = json.loads(content, strict=False)
-            obj = demjson3.decode(content)
+            obj = dirtyjson.loads(content)
             reasoning = obj["reasoning"]
             if "answer" in obj:
                 answer = obj["answer"]
