@@ -16,7 +16,7 @@ gemini_client = Gemini(api_key=gemini_api_key)
 gemini_nr_questions = 0
 
 
-def ask_gemini(question: str) -> str:
+def ask_gemini(question: str, retries=10) -> str:
     try:
         global gemini_nr_questions
         gemini_nr_questions += 1
@@ -29,10 +29,12 @@ def ask_gemini(question: str) -> str:
         logger.debug(f"Received a response: {response.text}")
         return response.text
     except Exception as e:
+        if retries == 0:
+            return "Failed to get a response from Gemini."
         logger.error(f"Failed to get a response from Gemini: {e}")
-        logger.error("Retrying in 15 seconds...")
-        time.sleep(5)
-        return ask_gemini(question)
+        logger.error("Retrying in 30 seconds...")
+        time.sleep(30)
+        return ask_gemini(question, retries - 1)
 
 
 # Mistral API key and model
@@ -41,21 +43,29 @@ mistral_client = Mistral(api_key=mistral_api_key)
 mistral_nr_questions = 0
 
 
-def ask_mistral(question: str) -> str:
-    global mistral_nr_questions
-    mistral_nr_questions += 1
-    logger.debug(f"Sending a question #{mistral_nr_questions} to mistral...")
-    response = mistral_client.chat.complete(
-        model="mistral-large-latest",
-        messages=[
-            {
-                "role": "user",
-                "content": question,
-            },
-        ],
-    )
-    logger.debug(f"Received a response.")
-    return response.choices[0].message.content
+def ask_mistral(question: str, retries=10) -> str:
+    try:
+        global mistral_nr_questions
+        mistral_nr_questions += 1
+        logger.debug(f"Sending a question #{mistral_nr_questions} to mistral...")
+        response = mistral_client.chat.complete(
+            model="mistral-large-latest",
+            messages=[
+                {
+                    "role": "user",
+                    "content": question,
+                },
+            ],
+        )
+        logger.debug(f"Received a response.")
+        return response.choices[0].message.content
+    except Exception as e:
+        if retries == 0:
+            return "Failed to get a response from Mistral."
+        logger.error(f"Failed to get a response from Mistral: {e}")
+        logger.error("Retrying in 30 seconds...")
+        time.sleep(30)
+        return ask_mistral(question, retries - 1)
 
 
 # Together API key and model
@@ -79,7 +89,7 @@ def ask_together(question: str, model: str, retries=10) -> str:
         if retries == 0:
             return "Failed to get a response from Together."
         logger.error(f"Failed to get a response from Together: {e}")
-        logger.error("Retrying in 15 seconds...")
+        logger.error("Retrying in 30 seconds...")
         time.sleep(30)
         return ask_together(question, model, retries - 1)
 

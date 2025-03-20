@@ -4,7 +4,6 @@ from typing import Optional
 import json
 import logging
 import pathlib
-import dirtyjson
 
 import llm_interactor
 import script_runner
@@ -151,31 +150,31 @@ class LLMAnswer:
         """
         Returns a string which describes the accepted format of the answer.
         """
-        # fmt = {
-        #     "reasoning": "The techniques you used for solving the problem, concise, mandatory",
-        #     "python_code": "If you choose to solve the problem using a python script, the python3.12 script, without dependencies on 3rd party libs, which has to print EXACTLY the right answer to stdout (only the right answer, nothing more). The field doesn't exist if you reply with an answer.",
-        #     "answer": "If you choose to solve the problem directly, this is the correct answer. The field doesn't exist if you reply with a script. The answer is the actual result, not the letter / index of the answer.",
-        # }
         answer = "You have to output the correct answer (not the index, the actual value of the answer).\n"
         answer += "The answer is computed with a diff check, so it has to be EXACTLY the right answer.\n"
         answer += "You can answer in 2 ways: by providing the answer (i.e. the string), or by providing a Python3.12 script which, when ran with a timeout of ~10 seconds, outputs EXACTLY the right answer.\n"
-        answer += "Please reply with a valid JSON, in the following format, without any additional notes or comments:\n"
-        answer += """Use this JSON schema:
+        answer += """Please reply in the following format, with separator blocks, in the following format:
+If you want to provide the answer using a Python script:
+<REASONING>
+[your reasoning steps here]
+</REASONING>
+<PYTHON CODE>
+[your python code here]
+</PYTHON CODE>
 
-Answer = {'reasoning': str, 'answer': optional[str], 'python_code': optional[str]}
-Return: Answer
+OR (if you want to provide the answer directly):
+<REASONING>
+[your reasoning steps here]
+</REASONING>
+<ANSWER>
+[your answer here]
+</ANSWER>
 """
-        answer += "For instance, your output could be this:\n"
-        answer += '{"reasoning": "I used the following techniques to solve the problem\\n", "answer": "42"}\n'
-        answer += "or\n"
-        answer += '{"reasoning": "I used the following techniques to solve the problem:\\n", "python_code": "print(\'42\')"}\n'
-        answer += "\nThe reasoning field is mandatory, and MUST NOT contain any LaTeX, quotes, formulas with dollar signs, or special characters. The python code MUST NOT contain double quotes, use single quotes instead.\n"
-        # answer += "Your answer needs to be a valid JSON, so make sure to ESCAPE ALL THE DOUBLE QUOTES within the JSON.\n"
-        # answer += "AGAIN, ESCAPE ALL DOUBLE QUOTES!!!"
+        answer += "NEVER include both <PYTHON CODE> and <ANSWER> blocks in the same message. ONLY include one or the other."
         return answer
 
     @staticmethod
-    def from_reply_json(
+    def from_reply(
         content: str, edition: str, problem_index: int, llm: llm_interactor.Model
     ) -> Optional["LLMAnswer"]:
         """
@@ -185,27 +184,33 @@ Return: Answer
         logger.info(
             f"Trying to parse the answer for {edition} problem {problem_index} ({llm})..."
         )
-        if content.startswith("```json"):
-            content = content[7:]
-        if content.startswith("```"):
-            content = content[3:]
-        if content.endswith("```"):
-            content = content[:-3]
-        content = content.replace("\\(", "(").replace("\\)", ")")
-        content = content.replace("\\[", "[").replace("\\]", "]")
-        content = content.replace("\\{", "{").replace("\\}", "}")
 
-        logger.debug(f"Content: {content}")
         try:
-            # obj = json.loads(content, strict=False)
-            obj = dirtyjson.loads(content)
-            reasoning = obj["reasoning"]
-            if "answer" in obj:
-                answer = obj["answer"]
+            # We expect to have something like this:
+            # <START REASONING>
+            # [reasoning]
+            # <END REASONING>
+            # <START PYTHON CODE> OR <START ANSWER>
+            # [python code]
+            # <END PYTHON CODE> OR <END ANSWER>
+            assert "<REASONING>" in content, "No <REASONING> found."
+            assert "</REASONING>" in content, "No </REASONING> found."
+            reasoning = content.split("<REASONING>")[1].split("</REASONING>")[0]
+
+            if "<PYTHON CODE>" in content:
+                assert "</PYTHON CODE>" in content, "No <PYTHON CODE> found."
+                if "<ANSWER>" in content:
+                    logger.error("Both <PYTHON CODE> and <ANSWER> found.")
+                python_code = content.split("<PYTHON CODE>")[1].split("</PYTHON CODE>")[
+                    0
+                ]
+                answer = script_runner.run_script(python_code).strip()
+            else:
+                assert "<ANSWER>" in content, "No <ANSWER> or <PYTHON CODE> found."
+                assert "</ANSWER>" in content, "No </ANSWER> found."
                 python_code = None
-            if "python_code" in obj:
-                python_code = obj["python_code"]
-                answer = script_runner.run_script(python_code)
+                answer = content.split("<ANSWER>")[1].split("</ANSWER>")[0].strip()
+
             llm_answer = LLMAnswer(
                 reasoning=reasoning,
                 python_code=python_code,

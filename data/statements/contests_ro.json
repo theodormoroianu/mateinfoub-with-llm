@@ -154,7 +154,7 @@
       },
       {
         "title": "Cop\u0103cel",
-        "markdown_statement": "Comanda cop\u0103cel afi\u0219eaz\u0103 structura directoarelor. De exemplu, dac\u0103 avem un director A care con\u021bine directoarele B, C si D, directorul B con\u021bine directoarele E si F, iar directorul D con\u021bine directorul G, atunci rezultatul comenzii cop\u0103cel va ar\u0103ta \u00een felul urm\u0103tor:\n\n```c++\n> copacel A\nA\n|-- B\n|   |-- E\n|   |-- F\n|-- C\n|-- D\n    |-- G\n\n7 directories,  0 files\n```\n\n\u00cen exemplul de mai sus, directoarele C, E, F \u0219i G sunt goale.\n\nLa linkul <a href=\"data/2024-tree.txt\" target=\"_blank\">acesta</a> se afl\u0103 rezultatul rul\u0103rii comenzii cop\u0103cel pe un sistem cu 1500 de directoare (\u0219i niciun fi\u0219ier). C\u00e2te din directoarele prezente sunt goale?",
+        "markdown_statement": "Comanda cop\u0103cel afi\u0219eaz\u0103 structura directoarelor. De exemplu, dac\u0103 avem un director A care con\u021bine directoarele B, C si D, directorul B con\u021bine directoarele E si F, iar directorul D con\u021bine directorul G, atunci rezultatul comenzii cop\u0103cel va ar\u0103ta \u00een felul urm\u0103tor:\n\n```c++\n> copacel A\nA\n|-- B\n|   |-- E\n|   |-- F\n|-- C\n|-- D\n    |-- G\n\n7 directories,  0 files\n```\n\n\u00cen exemplul de mai sus, directoarele C, E, F \u0219i G sunt goale.\n\nLa linkul acesta (https://mateinfo-ub.github.io/data/2024-tree.txt) se afl\u0103 rezultatul rul\u0103rii comenzii cop\u0103cel pe un sistem cu 1500 de directoare (\u0219i niciun fi\u0219ier). C\u00e2te din directoarele prezente sunt goale?",
         "answer_variants": [
           "53",
           "164",

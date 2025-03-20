@@ -9,11 +9,12 @@ import tempfile
 
 
 logger = logging.getLogger(__name__)
+# logger.setLevel(logging.DEBUG)
 
 
 def run_script(
     script: str,
-    timeout: int = 10,
+    timeout: int = 30,
 ) -> str:
     """
     Runs the python script in a container, and captures the stdout. If the script takes more than `timeout` seconds to
@@ -23,7 +24,18 @@ def run_script(
     :param timeout: The maximum time in seconds to run the script.
     :return: The stdout of the script, or "Timeout" if the script ran for more than timeout seconds.
     """
+
+    script = script.strip()
+    if script.startswith("```python"):
+        script = script[len("```python") :]
+    if script.startswith("```"):
+        script = script[len("```") :]
+    if script.endswith("```"):
+        script = script[: -len("```")]
+
     logger.info("Running script...")
+    logger.debug(f"Script: {script}")
+
     # Create a temporary directory.
     with tempfile.TemporaryDirectory() as temp_dir:
         # Write the script to a file.
@@ -37,7 +49,9 @@ def run_script(
             "run",
             "--rm",
             "--cpus=1",  # Limit to 1 CPU
-            "--memory=4g",  # Limit to 4GB of RAM
+            "--memory=8g",  # Limit to 8GB of RAM
+            "--name",
+            "script_runner",
             "-v",
             f"{temp_dir}:/app",
             "python",
@@ -50,6 +64,7 @@ def run_script(
         try:
             stdout, stderr = process.communicate(timeout=timeout)
         except subprocess.TimeoutExpired:
+            subprocess.run(["docker", "kill", "script_runner"])
             process.kill()
             stdout, stderr = process.communicate()
             logger.warning(
