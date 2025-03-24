@@ -11,19 +11,49 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 
-def solve_tasks_asking_llms():
+def solve_tasks_asking_llms(round: int):
     """
     Asks LLMs to solve the tasks.
     """
     contests = internal_types.Contest.read_all_contests()
-    solutions = []
-    for lang, contests in contests.items():
+    logging.info(f"Round {round}")
+    for lang, contests in list(contests.items()):
+
+        save_loc = (
+            str(internal_types.RO_SOLUTIONS_FILE) + "_round_" + str(round) + ".json"
+            if lang == "ro"
+            else str(internal_types.EN_SOLUTIONS_FILE)
+            + "_round_"
+            + str(round)
+            + ".json"
+        )
+        try:
+            with open(save_loc, "r") as f:
+                solutions = [
+                    internal_types.LLMAnswer.from_json(s) for s in json.loads(f.read())
+                ]
+        except FileNotFoundError:
+            solutions = []
+
         logger.info(f"Solving tasks for lang {lang}")
         for contest in contests:
             logger.info(f"Solving tasks for contest {contest.name}")
             for problem_idx, problem in enumerate(tqdm(contest.problems)):
                 logger.info(f"Solving task {problem.title}")
                 for llm in llm_interactor.Model._member_map_.values():
+
+                    # Check if we already have a solution for this problem.
+                    if any(
+                        s.edition == contest.name
+                        and s.problem_index == problem_idx
+                        and s.llm == llm
+                        for s in solutions
+                    ):
+                        logging.info(
+                            f"Skipping problem {problem.title} from {contest.name} ({llm.name}), as we already have a solution."
+                        )
+                        continue
+
                     statement = problem.to_statement()
                     accepted_format = internal_types.LLMAnswer.accepted_format()
 
@@ -32,6 +62,9 @@ def solve_tasks_asking_llms():
                     question += f"{statement}\n"
                     question += "The accepted format is specified below:\n"
                     question += f"{accepted_format}\n"
+                    logging.info(
+                        f"Asking {llm.name} a question for problem {problem.title}"
+                    )
                     answer = llm_interactor.ask_model(llm, question)
                     result = internal_types.LLMAnswer.from_reply(
                         answer, contest.name, problem_idx, llm
@@ -41,12 +74,6 @@ def solve_tasks_asking_llms():
                         f"Expected answer: '{problem.correct_answer}', got '{result.answer if result.answer else "no answer"}'"
                     )
 
-                save_loc = (
-                    internal_types.RO_SOLUTIONS_FILE
-                    if lang == "ro"
-                    else internal_types.EN_SOLUTIONS_FILE
-                )
-
-                with open(save_loc, "w") as f:
-                    f.write(json.dumps([s.to_json() for s in solutions], indent=2))
-                logger.info(f"Saved solutions to {save_loc}")
+                    with open(save_loc, "w") as f:
+                        f.write(json.dumps([s.to_json() for s in solutions], indent=2))
+                    logger.info(f"Saved solutions to {save_loc}")

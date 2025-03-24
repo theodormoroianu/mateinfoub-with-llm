@@ -35,6 +35,9 @@ def main():
     parser_solve_problems = subparsers.add_parser(
         "solve", help="Run the models on the statements."
     )
+    parser_solve_problems.add_argument(
+        "-r", "--round", type=int, help="The round number.", default=0
+    )
 
     # Parse the arguments
     args = parser.parse_args()
@@ -42,7 +45,8 @@ def main():
     if args.command == "translate":
         statements_processor.translate_statements(force=args.force)
     if args.command == "solve":
-        exp1_get_solutions.solve_tasks_asking_llms()
+        round = args.round
+        exp1_get_solutions.solve_tasks_asking_llms(round)
     else:
         parser.print_help()
 

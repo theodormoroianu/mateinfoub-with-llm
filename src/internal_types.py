@@ -4,6 +4,7 @@ from typing import Optional
 import json
 import logging
 import pathlib
+import glob
 
 import llm_interactor
 import script_runner
@@ -12,6 +13,7 @@ logger = logging.getLogger(__name__)
 
 # Directory where our statements and results are stored.
 DATA_DIR = pathlib.Path(__file__).parent.parent / "data" / "statements"
+SOLUTIONS_DIR = pathlib.Path(__file__).parent.parent / "data" / "solutions"
 
 # Original statements.
 RO_STATEMENTS_FILE = DATA_DIR / "contests_ro.json"
@@ -20,10 +22,24 @@ RO_STATEMENTS_FILE = DATA_DIR / "contests_ro.json"
 EN_STATEMENTS_FILE = DATA_DIR / "contests_en.json"
 
 # Solutions in Romanian.
-RO_SOLUTIONS_FILE = DATA_DIR / "solutions_ro.json"
+RO_SOLUTIONS_FILE = SOLUTIONS_DIR / "solutions_ro"
 
 # Solutions in English.
-EN_SOLUTIONS_FILE = DATA_DIR / "solutions_en.json"
+EN_SOLUTIONS_FILE = SOLUTIONS_DIR / "solutions_en"
+
+
+def get_statement_files() -> dict[str, str]:
+    return {
+        "ro": str(RO_STATEMENTS_FILE),
+        "en": str(EN_STATEMENTS_FILE),
+    }
+
+
+def get_solutions_files_glob() -> dict[str, str]:
+    return {
+        "ro": str(RO_SOLUTIONS_FILE) + "*",
+        "en": str(EN_SOLUTIONS_FILE) + "*",
+    }
 
 
 class ProblemDificulty(str, Enum):
