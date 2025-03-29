@@ -16,14 +16,14 @@ gemini_client = Gemini(api_key=gemini_api_key)
 gemini_nr_questions = 0
 
 
-def ask_gemini(question: str, retries=10) -> str:
+def ask_gemini(question: str, retries=10, model="gemini-2.0-flash") -> str:
     try:
         global gemini_nr_questions
         gemini_nr_questions += 1
         logger.debug(f"Sending a question #{gemini_nr_questions} to gemini...")
         logger.debug(f"Question: {question}")
         response = gemini_client.models.generate_content(
-            model="gemini-2.0-flash",
+            model=model,
             contents=question,
         )
         logger.debug(f"Received a response: {response.text}")
@@ -34,7 +34,7 @@ def ask_gemini(question: str, retries=10) -> str:
         logger.error(f"Failed to get a response from Gemini: {e}")
         logger.error("Retrying in 30 seconds...")
         time.sleep(30)
-        return ask_gemini(question, retries - 1)
+        return ask_gemini(question, retries - 1, model=model)
 
 
 # Mistral API key and model
@@ -98,11 +98,14 @@ class Model(str, Enum):
     # Provided by Google
     GEMINI = "gemini"
 
+    GEMINI_2_5 = "gemini-2.5"
+
     # Provided by Mistral
     MISTRAL = "mistral"
 
     # Provided by TogetherAI
     LLAMA3_3_FREE = "Llama-3.3-70B-Instruct-Turbo-Free"
+
     # DEEPSEEK_R1 = "DeepSeek-R1"
     DEEPSEEK_V3 = "DeepSeek-V3"
 
@@ -113,6 +116,8 @@ def ask_model(model: Model, question: str) -> str:
     """
     if model == Model.GEMINI:
         return ask_gemini(question)
+    elif model == Model.GEMINI_2_5:
+        return ask_gemini(question, model="gemini-2.5-pro-exp-03-25")
     elif model == Model.MISTRAL:
         return ask_mistral(question)
     elif model == Model.LLAMA3_3_FREE:

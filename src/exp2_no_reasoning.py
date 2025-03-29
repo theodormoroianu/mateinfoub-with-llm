@@ -20,10 +20,13 @@ def solve_tasks_asking_llms(round: int):
     for lang, contests in list(contests.items()):
 
         save_loc = (
-            str(internal_types.RO_SOLUTIONS_FILE) + "_round_" + str(round) + ".json"
+            str(internal_types.RO_SOLUTIONS_FILE)
+            + "_no_reasoning_round_"
+            + str(round)
+            + ".json"
             if lang == "ro"
             else str(internal_types.EN_SOLUTIONS_FILE)
-            + "_round_"
+            + "_no_reasoning_round_"
             + str(round)
             + ".json"
         )
@@ -67,7 +70,9 @@ def solve_tasks_asking_llms(round: int):
                     ]
 
                     statement = problem.to_statement()
-                    accepted_format = internal_types.LLMAnswer.accepted_format()
+                    accepted_format = (
+                        internal_types.LLMAnswer.accepted_format_no_reasoning()
+                    )
 
                     question = f"You are tasked with solving a CS/Math problem, which might be in another language.\n"
                     question += f"Here is the problem:\n"

@@ -143,6 +143,9 @@ class LLMAnswer:
     An LLM's solution. Can either be a python script or a punctual answer.
     """
 
+    # The whole answer.
+    whole_answer: str
+
     # Explanation of the model's reasoning.
     reasoning: str
 
@@ -190,6 +193,30 @@ OR (if you want to provide the answer directly):
         return answer
 
     @staticmethod
+    def accepted_format_no_reasoning() -> str:
+        """
+        Returns a string which describes the accepted format of the answer.
+        """
+        answer = "You have to output the correct answer (not the index, the actual value of the answer).\n"
+        answer += "The answer is computed with a diff check, so it has to be EXACTLY the right answer.\n"
+        answer += "You can answer in 2 ways: by providing the answer (i.e. the string), or by providing a Python3.12 script which, when ran with a timeout of ~10 seconds, outputs EXACTLY the right answer.\n"
+        answer += """Please reply in the following format, with separator blocks, in the following format:
+If you want to provide the answer using a Python script:
+<PYTHON CODE>
+[your python code here]
+</PYTHON CODE>
+
+OR (if you want to provide the answer directly):
+<ANSWER>
+[your answer here]
+</ANSWER>
+
+Do NOT provide any additional information, provide ONLY the <PYTHON CODE>...</PYTHON CODE> or <ANSWER>...</ANSWER> blocks.
+"""
+        answer += "NEVER include both <PYTHON CODE> and <ANSWER> blocks in the same message. ONLY include one or the other."
+        return answer
+
+    @staticmethod
     def from_reply(
         content: str, edition: str, problem_index: int, llm: llm_interactor.Model
     ) -> Optional["LLMAnswer"]:
@@ -212,7 +239,12 @@ OR (if you want to provide the answer directly):
             assert "<REASONING>" in content, "No <REASONING> found."
             assert "</REASONING>" in content, "No </REASONING> found."
             reasoning = content.split("<REASONING>")[1].split("</REASONING>")[0]
+        except Exception as e:
+            logger.warning(f"Failed to get reasoning: {e}")
+            logger.warning(f"Content: {content}")
+            reasoning = "Failed to get reasoning."
 
+        try:
             if "<PYTHON CODE>" in content:
                 assert "</PYTHON CODE>" in content, "No <PYTHON CODE> found."
                 if "<ANSWER>" in content:
@@ -220,33 +252,37 @@ OR (if you want to provide the answer directly):
                 python_code = content.split("<PYTHON CODE>")[1].split("</PYTHON CODE>")[
                     0
                 ]
+                python_code = python_code.strip()
+                if python_code.startswith("```python"):
+                    python_code = python_code[len("```python") :]
+                if python_code.endswith("```"):
+                    python_code = python_code[: -len("```")]
+                if python_code.startswith("```"):
+                    python_code = python_code[len("```") :]
+
+                python_code = python_code.strip()
                 answer = script_runner.run_script(python_code).strip()
             else:
                 assert "<ANSWER>" in content, "No <ANSWER> or <PYTHON CODE> found."
                 assert "</ANSWER>" in content, "No </ANSWER> found."
                 python_code = None
                 answer = content.split("<ANSWER>")[1].split("</ANSWER>")[0].strip()
-
-            llm_answer = LLMAnswer(
-                reasoning=reasoning,
-                python_code=python_code,
-                answer=answer,
-                edition=edition,
-                problem_index=problem_index,
-                llm=llm,
-            )
-            return llm_answer
         except Exception as e:
             logger.warning(f"Failed to get answer: {e}")
             logger.warning(f"Content: {content}")
-            return LLMAnswer(
-                reasoning="Failed to get answer.",
-                python_code=None,
-                answer="Failed to get answer.",
-                edition=edition,
-                problem_index=problem_index,
-                llm=llm,
-            )
+            answer = "Failed to get answer."
+            python_code = None
+
+        llm_answer = LLMAnswer(
+            reasoning=reasoning,
+            python_code=python_code,
+            answer=answer,
+            edition=edition,
+            problem_index=problem_index,
+            llm=llm,
+            whole_answer=content,
+        )
+        return llm_answer
 
     @staticmethod
     def from_json(obj: dict) -> "LLMAnswer":
@@ -257,6 +293,7 @@ OR (if you want to provide the answer directly):
             edition=obj["edition"],
             problem_index=obj["problem_index"],
             llm=llm_interactor.Model(obj["llm"]),
+            whole_answer=obj["whole_answer"] if obj.get("whole_answer") else "",
         )
 
     def to_json(self) -> dict:
