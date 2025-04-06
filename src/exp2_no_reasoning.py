@@ -35,9 +35,9 @@ def solve_tasks_asking_llms(round: int):
                 solutions = [
                     internal_types.LLMAnswer.from_json(s) for s in json.loads(f.read())
                 ]
-            solutions = [
-                s for s in solutions if s.llm != llm_interactor.Model.DEEPSEEK_R1
-            ]
+            # solutions = [
+            #     s for s in solutions if s.llm != llm_interactor.Model.DEEPSEEK_R1
+            # ]
             with open(save_loc, "w") as f:
                 f.write(json.dumps([s.to_json() for s in solutions], indent=2))
         except FileNotFoundError:
@@ -53,8 +53,8 @@ def solve_tasks_asking_llms(round: int):
             for problem_idx, problem in enumerate(tqdm(contest.problems)):
                 logger.info(f"Solving task {problem.title}")
                 for llm in llm_interactor.Model._member_map_.values():
-                    if llm == llm_interactor.Model.DEEPSEEK_R1:
-                        continue
+                    # if llm == llm_interactor.Model.DEEPSEEK_R1:
+                    #     continue
 
                     # Check if we already have a solution for this problem.
                     if any(

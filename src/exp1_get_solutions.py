@@ -45,7 +45,7 @@ def solve_tasks_asking_llms(round: int):
             for problem_idx, problem in enumerate(tqdm(contest.problems)):
                 logger.info(f"Solving task {problem.title}")
                 for llm in llm_interactor.Model._member_map_.values():
-                    # if llm == llm_interactor.Model.GEMINI_2_5:
+                    # if llm == llm_interactor.Model.DEEPSEEK_R1:
                     #     continue
 
                     # Check if we already have a solution for this problem.
@@ -54,6 +54,9 @@ def solve_tasks_asking_llms(round: int):
                         and s.problem_index == problem_idx
                         and s.llm == llm
                         and "Failed to get a response from" not in s.whole_answer
+                        and not (
+                            s.whole_answer == "" and s.answer == "Failed to get answer."
+                        )
                         # and s.answer != "Timeout"
                         # and s.answer != "Failed to get answer."
                         for s in solutions
