@@ -69,7 +69,7 @@ def ask_mistral(question: str, retries=10) -> str:
 
 
 # Together API key and model
-together_api_key = os.environ["TOGETHER_API_KEY"]
+together_api_key = os.environ["TOGETHER_API_KEY_2"]
 together_client = Together(api_key=together_api_key)
 together_nr_questions = 0
 
@@ -89,8 +89,8 @@ def ask_together(question: str, model: str, retries=10) -> str:
         if retries == 0:
             return "Failed to get a response from Together."
         logger.error(f"Failed to get a response from Together: {e}")
-        logger.error("Retrying in 30 seconds...")
-        time.sleep(30)
+        logger.error("Retrying in 60 seconds...")
+        time.sleep(60)
         return ask_together(question, model, retries - 1)
 
 
@@ -106,7 +106,7 @@ class Model(str, Enum):
     # Provided by TogetherAI
     LLAMA3_3_FREE = "Llama-3.3-70B-Instruct-Turbo-Free"
 
-    # DEEPSEEK_R1 = "DeepSeek-R1"
+    DEEPSEEK_R1 = "DeepSeek-R1"
     DEEPSEEK_V3 = "DeepSeek-V3"
 
 
@@ -122,8 +122,8 @@ def ask_model(model: Model, question: str) -> str:
         return ask_mistral(question)
     elif model == Model.LLAMA3_3_FREE:
         return ask_together(question, "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free")
-    # elif model == Model.DEEPSEEK_R1:
-    #     return ask_together(question, "deepseek-ai/DeepSeek-R1")
+    elif model == Model.DEEPSEEK_R1:
+        return ask_together(question, "deepseek-ai/DeepSeek-R1")
     elif model == Model.DEEPSEEK_V3:
         return ask_together(question, "deepseek-ai/DeepSeek-V3")
     raise ValueError(f"Invalid model: {model}")

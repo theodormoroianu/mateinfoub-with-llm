@@ -21,12 +21,12 @@ def solve_tasks_asking_llms(round: int):
 
         save_loc = (
             str(internal_types.RO_SOLUTIONS_FILE)
-            + "_no_reasoning_round_"
+            + "_no_multiple_choices_round_"
             + str(round)
             + ".json"
             if lang == "ro"
             else str(internal_types.EN_SOLUTIONS_FILE)
-            + "_no_reasoning_round_"
+            + "_no_multiple_choices_round_"
             + str(round)
             + ".json"
         )
@@ -35,11 +35,6 @@ def solve_tasks_asking_llms(round: int):
                 solutions = [
                     internal_types.LLMAnswer.from_json(s) for s in json.loads(f.read())
                 ]
-            solutions = [
-                s for s in solutions if s.llm != llm_interactor.Model.DEEPSEEK_R1
-            ]
-            with open(save_loc, "w") as f:
-                f.write(json.dumps([s.to_json() for s in solutions], indent=2))
         except FileNotFoundError:
             solutions = []
 
@@ -53,7 +48,10 @@ def solve_tasks_asking_llms(round: int):
             for problem_idx, problem in enumerate(tqdm(contest.problems)):
                 logger.info(f"Solving task {problem.title}")
                 for llm in llm_interactor.Model._member_map_.values():
-                    if llm == llm_interactor.Model.DEEPSEEK_R1:
+                    if (
+                        llm == llm_interactor.Model.DEEPSEEK_R1
+                        or llm == llm_interactor.Model.GEMINI_2_5
+                    ):
                         continue
 
                     # Check if we already have a solution for this problem.
@@ -82,10 +80,8 @@ def solve_tasks_asking_llms(round: int):
                         )
                     ]
 
-                    statement = problem.to_statement()
-                    accepted_format = (
-                        internal_types.LLMAnswer.accepted_format_no_reasoning()
-                    )
+                    statement = problem.to_statement_no_multiple_choices()
+                    accepted_format = internal_types.LLMAnswer.accepted_format()
 
                     question = f"You are tasked with solving a CS/Math problem, which might be in another language.\n"
                     question += f"Here is the problem:\n"

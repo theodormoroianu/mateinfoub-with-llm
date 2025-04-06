@@ -35,18 +35,26 @@ def solve_tasks_asking_llms(round: int):
         except FileNotFoundError:
             solutions = []
 
+        # Try to fix python extraction from previous runs.
+        for s in solutions:
+            s.try_extract_python_code()
+
         logger.info(f"Solving tasks for lang {lang}")
         for contest in contests:
             logger.info(f"Solving tasks for contest {contest.name}")
             for problem_idx, problem in enumerate(tqdm(contest.problems)):
                 logger.info(f"Solving task {problem.title}")
                 for llm in llm_interactor.Model._member_map_.values():
+                    # if llm == llm_interactor.Model.GEMINI_2_5:
+                    #     continue
 
                     # Check if we already have a solution for this problem.
                     if any(
                         s.edition == contest.name
                         and s.problem_index == problem_idx
                         and s.llm == llm
+                        and "Failed to get a response from" not in s.whole_answer
+                        # and s.answer != "Timeout"
                         # and s.answer != "Failed to get answer."
                         for s in solutions
                     ):
@@ -89,3 +97,7 @@ def solve_tasks_asking_llms(round: int):
                     with open(save_loc, "w") as f:
                         f.write(json.dumps([s.to_json() for s in solutions], indent=2))
                     logger.info(f"Saved solutions to {save_loc}")
+
+        with open(save_loc, "w") as f:
+            f.write(json.dumps([s.to_json() for s in solutions], indent=2))
+        logger.info(f"Saved solutions to {save_loc}")

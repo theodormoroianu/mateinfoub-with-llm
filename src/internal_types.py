@@ -37,8 +37,22 @@ def get_statement_files() -> dict[str, str]:
 
 def get_solutions_files_glob() -> dict[str, str]:
     return {
-        "ro": str(RO_SOLUTIONS_FILE) + "*",
-        "en": str(EN_SOLUTIONS_FILE) + "*",
+        "ro": str(RO_SOLUTIONS_FILE) + "_round_*",
+        "en": str(EN_SOLUTIONS_FILE) + "_round_*",
+    }
+
+
+def get_solution_files_no_reasoning_glob() -> dict[str, str]:
+    return {
+        "ro": str(RO_SOLUTIONS_FILE) + "_no_reasoning_round_*",
+        "en": str(EN_SOLUTIONS_FILE) + "_no_reasoning_round_*",
+    }
+
+
+def get_solution_files_no_multiple_choices_glob() -> dict[str, str]:
+    return {
+        "ro": str(RO_SOLUTIONS_FILE) + "_no_multiple_choices_round_*",
+        "en": str(EN_SOLUTIONS_FILE) + "_no_multiple_choices_round_*",
     }
 
 
@@ -93,6 +107,7 @@ class Problem:
     def to_statement(self) -> str:
         """
         Converts the problem to a statement, which can be passed to the LLM.
+        The multiple choice variants are included.
         """
         statement = self.markdown_statement
         if self.image_content:
@@ -101,6 +116,16 @@ class Problem:
         statement += "\n\nAnswer variants:\n"
         for idx, variant in enumerate(self.answer_variants):
             statement += f" * {variant}\n"
+        return statement
+
+    def to_statement_no_multiple_choices(self) -> str:
+        """
+        Converts the problem to a statement, which can be passed to the LLM.
+        """
+        statement = self.markdown_statement
+        if self.image_content:
+            statement += f"\nContent of the image:\n{self.image_content}"
+
         return statement
 
 
@@ -165,11 +190,15 @@ class LLMAnswer:
     llm: llm_interactor.Model
 
     @staticmethod
-    def accepted_format() -> str:
+    def accepted_format(doesnt_have_choices: bool = False) -> str:
         """
         Returns a string which describes the accepted format of the answer.
+
         """
-        answer = "You have to output the correct answer (not the index, the actual value of the answer).\n"
+        if doesnt_have_choices:
+            answer = "You have to output only the correct answer, strictly (for instance output '2', instead of 'the answer is 2').\n"
+        else:
+            answer = "You have to output the correct answer (not the index, the actual value of the answer).\n"
         answer += "The answer is computed with a diff check, so it has to be EXACTLY the right answer.\n"
         answer += "You can answer in 2 ways: by providing the answer (i.e. the string), or by providing a Python3.12 script which, when ran with a timeout of ~10 seconds, outputs EXACTLY the right answer.\n"
         answer += """Please reply in the following format, with separator blocks, in the following format:
@@ -282,7 +311,35 @@ Do NOT provide any additional information, provide ONLY the <PYTHON CODE>...</PY
             llm=llm,
             whole_answer=content,
         )
+
+        # Maybe we can try to extract the python code from the answer.
+        llm_answer.try_extract_python_code()
+
         return llm_answer
+
+    def try_extract_python_code(self):
+        """
+        Try to extract the python code from malformed answers.
+        """
+        if (
+            self.answer == "Failed to get answer."
+            and self.python_code is None
+            and self.whole_answer is not None
+        ):
+            # Try to isolate the latest ```python or ``` block.
+            python_code = None
+            if "```python" in self.whole_answer:
+                segm_with_code = self.whole_answer.split("```python")[-1]
+                if "```" in segm_with_code:
+                    python_code = segm_with_code.split("```")[0]
+            if "```" in self.whole_answer:
+                segm_with_code = self.whole_answer.split("```")[-2]
+                if "```" in segm_with_code:
+                    python_code = segm_with_code.split("```")[0]
+
+            if python_code is not None:
+                self.python_code = python_code.strip()
+                self.answer = script_runner.run_script(python_code).strip()
 
     @staticmethod
     def from_json(obj: dict) -> "LLMAnswer":
