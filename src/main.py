@@ -4,10 +4,13 @@ import os
 import argparse
 import logging
 
+import exp1_get_solutions
 import exp2_no_reasoning
 import exp3_no_multiple_choice
+import exp4_no_python
+
 import statements_processor
-import exp1_get_solutions
+import compare_answers
 
 logging.basicConfig(level=logging.INFO)
 logging.getLogger("google.genai").setLevel(logging.WARNING)
@@ -56,6 +59,19 @@ def main():
         "-r", "--round", type=int, help="The round number.", default=1
     )
 
+    parser_solve_no_python = subparsers.add_parser(
+        "solve-no-python",
+        help="Run the models without asking for reasoning.",
+    )
+    parser_solve_no_python.add_argument(
+        "-r", "--round", type=int, help="The round number.", default=1
+    )
+
+    # Run the models on the statements.
+    parser_compare_answers = subparsers.add_parser(
+        "compare-no-multiple-choice", help="Run the models on the statements."
+    )
+
     # Parse the arguments
     args = parser.parse_args()
 
@@ -70,6 +86,11 @@ def main():
     elif args.command == "solve-no-multiple-choice":
         round = args.round
         exp3_no_multiple_choice.solve_tasks_asking_llms(round)
+    elif args.command == "solve-no-python":
+        round = args.round
+        exp4_no_python.solve_tasks_asking_llms(round)
+    elif args.command == "compare-no-multiple-choice":
+        compare_answers.compute_matchings_for_answers()
     else:
         parser.print_help()
 

@@ -21,12 +21,12 @@ def solve_tasks_asking_llms(round: int):
 
         save_loc = (
             str(internal_types.RO_SOLUTIONS_FILE)
-            + "_no_multiple_choices_round_"
+            + "_no_python_round_"
             + str(round)
             + ".json"
             if lang == "ro"
             else str(internal_types.EN_SOLUTIONS_FILE)
-            + "_no_multiple_choices_round_"
+            + "_no_python_round_"
             + str(round)
             + ".json"
         )
@@ -55,6 +55,7 @@ def solve_tasks_asking_llms(round: int):
                     if (
                         llm == llm_interactor.Model.DEEPSEEK_R1
                         or llm == llm_interactor.Model.GEMINI_2_5
+                        or llm == llm_interactor.Model.LLAMA3_3_FREE
                     ):
                         continue
 
@@ -84,8 +85,10 @@ def solve_tasks_asking_llms(round: int):
                         )
                     ]
 
-                    statement = problem.to_statement_no_multiple_choices()
-                    accepted_format = internal_types.LLMAnswer.accepted_format()
+                    statement = problem.to_statement()
+                    accepted_format = (
+                        internal_types.LLMAnswer.accepted_format_no_python()
+                    )
 
                     question = f"You are tasked with solving a CS/Math problem, which might be in another language.\n"
                     question += f"Here is the problem:\n"
@@ -99,6 +102,7 @@ def solve_tasks_asking_llms(round: int):
                     result = internal_types.LLMAnswer.from_reply(
                         answer, contest.name, problem_idx, llm
                     )
+                    assert result.python_code is None, "Python code should be None."
                     solutions.append(result)
                     logging.info(
                         f"Expected answer: '{problem.correct_answer}', got '{result.answer if result.answer else "no answer"}'"

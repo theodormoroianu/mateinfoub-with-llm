@@ -222,6 +222,28 @@ OR (if you want to provide the answer directly):
         return answer
 
     @staticmethod
+    def accepted_format_no_python(doesnt_have_choices: bool = False) -> str:
+        """
+        Returns a string which describes the accepted format of the answer.
+
+        """
+        if doesnt_have_choices:
+            answer = "You have to output only the correct answer, strictly (for instance output '2', instead of 'the answer is 2').\n"
+        else:
+            answer = "You have to output the correct answer (not the index, the actual value of the answer).\n"
+        answer += "The answer is computed with a diff check, so it has to be EXACTLY the right answer.\n"
+        answer += """Please reply in the following format, with separator blocks, in the following format:
+<REASONING>
+[your reasoning steps here]
+</REASONING>
+<ANSWER>
+[your answer here]
+</ANSWER>
+"""
+        answer += "Make sure to ALWAYS include the <REASONING></REASONING> and the <ANSWER></ANSWER> blocks, or your answer is automatically incorrect."
+        return answer
+
+    @staticmethod
     def accepted_format_no_reasoning() -> str:
         """
         Returns a string which describes the accepted format of the answer.
@@ -340,6 +362,10 @@ Do NOT provide any additional information, provide ONLY the <PYTHON CODE>...</PY
             if python_code is not None:
                 self.python_code = python_code.strip()
                 self.answer = script_runner.run_script(python_code).strip()
+
+        if self.python_code is not None:  # self.answer == "Timeout":
+            # We may have some timeout issues, give the script another chance.
+            self.answer = script_runner.run_script(self.python_code).strip()
 
     @staticmethod
     def from_json(obj: dict) -> "LLMAnswer":

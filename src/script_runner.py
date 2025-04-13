@@ -6,7 +6,7 @@ import os
 import subprocess
 import logging
 import tempfile
-
+import uuid
 
 logger = logging.getLogger(__name__)
 # logger.setLevel(logging.DEBUG)
@@ -43,6 +43,8 @@ def run_script(
         with open(script_file, "w") as f:
             f.write(script)
 
+        name = "script_runner_" + str(uuid.uuid4())
+
         # Run the script in a container.
         command = [
             "docker",
@@ -51,7 +53,7 @@ def run_script(
             "--cpus=1",  # Limit to 1 CPU
             "--memory=8g",  # Limit to 8GB of RAM
             "--name",
-            "script_runner",
+            name,
             "-v",
             f"{temp_dir}:/app",
             "python",
@@ -64,7 +66,7 @@ def run_script(
         try:
             stdout, stderr = process.communicate(timeout=timeout)
         except subprocess.TimeoutExpired:
-            subprocess.run(["docker", "kill", "script_runner"])
+            subprocess.run(["docker", "kill", name])
             process.kill()
             stdout, stderr = process.communicate()
             logger.warning(

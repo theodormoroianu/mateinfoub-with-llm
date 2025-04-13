@@ -39,6 +39,10 @@ def solve_tasks_asking_llms(round: int):
         for s in solutions:
             s.try_extract_python_code()
 
+        with open(save_loc, "w") as f:
+            f.write(json.dumps([s.to_json() for s in solutions], indent=2))
+        logger.info(f"Saved solutions to {save_loc}")
+
         logger.info(f"Solving tasks for lang {lang}")
         for contest in contests:
             logger.info(f"Solving tasks for contest {contest.name}")
