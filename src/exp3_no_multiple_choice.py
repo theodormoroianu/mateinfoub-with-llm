@@ -53,8 +53,9 @@ def solve_tasks_asking_llms(round: int):
                 logger.info(f"Solving task {problem.title}")
                 for llm in llm_interactor.Model._member_map_.values():
                     if (
-                        llm == llm_interactor.Model.DEEPSEEK_R1
-                        or llm == llm_interactor.Model.GEMINI_2_5
+                        llm
+                        == llm_interactor.Model.DEEPSEEK_R1
+                        # or llm == llm_interactor.Model.GEMINI_2_5
                     ):
                         continue
 

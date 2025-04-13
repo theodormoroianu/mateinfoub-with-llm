@@ -65,10 +65,13 @@ def solve_tasks_asking_llms(round: int):
                         # and s.answer != "Failed to get answer."
                         for s in solutions
                     ):
-                        logging.info(
-                            f"Skipping problem {problem.title} from {contest.name} ({llm.name}), as we already have a solution."
-                        )
-                        continue
+                        if lang == "ro" and llm == llm_interactor.Model.GEMINI:
+                            pass
+                        else:
+                            logging.info(
+                                f"Skipping problem {problem.title} from {contest.name} ({llm.name}), as we already have a solution."
+                            )
+                            continue
 
                     # Remove the old answer, if any.
                     solutions = [

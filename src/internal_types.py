@@ -363,9 +363,9 @@ Do NOT provide any additional information, provide ONLY the <PYTHON CODE>...</PY
                 self.python_code = python_code.strip()
                 self.answer = script_runner.run_script(python_code).strip()
 
-        if self.answer == "Timeout":
-            # We may have some timeout issues, give the script another chance.
-            self.answer = script_runner.run_script(self.python_code).strip()
+        # if self.answer == "Timeout":
+        #     # We may have some timeout issues, give the script another chance.
+        #     self.answer = script_runner.run_script(self.python_code).strip()
 
     @staticmethod
     def from_json(obj: dict) -> "LLMAnswer":

@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 # Gemini API key and model
 gemini_api_key = (
-    os.environ["GEMINI_API_KEY"] if "GEMINI_API_KEY" in os.environ else None
+    os.environ["GEMINI_API_KEY_3"] if "GEMINI_API_KEY" in os.environ else None
 )
 gemini_client = Gemini(api_key=gemini_api_key)
 gemini_nr_questions = 0

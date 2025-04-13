@@ -583,6 +583,46 @@
     [
       "68%",
       "0.6805"
+    ],
+    [
+      "7",
+      "7"
+    ],
+    [
+      "21 and 252",
+      "21 252"
+    ],
+    [
+      "0.074",
+      "0.0741923582400"
+    ],
+    [
+      "6",
+      "6"
+    ],
+    [
+      "8/27",
+      "8/27"
+    ],
+    [
+      "1.8",
+      "9/5"
+    ],
+    [
+      "Statement 4",
+      "Matei nu poate uda planta."
+    ],
+    [
+      "4 coins of 10 cents",
+      "0 coins of 50 cents and 4 coins of 10 cents"
+    ],
+    [
+      "21 \u0219i  252",
+      "21 252"
+    ],
+    [
+      "4 coins of 10 cents",
+      "0 monede de 50 bani, 4 monede de 10 bani"
     ]
   ],
   "non_matching": [
@@ -2813,6 +2853,50 @@
     [
       "43",
       "280"
+    ],
+    [
+      "734",
+      "735"
+    ],
+    [
+      "1200908",
+      "2980262"
+    ],
+    [
+      "Between 31 and 60",
+      "Failed to get answer."
+    ],
+    [
+      "4 coins of 10 cents",
+      "Failed to get answer."
+    ],
+    [
+      "1200908",
+      "2771980"
+    ],
+    [
+      "6",
+      "Failed to get answer."
+    ],
+    [
+      "23",
+      "Failed to get answer."
+    ],
+    [
+      "8/27",
+      "Failed to get answer."
+    ],
+    [
+      "Questions 2, 3 and 4",
+      "Is Matei lying?"
+    ],
+    [
+      "1/100",
+      "Failed to get answer."
+    ],
+    [
+      "15",
+      "Failed to get answer."
     ]
   ]
 }
