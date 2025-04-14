@@ -56,6 +56,8 @@ def solve_tasks_asking_llms(round: int):
                         llm == llm_interactor.Model.DEEPSEEK_R1
                         or llm == llm_interactor.Model.GEMINI_2_5
                         or llm == llm_interactor.Model.LLAMA3_3_FREE
+                        or llm == llm_interactor.Model.MISTRAL
+                        # or llm == llm_interactor.Model.DEEPSEEK_V3
                     ):
                         continue
 

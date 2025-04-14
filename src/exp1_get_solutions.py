@@ -65,7 +65,11 @@ def solve_tasks_asking_llms(round: int):
                         # and s.answer != "Failed to get answer."
                         for s in solutions
                     ):
-                        if lang == "ro" and llm == llm_interactor.Model.GEMINI:
+                        if (
+                            lang == "en"
+                            and llm == llm_interactor.Model.DEEPSEEK_V3
+                            and contest.name == "Ediția 2022"
+                        ):
                             pass
                         else:
                             logging.info(

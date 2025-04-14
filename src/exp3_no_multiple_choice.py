@@ -55,7 +55,8 @@ def solve_tasks_asking_llms(round: int):
                     if (
                         llm
                         == llm_interactor.Model.DEEPSEEK_R1
-                        # or llm == llm_interactor.Model.GEMINI_2_5
+                        # llm
+                        # == llm_interactor.Model.GEMINI_2_5
                     ):
                         continue
 

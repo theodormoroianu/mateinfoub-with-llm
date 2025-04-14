@@ -56,6 +56,13 @@ def get_solution_files_no_multiple_choices_glob() -> dict[str, str]:
     }
 
 
+def get_solution_files_no_python_code_glob() -> dict[str, str]:
+    return {
+        "ro": str(RO_SOLUTIONS_FILE) + "_no_python_round_*",
+        "en": str(EN_SOLUTIONS_FILE) + "_no_python_round_*",
+    }
+
+
 class ProblemDificulty(str, Enum):
     EASY = "easy"
     MEDIUM = "medium"

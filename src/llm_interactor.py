@@ -11,9 +11,7 @@ from enum import Enum
 logger = logging.getLogger(__name__)
 
 # Gemini API key and model
-gemini_api_key = (
-    os.environ["GEMINI_API_KEY_3"] if "GEMINI_API_KEY" in os.environ else None
-)
+gemini_api_key = os.environ["GEMINI_API_KEY"] if "GEMINI_API_KEY" in os.environ else ""
 gemini_client = Gemini(api_key=gemini_api_key)
 gemini_nr_questions = 0
 
@@ -41,7 +39,7 @@ def ask_gemini(question: str, retries=10, model="gemini-2.0-flash") -> str:
 
 # Mistral API key and model
 mistral_api_key = (
-    os.environ["MISTRAL_API_KEY"] if "MISTRAL_API_KEY" in os.environ else None
+    os.environ["MISTRAL_API_KEY"] if "MISTRAL_API_KEY" in os.environ else ""
 )
 mistral_client = Mistral(api_key=mistral_api_key)
 mistral_nr_questions = 0
@@ -74,7 +72,7 @@ def ask_mistral(question: str, retries=10) -> str:
 
 # Together API key and model
 together_api_key = (
-    os.environ["TOGETHER_API_KEY"] if "TOGETHER_API_KEY" in os.environ else None
+    os.environ["TOGETHER_API_KEY"] if "TOGETHER_API_KEY" in os.environ else ""
 )
 together_client = Together(api_key=together_api_key)
 together_nr_questions = 0
